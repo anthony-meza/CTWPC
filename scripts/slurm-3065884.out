@@ -1,0 +1,125 @@
+2023-04-18 09:56:51,903 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.67:33347'
+2023-04-18 09:57:04,606 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.67:35211
+2023-04-18 09:57:04,606 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.67:35211
+2023-04-18 09:57:04,606 - distributed.worker - INFO -           Worker name:             SLURMCluster-2
+2023-04-18 09:57:04,606 - distributed.worker - INFO -          dashboard at:          172.16.3.67:35057
+2023-04-18 09:57:04,606 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.91:42599
+2023-04-18 09:57:04,606 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 09:57:04,606 - distributed.worker - INFO -               Threads:                         36
+2023-04-18 09:57:04,606 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-04-18 09:57:04,606 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-awubhyhb
+2023-04-18 09:57:04,606 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 09:57:04,613 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.91:42599
+2023-04-18 09:57:04,613 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 09:57:04,613 - distributed.core - INFO - Starting established connection to tcp://172.16.3.91:42599
+2023-04-18 09:58:19,513 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.20s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 10:07:51,324 - distributed.worker - ERROR - failed during get data with tcp://172.16.3.67:35211 -> tcp://172.16.3.100:37296
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 867, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 1140, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+TimeoutError: [Errno 110] Connection timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 1758, in get_data
+    response = await comm.read(deserializers=serializers)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.67:35211 remote=tcp://172.16.3.100:57627>: TimeoutError: [Errno 110] Connection timed out
+2023-04-18 10:07:51,326 - distributed.core - INFO - Lost connection to 'tcp://172.16.3.100:57627'
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 867, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 1140, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+TimeoutError: [Errno 110] Connection timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/core.py", line 771, in _handle_comm
+    result = await result
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 1758, in get_data
+    response = await comm.read(deserializers=serializers)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.67:35211 remote=tcp://172.16.3.100:57627>: TimeoutError: [Errno 110] Connection timed out
+2023-04-18 10:08:44,555 - distributed.core - INFO - Connection to tcp://172.16.3.91:42599 has been closed.
+2023-04-18 10:08:44,556 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.67:35211. Reason: worker-handle-scheduler-connection-broken
+2023-04-18 10:08:44,560 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.67:33347'. Reason: worker-handle-scheduler-connection-broken
+2023-04-18 10:08:47,427 - distributed.client - ERROR - 
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/core.py", line 291, in connect
+    comm = await asyncio.wait_for(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 511, in connect
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <distributed.comm.tcp.TCPConnector object at 0x2aab168caf50>: ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/utils.py", line 742, in wrapper
+    return await func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/client.py", line 1298, in _reconnect
+    await self._ensure_connected(timeout=timeout)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/client.py", line 1328, in _ensure_connected
+    comm = await connect(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/core.py", line 315, in connect
+    await asyncio.sleep(backoff)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/asyncio/tasks.py", line 605, in sleep
+    return await future
+asyncio.exceptions.CancelledError
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/client.py", line 1500, in _handle_report
+    msgs = await self.scheduler_comm.comm.read()
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Client->Scheduler local=tcp://172.16.3.67:52665 remote=tcp://172.16.3.91:42599>: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/utils.py", line 742, in wrapper
+    return await func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/client.py", line 1508, in _handle_report
+    await self._reconnect()
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/utils.py", line 742, in wrapper
+    return await func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/client.py", line 1298, in _reconnect
+    await self._ensure_connected(timeout=timeout)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/client.py", line 1328, in _ensure_connected
+    comm = await connect(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/core.py", line 315, in connect
+    await asyncio.sleep(backoff)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/asyncio/tasks.py", line 605, in sleep
+    return await future
+asyncio.exceptions.CancelledError
+2023-04-18 10:08:47,466 - distributed.nanny - INFO - Worker closed
+2023-04-18 10:08:49,469 - distributed.nanny - ERROR - Worker process died unexpectedly
+2023-04-18 10:08:49,910 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.67:33347'. Reason: nanny-close-gracefully
+2023-04-18 10:08:49,911 - distributed.dask_worker - INFO - End worker

@@ -1,0 +1,119 @@
+2023-05-02 22:50:19,132 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.92:42021'
+2023-05-02 22:50:22,272 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.92:38986
+2023-05-02 22:50:22,273 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.92:38986
+2023-05-02 22:50:22,273 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-05-02 22:50:22,273 - distributed.worker - INFO -          dashboard at:          172.16.3.92:43158
+2023-05-02 22:50:22,273 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.55:40487
+2023-05-02 22:50:22,273 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:50:22,273 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 22:50:22,273 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 22:50:22,273 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-m6i5n5gj
+2023-05-02 22:50:22,273 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:50:22,277 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.55:40487
+2023-05-02 22:50:22,278 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:50:22,278 - distributed.core - INFO - Starting established connection to tcp://172.16.3.55:40487
+2023-05-02 22:50:50,987 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.15s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-02 22:51:10,797 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 66.66 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:17,107 - distributed.nanny.memory - WARNING - Worker tcp://172.16.3.92:38986 (pid=195555) exceeded 95% memory budget. Restarting...
+2023-05-02 22:51:17,396 - distributed.nanny - INFO - Worker process 195555 was killed by signal 15
+2023-05-02 22:51:17,417 - distributed.nanny - WARNING - Restarting worker
+2023-05-02 22:51:24,551 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.92:41458
+2023-05-02 22:51:24,551 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.92:41458
+2023-05-02 22:51:24,551 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-05-02 22:51:24,551 - distributed.worker - INFO -          dashboard at:          172.16.3.92:39747
+2023-05-02 22:51:24,551 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.55:40487
+2023-05-02 22:51:24,551 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:51:24,551 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 22:51:24,551 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 22:51:24,551 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-rdfj0j7b
+2023-05-02 22:51:24,551 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:51:24,559 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.55:40487
+2023-05-02 22:51:24,559 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:51:24,559 - distributed.core - INFO - Starting established connection to tcp://172.16.3.55:40487
+2023-05-02 22:51:29,125 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.91s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-02 22:51:29,362 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.63:44924
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 329, in connect
+    handshake = await wait_for(comm.read(), time_left())
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 1850, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.92:52007 remote=tcp://172.16.3.63:44924>: ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2888, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1509, in connect
+    return await connect_attempt
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1430, in _connect
+    comm = await connect(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 334, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://172.16.3.63:44924 after 30 s
+2023-05-02 22:51:29,407 - distributed.core - INFO - Removing comms to tcp://172.16.3.63:44924
+2023-05-02 22:51:40,392 - distributed.core - INFO - Removing comms to tcp://172.16.3.52:32814
+2023-05-02 22:51:42,889 - distributed.core - INFO - Removing comms to tcp://172.16.3.53:42755
+2023-05-02 22:51:49,922 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 61.92 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:53,023 - distributed.worker.memory - WARNING - Worker is at 81% memory usage. Pausing worker.  Process memory: 76.08 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:53,807 - distributed.nanny.memory - WARNING - Worker tcp://172.16.3.92:41458 (pid=195700) exceeded 95% memory budget. Restarting...
+2023-05-02 22:51:54,192 - distributed.nanny - INFO - Worker process 195700 was killed by signal 15
+2023-05-02 22:51:54,564 - distributed.nanny - WARNING - Restarting worker
+2023-05-02 22:52:02,039 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.92:39919
+2023-05-02 22:52:02,039 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.92:39919
+2023-05-02 22:52:02,039 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-05-02 22:52:02,039 - distributed.worker - INFO -          dashboard at:          172.16.3.92:43130
+2023-05-02 22:52:02,039 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.55:40487
+2023-05-02 22:52:02,039 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:52:02,039 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 22:52:02,039 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 22:52:02,039 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-p13zfmec
+2023-05-02 22:52:02,039 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:52:02,074 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.55:40487
+2023-05-02 22:52:02,074 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:52:02,075 - distributed.core - INFO - Starting established connection to tcp://172.16.3.55:40487
+2023-05-02 22:52:35,686 - distributed.core - INFO - Removing comms to tcp://172.16.3.53:39920
+2023-05-02 22:52:41,323 - distributed.core - INFO - Removing comms to tcp://172.16.3.52:40984
+2023-05-02 22:52:41,955 - distributed.core - INFO - Removing comms to tcp://172.16.3.63:41815
+2023-05-02 22:56:57,511 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.52s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-02 22:57:10,862 - distributed.core - INFO - Removing comms to tcp://172.16.3.85:44210
+2023-05-02 22:57:19,263 - distributed.core - INFO - Removing comms to tcp://172.16.3.83:45219
+2023-05-02 22:57:26,081 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.51s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-02 22:57:27,581 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 75.32 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:57:27,613 - distributed.worker.memory - WARNING - Worker is at 77% memory usage. Resuming worker. Process memory: 72.60 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:57:30,829 - distributed.utils_perf - INFO - full garbage collection released 553.78 MiB from 0 reference cycles (threshold: 9.54 MiB)
+2023-05-02 22:57:30,829 - distributed.worker.memory - WARNING - Worker is at 86% memory usage. Pausing worker.  Process memory: 80.38 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:57:32,506 - distributed.nanny.memory - WARNING - Worker tcp://172.16.3.92:39919 (pid=195792) exceeded 95% memory budget. Restarting...
+2023-05-02 22:57:32,836 - distributed.nanny - INFO - Worker process 195792 was killed by signal 15
+2023-05-02 22:57:32,976 - distributed.nanny - WARNING - Restarting worker
+2023-05-02 22:57:37,566 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.92:41198
+2023-05-02 22:57:37,566 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.92:41198
+2023-05-02 22:57:37,566 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-05-02 22:57:37,566 - distributed.worker - INFO -          dashboard at:          172.16.3.92:33581
+2023-05-02 22:57:37,566 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.55:40487
+2023-05-02 22:57:37,566 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:57:37,566 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 22:57:37,566 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 22:57:37,567 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-q6v7uxgn
+2023-05-02 22:57:37,567 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:57:37,573 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.55:40487
+2023-05-02 22:57:37,573 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:57:37,573 - distributed.core - INFO - Starting established connection to tcp://172.16.3.55:40487
+slurmstepd: error: *** JOB 3081851 ON pn042 CANCELLED AT 2023-05-02T22:57:41 ***

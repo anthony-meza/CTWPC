@@ -1,0 +1,48 @@
+2023-04-20 15:17:05,437 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.64:35009'
+2023-04-20 15:17:12,802 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.64:46727
+2023-04-20 15:17:12,802 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.64:46727
+2023-04-20 15:17:12,802 - distributed.worker - INFO -           Worker name:             SLURMCluster-2
+2023-04-20 15:17:12,802 - distributed.worker - INFO -          dashboard at:          172.16.3.64:37321
+2023-04-20 15:17:12,802 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.161:33683
+2023-04-20 15:17:12,802 - distributed.worker - INFO - -------------------------------------------------
+2023-04-20 15:17:12,802 - distributed.worker - INFO -               Threads:                         36
+2023-04-20 15:17:12,803 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-04-20 15:17:12,803 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-okiiciao
+2023-04-20 15:17:12,803 - distributed.worker - INFO - -------------------------------------------------
+2023-04-20 15:17:12,809 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.161:33683
+2023-04-20 15:17:12,810 - distributed.worker - INFO - -------------------------------------------------
+2023-04-20 15:17:12,811 - distributed.core - INFO - Starting established connection to tcp://172.16.3.161:33683
+2023-04-20 15:19:24,987 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.35s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-20 15:40:03,411 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 867, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 1140, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 1215, in heartbeat
+    response = await retry_operation(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/utils_comm.py", line 386, in retry_operation
+    return await retry(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/utils_comm.py", line 371, in retry
+    return await coro()
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/core.py", line 1163, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/core.py", line 928, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://172.16.3.64:53612 remote=tcp://172.16.3.161:33683>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-04-20 15:40:03,413 - distributed.core - INFO - Connection to tcp://172.16.3.161:33683 has been closed.
+2023-04-20 15:40:03,417 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.64:46727. Reason: worker-handle-scheduler-connection-broken
+2023-04-20 15:40:03,419 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.64:35009'. Reason: worker-handle-scheduler-connection-broken
+2023-04-20 15:40:03,424 - distributed.nanny - INFO - Worker closed
+2023-04-20 15:40:05,427 - distributed.nanny - ERROR - Worker process died unexpectedly
+2023-04-20 15:40:05,666 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.64:35009'. Reason: nanny-close-gracefully
+2023-04-20 15:40:05,667 - distributed.dask_worker - INFO - End worker

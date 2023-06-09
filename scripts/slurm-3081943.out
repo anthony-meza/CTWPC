@@ -1,0 +1,62 @@
+2023-05-02 23:53:30,611 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.64:34820'
+2023-05-02 23:53:34,438 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.64:40848
+2023-05-02 23:53:34,439 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.64:40848
+2023-05-02 23:53:34,439 - distributed.worker - INFO -           Worker name:             SLURMCluster-5
+2023-05-02 23:53:34,439 - distributed.worker - INFO -          dashboard at:          172.16.3.64:38037
+2023-05-02 23:53:34,439 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.60:40715
+2023-05-02 23:53:34,439 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 23:53:34,439 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 23:53:34,439 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 23:53:34,439 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-cfliw980
+2023-05-02 23:53:34,439 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 23:53:34,960 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.60:40715
+2023-05-02 23:53:34,960 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 23:53:34,960 - distributed.core - INFO - Starting established connection to tcp://172.16.3.60:40715
+2023-05-02 23:59:56,699 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.11s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 00:00:06,018 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.30s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 00:00:18,750 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.21s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 00:00:26,457 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.02s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 00:00:48,052 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.13s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 00:01:05,642 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.30s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 00:01:34,231 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.11s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 00:07:24,319 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.09s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 00:07:46,942 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.02s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 00:11:06,742 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.46s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 00:35:20,266 - distributed.core - INFO - Removing comms to tcp://172.16.3.90:35092
+2023-05-03 00:35:22,983 - distributed.worker - ERROR - failed during get data with tcp://172.16.3.64:40848 -> tcp://172.16.3.90:35092
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 317, in write
+    raise StreamClosedError()
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1782, in get_data
+    compressed = await comm.write(msg, serializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 328, in write
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.64:40848 remote=tcp://172.16.3.90:44412>: Stream is closed
+2023-05-03 00:35:23,158 - distributed.core - INFO - Lost connection to 'tcp://172.16.3.90:44412'
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 317, in write
+    raise StreamClosedError()
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 831, in _handle_comm
+    result = await result
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 990, in wrapper
+    return await func(self, *args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1782, in get_data
+    compressed = await comm.write(msg, serializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 328, in write
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.64:40848 remote=tcp://172.16.3.90:44412>: Stream is closed
+slurmstepd: error: *** JOB 3081943 ON pn014 CANCELLED AT 2023-05-03T01:53:36 DUE TO TIME LIMIT ***

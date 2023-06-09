@@ -1,0 +1,21 @@
+2023-05-02 17:01:18,906 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.52:45994'
+2023-05-02 17:01:19,887 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.52:41582
+2023-05-02 17:01:19,887 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.52:41582
+2023-05-02 17:01:19,887 - distributed.worker - INFO -           Worker name:            SLURMCluster-12
+2023-05-02 17:01:19,887 - distributed.worker - INFO -          dashboard at:          172.16.3.52:41494
+2023-05-02 17:01:19,887 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:44611
+2023-05-02 17:01:19,887 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:01:19,887 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 17:01:19,888 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-02 17:01:19,888 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-hw6echb4
+2023-05-02 17:01:19,888 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:01:24,520 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:44611
+2023-05-02 17:01:24,520 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:01:24,520 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:44611
+2023-05-02 17:04:58,730 - distributed.core - INFO - Removing comms to tcp://172.16.3.167:38308
+2023-05-02 17:04:58,739 - distributed.core - INFO - Removing comms to tcp://172.16.3.190:36877
+2023-05-02 17:04:58,744 - distributed.core - INFO - Removing comms to tcp://172.16.3.189:43766
+2023-05-02 17:04:58,744 - distributed.core - INFO - Removing comms to tcp://172.16.3.188:35554
+2023-05-02 17:04:58,756 - distributed.core - INFO - Removing comms to tcp://172.16.3.187:38962
+slurmstepd: error: *** JOB 3081314 ON pn002 CANCELLED AT 2023-05-02T17:04:58 ***
+2023-05-02 17:04:58,763 - distributed.core - INFO - Removing comms to tcp://172.16.3.186:41958

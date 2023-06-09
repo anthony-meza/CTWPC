@@ -1,0 +1,404 @@
+2023-05-04 19:10:48,940 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.102:45509'
+2023-05-04 19:10:49,336 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-sjcgn4fr', purging
+2023-05-04 19:10:50,399 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.102:33026
+2023-05-04 19:10:50,399 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.102:33026
+2023-05-04 19:10:50,399 - distributed.worker - INFO -           Worker name:             SLURMCluster-5
+2023-05-04 19:10:50,399 - distributed.worker - INFO -          dashboard at:         172.16.3.102:38315
+2023-05-04 19:10:50,399 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:42976
+2023-05-04 19:10:50,399 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 19:10:50,399 - distributed.worker - INFO -               Threads:                         36
+2023-05-04 19:10:50,399 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-04 19:10:50,399 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-p5gxdnr3
+2023-05-04 19:10:50,399 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 19:10:50,405 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:42976
+2023-05-04 19:10:50,405 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 19:10:50,406 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:42976
+2023-05-04 19:11:44,460 - distributed.core - INFO - Event loop was unresponsive in Worker for 29.59s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 19:11:48,796 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.89s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 19:12:16,434 - distributed.core - INFO - Event loop was unresponsive in Worker for 26.22s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 19:13:27,771 - distributed.core - INFO - Event loop was unresponsive in Worker for 28.41s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 19:13:53,704 - distributed.core - INFO - Event loop was unresponsive in Worker for 19.83s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 19:15:03,235 - distributed.core - INFO - Event loop was unresponsive in Worker for 32.05s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 19:15:09,678 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.50s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 19:15:14,790 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.11s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 19:15:37,142 - distributed.core - INFO - Event loop was unresponsive in Worker for 22.30s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 19:16:50,440 - distributed.core - INFO - Event loop was unresponsive in Worker for 33.43s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 19:17:23,617 - distributed.core - INFO - Event loop was unresponsive in Worker for 27.06s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 19:17:39,894 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 5, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(1920, 2240, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,895 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 18, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(6080, 6400, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,896 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 8, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(2880, 3200, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,898 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 10, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(3520, 3840, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,898 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 20, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(6720, 7040, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,899 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 9, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(3200, 3520, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,900 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 2, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(960, 1280, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  81
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,901 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 22, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(7360, 7680, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   5,   6,   7,   8,   9,  10,  11,  12,  13,
+        14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,  26,
+        27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,  39,
+        40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,  52,
+        53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,  65,
+        66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,  78,
+        79,  80,  81,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,902 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 0, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(320, 640, None), slice(0, 249, None), slice(0, 301, None))), (slice(46, 320, 1), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  81,  82, 
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,902 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 15, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(5120, 5440, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,904 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 23, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(7680, 8000, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,904 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 13, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(4480, 4800, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,905 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 14, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(4800, 5120, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,905 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 7, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(2560, 2880, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,906 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 19, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(6400, 6720, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,907 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 4, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(1600, 1920, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,907 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 6, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(2240, 2560, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,908 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 16, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(5440, 5760, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,908 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 27, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(8960, 9280, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,922 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 3, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(1280, 1600, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,922 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 24, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(8000, 8320, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,923 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 26, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(8640, 8960, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,923 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 28, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(9280, 9600, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,924 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 29, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(9600, 9920, None), slice(0, 249, None), slice(0, 301, None))), (slice(0, 262, 1), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  81,  82,
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,924 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 17, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(5760, 6080, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,925 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 12, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(4160, 4480, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,925 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 1, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(640, 960, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  81,
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,926 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 25, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(8320, 8640, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+2023-05-04 19:17:39,926 - distributed.worker - WARNING - Compute Failed
+Key:       ('open_dataset-getitem-a5ed4fee22ef7ed2462eee70051131d6', 11, 0, 0)
+Function:  execute_task
+args:      ((<function getitem at 0x2aaacb65edd0>, (<function getitem at 0x2aaacb65edd0>, (subgraph_callable-4753446d-90d5-40fa-aa4f-45e670f77b05, ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab59cf9cc0>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(3840, 4160, None), slice(0, 249, None), slice(0, 301, None))), (slice(None, None, None), slice(None, None, None), slice(None, None, None))), (array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
+        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,
+        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,
+        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  8
+kwargs:    {}
+Exception: "ValueError('Array chunk size or shape is unknown. Possible solution with x.compute_chunk_sizes()')"
+
+slurmstepd: error: *** JOB 3083084 ON pn052 CANCELLED AT 2023-05-04T21:11:14 DUE TO TIME LIMIT ***

@@ -1,0 +1,22 @@
+2023-05-10 09:33:21,475 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.105:34096'
+2023-05-10 09:33:23,642 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-hjtn6v34', purging
+/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/contextlib.py:142: UserWarning: Creating scratch directories is taking a surprisingly long time. (3.38s) This is often due to running workers on a network file system. Consider specifying a local-directory to point workers to write scratch data to a local disk.
+  next(self.gen)
+2023-05-10 09:33:35,014 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.105:34472
+2023-05-10 09:33:35,014 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.105:34472
+2023-05-10 09:33:35,014 - distributed.worker - INFO -           Worker name:             SLURMCluster-2
+2023-05-10 09:33:35,014 - distributed.worker - INFO -          dashboard at:         172.16.3.105:40026
+2023-05-10 09:33:35,014 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:33291
+2023-05-10 09:33:35,014 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 09:33:35,014 - distributed.worker - INFO -               Threads:                         30
+2023-05-10 09:33:35,015 - distributed.worker - INFO -                Memory:                 139.70 GiB
+2023-05-10 09:33:35,015 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-7hv7fm7f
+2023-05-10 09:33:35,015 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 09:33:35,020 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:33291
+2023-05-10 09:33:35,021 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 09:33:35,021 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:33291
+2023-05-10 09:35:14,343 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.48s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-10 10:14:05,536 - distributed.core - INFO - Removing comms to tcp://172.16.3.185:36490
+2023-05-10 10:14:05,547 - distributed.core - INFO - Removing comms to tcp://172.16.3.129:37884
+2023-05-10 10:14:05,553 - distributed.core - INFO - Removing comms to tcp://172.16.3.128:46712
+slurmstepd: error: *** JOB 3085346 ON pn055 CANCELLED AT 2023-05-10T10:14:05 ***

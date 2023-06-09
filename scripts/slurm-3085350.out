@@ -1,0 +1,56 @@
+2023-05-10 09:33:14,980 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.102:46419'
+2023-05-10 09:33:15,379 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-549ces4w', purging
+2023-05-10 09:33:16,733 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.102:41673
+2023-05-10 09:33:16,734 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.102:41673
+2023-05-10 09:33:16,734 - distributed.worker - INFO -           Worker name:             SLURMCluster-5
+2023-05-10 09:33:16,734 - distributed.worker - INFO -          dashboard at:         172.16.3.102:37666
+2023-05-10 09:33:16,734 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:33291
+2023-05-10 09:33:16,734 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 09:33:16,734 - distributed.worker - INFO -               Threads:                         30
+2023-05-10 09:33:16,734 - distributed.worker - INFO -                Memory:                 139.70 GiB
+2023-05-10 09:33:16,734 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-ov750sjm
+2023-05-10 09:33:16,734 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 09:33:16,739 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:33291
+2023-05-10 09:33:16,739 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 09:33:16,739 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:33291
+Exception ignored in: <function CachingFileManager.__del__ at 0x2aaacb544820>
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 249, in __del__
+    self.close(needs_lock=False)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 233, in close
+    file.close()
+  File "src/netCDF4/_netCDF4.pyx", line 2607, in netCDF4._netCDF4.Dataset.close
+  File "src/netCDF4/_netCDF4.pyx", line 2570, in netCDF4._netCDF4.Dataset._close
+  File "src/netCDF4/_netCDF4.pyx", line 2014, in netCDF4._netCDF4._ensure_nc_success
+RuntimeError: NetCDF: Not a valid ID
+Exception ignored in: <function CachingFileManager.__del__ at 0x2aaacb544820>
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 249, in __del__
+    self.close(needs_lock=False)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 233, in close
+    file.close()
+  File "src/netCDF4/_netCDF4.pyx", line 2607, in netCDF4._netCDF4.Dataset.close
+  File "src/netCDF4/_netCDF4.pyx", line 2570, in netCDF4._netCDF4.Dataset._close
+  File "src/netCDF4/_netCDF4.pyx", line 2014, in netCDF4._netCDF4._ensure_nc_success
+RuntimeError: NetCDF: Not a valid ID
+Exception ignored in: <function CachingFileManager.__del__ at 0x2aaacb544820>
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 249, in __del__
+    self.close(needs_lock=False)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 233, in close
+    file.close()
+  File "src/netCDF4/_netCDF4.pyx", line 2607, in netCDF4._netCDF4.Dataset.close
+  File "src/netCDF4/_netCDF4.pyx", line 2570, in netCDF4._netCDF4.Dataset._close
+  File "src/netCDF4/_netCDF4.pyx", line 2014, in netCDF4._netCDF4._ensure_nc_success
+RuntimeError: NetCDF: Not a valid ID
+Exception ignored in: <function CachingFileManager.__del__ at 0x2aaacb544820>
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 249, in __del__
+    self.close(needs_lock=False)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 233, in close
+    file.close()
+  File "src/netCDF4/_netCDF4.pyx", line 2607, in netCDF4._netCDF4.Dataset.close
+  File "src/netCDF4/_netCDF4.pyx", line 2570, in netCDF4._netCDF4.Dataset._close
+  File "src/netCDF4/_netCDF4.pyx", line 2014, in netCDF4._netCDF4._ensure_nc_success
+RuntimeError: NetCDF: Not a valid ID
+slurmstepd: error: *** JOB 3085350 ON pn052 CANCELLED AT 2023-05-10T10:14:05 ***

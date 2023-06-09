@@ -1,0 +1,824 @@
+2023-05-03 13:33:30,208 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.189:43814'
+2023-05-03 13:33:32,190 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.189:41225
+2023-05-03 13:33:32,190 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.189:41225
+2023-05-03 13:33:32,190 - distributed.worker - INFO -           Worker name:             SLURMCluster-7
+2023-05-03 13:33:32,190 - distributed.worker - INFO -          dashboard at:         172.16.3.189:43319
+2023-05-03 13:33:32,190 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.87:37981
+2023-05-03 13:33:32,190 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 13:33:32,190 - distributed.worker - INFO -               Threads:                         36
+2023-05-03 13:33:32,190 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-03 13:33:32,190 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-opz7sysr
+2023-05-03 13:33:32,190 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 13:33:32,197 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.87:37981
+2023-05-03 13:33:32,197 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 13:33:32,197 - distributed.core - INFO - Starting established connection to tcp://172.16.3.87:37981
+/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/scipy/io/_netcdf.py:305: RuntimeWarning: Cannot close a netcdf_file opened with mmap=True, when netcdf_variables or arrays referring to its data still exist. All data arrays obtained from such files refer directly to data on disk, and must be copied before the file can be cleanly closed. (See netcdf_file docstring for more information on mmap.)
+  warnings.warn((
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 1:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+thread 2:
+:
+2023-05-03 13:41:15,228 - distributed.worker - ERROR - Exception during execution of task ('getitem-d76737ac86f58afc1aaf8c1fb770cdb7', 9374, 0, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: "('concatenate-getitem-d76737ac86f58afc1aaf8c1fb770cdb7', 9374, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2381, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 223, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: "('concatenate-getitem-d76737ac86f58afc1aaf8c1fb770cdb7', 9374, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2249, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: "('concatenate-getitem-d76737ac86f58afc1aaf8c1fb770cdb7', 9374, 0, 0, 0)"
+--- Logging error ---
+2023-05-03 13:41:15,262 - distributed.worker - ERROR - Exception during execution of task ('getitem-d7eaf411279ee2c50859c4805435401d', 8668, 0, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: "('concatenate-getitem-d7eaf411279ee2c50859c4805435401d', 8668, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2381, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 223, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: "('concatenate-getitem-d7eaf411279ee2c50859c4805435401d', 8668, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2249, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: "('concatenate-getitem-d7eaf411279ee2c50859c4805435401d', 8668, 0, 0, 0)"
+--- Logging error ---
+2023-05-03 13:41:15,399 - distributed.worker - ERROR - Exception during execution of task ('rechunk-split-rechunk-merge-rechunk-merge-60a6070665766ca79bcaf6fa6782c23d', 638, 0, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2381, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 223, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2249, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+--- Logging error ---
+2023-05-03 13:41:15,489 - distributed.worker - ERROR - Exception during execution of task ('rechunk-split-rechunk-merge-rechunk-merge-60a6070665766ca79bcaf6fa6782c23d', 1003, 0, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2381, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 223, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2249, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+--- Logging error ---
+2023-05-03 13:41:15,540 - distributed.worker - ERROR - Exception during execution of task ('rechunk-split-rechunk-merge-rechunk-merge-60a6070665766ca79bcaf6fa6782c23d', 1368, 0, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2381, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 223, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2249, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+--- Logging error ---
+2023-05-03 13:41:15,571 - distributed.worker - ERROR - Exception during execution of task ('rechunk-split-rechunk-merge-rechunk-merge-60a6070665766ca79bcaf6fa6782c23d', 3193, 0, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2381, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 223, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2249, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+--- Logging error ---
+2023-05-03 13:41:15,616 - distributed.worker - ERROR - Exception during execution of task ('rechunk-split-rechunk-merge-rechunk-merge-60a6070665766ca79bcaf6fa6782c23d', 5748, 0, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2381, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 223, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2249, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+--- Logging error ---
+2023-05-03 13:41:15,664 - distributed.worker - ERROR - Exception during execution of task ('rechunk-split-rechunk-merge-rechunk-merge-60a6070665766ca79bcaf6fa6782c23d', 3828, 0, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2381, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 223, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2249, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+--- Logging error ---
+2023-05-03 13:41:15,735 - distributed.worker - ERROR - Exception during execution of task ('rechunk-split-rechunk-merge-rechunk-merge-60a6070665766ca79bcaf6fa6782c23d', 5653, 0, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2381, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 223, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2249, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+--- Logging error ---
+2023-05-03 13:41:15,813 - distributed.worker - ERROR - Exception during execution of task ('rechunk-split-rechunk-merge-rechunk-merge-60a6070665766ca79bcaf6fa6782c23d', 1710, 0, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2381, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 223, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2249, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: "('array-237aed616529690cc3d00da541e2ba4e', 0, 0, 0, 0)"
+--- Logging error ---
+2023-05-03 13:41:18,656 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-concatenate-store-map-7791f33e43c947d705213b399b223994', 82, 4, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab3660f5b0>, (<function broadcast_to at 0x2aaab6a2a3b0>, (functools.partial(<function mean_agg at 0x2aab37881d80>, dtype=dtype('float32'), axis=(0,), keepdims=False), [{'n': array([[[[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]],
+
+        [[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]]]], dtype=float32), 'total': array([[[[549.6933 , 549.71155, 549.7329 , ...,       nan,       nan,
+                nan],
+         [549.66125, 549.704  , 549.7406 , ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-03 13:41:18,842 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-concatenate-store-map-7791f33e43c947d705213b399b223994', 219, 0, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab3660f5b0>, (<function broadcast_to at 0x2aaab6a2a3b0>, (functools.partial(<function mean_agg at 0x2aab37881d80>, dtype=dtype('float32'), axis=(0,), keepdims=False), [{'n': array([[[[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]],
+
+        [[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]]]], dtype=float32), 'total': array([[[[551.7716 , 551.6251 , 551.4298 , ...,       nan,       nan,
+                nan],
+         [551.84485, 551.66785, 551.4527 , ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-03 13:41:22,199 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-concatenate-store-map-7791f33e43c947d705213b399b223994', 209, 7, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab3660f5b0>, (<function broadcast_to at 0x2aaab6a2a3b0>, (functools.partial(<function mean_agg at 0x2aab37881d80>, dtype=dtype('float32'), axis=(0,), keepdims=False), [{'n': array([[[[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]],
+
+        [[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]]]], dtype=float32), 'total': array([[[[550.21216, 550.39215, 550.53406, ...,       nan,       nan,
+                nan],
+         [550.21216, 550.37537, 550.53406, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-03 13:41:22,513 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-concatenate-store-map-7791f33e43c947d705213b399b223994', 209, 1, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab3660f5b0>, (<function broadcast_to at 0x2aaab6a2a3b0>, (functools.partial(<function mean_agg at 0x2aab37881d80>, dtype=dtype('float32'), axis=(0,), keepdims=False), [{'n': array([[[[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]],
+
+        [[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]]]], dtype=float32), 'total': array([[[[550.45013, 550.4959 , 550.51575, ...,       nan,       nan,
+                nan],
+         [550.39825, 550.47   , 550.4791 , ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-03 13:41:23,246 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-concatenate-store-map-7791f33e43c947d705213b399b223994', 209, 2, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab3660f5b0>, (<function broadcast_to at 0x2aaab6a2a3b0>, (functools.partial(<function mean_agg at 0x2aab37881d80>, dtype=dtype('float32'), axis=(0,), keepdims=False), [{'n': array([[[[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]],
+
+        [[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]]]], dtype=float32), 'total': array([[[[550.4379 , 550.47455, 550.499  , ...,       nan,       nan,
+                nan],
+         [550.38605, 550.4547 , 550.4685 , ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-03 13:41:24,412 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-concatenate-store-map-7791f33e43c947d705213b399b223994', 219, 6, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab3660f5b0>, (<function broadcast_to at 0x2aaab6a2a3b0>, (functools.partial(<function mean_agg at 0x2aab37881d80>, dtype=dtype('float32'), axis=(0,), keepdims=False), [{'n': array([[[[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]],
+
+        [[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]]]], dtype=float32), 'total': array([[[[551.71204, 551.6754 , 551.48315, ...,       nan,       nan,
+                nan],
+         [551.8082 , 551.75635, 551.56104, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-03 13:41:24,992 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-concatenate-store-map-7791f33e43c947d705213b399b223994', 209, 5, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab3660f5b0>, (<function broadcast_to at 0x2aaab6a2a3b0>, (functools.partial(<function mean_agg at 0x2aab37881d80>, dtype=dtype('float32'), axis=(0,), keepdims=False), [{'n': array([[[[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]],
+
+        [[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]]]], dtype=float32), 'total': array([[[[550.54016, 550.55695, 550.5783 , ...,       nan,       nan,
+                nan],
+         [550.5127 , 550.56006, 550.6089 , ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-03 13:41:25,573 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-concatenate-store-map-7791f33e43c947d705213b399b223994', 209, 3, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab3660f5b0>, (<function broadcast_to at 0x2aaab6a2a3b0>, (functools.partial(<function mean_agg at 0x2aab37881d80>, dtype=dtype('float32'), axis=(0,), keepdims=False), [{'n': array([[[[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]],
+
+        [[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]]]], dtype=float32), 'total': array([[[[550.4532 , 550.4791 , 550.4944 , ...,       nan,       nan,
+                nan],
+         [550.4013 , 550.4654 , 550.4807 , ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-03 13:41:26,156 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-concatenate-store-map-62b890564bc6ed183b5824295b9c1b9e', 332, 4, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab3660f5b0>, (<function broadcast_to at 0x2aaab6a2a3b0>, (functools.partial(<function mean_agg at 0x2aab37881d80>, dtype=dtype('float32'), axis=(0,), keepdims=False), [{'n': array([[[[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]],
+
+        [[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]]]], dtype=float32), 'total': array([[[[355.1607 , 355.93787, 356.5326 , ...,       nan,       nan,
+                nan],
+         [354.76666, 355.60828, 356.3927 , ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-03 13:41:26,447 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-concatenate-store-map-62b890564bc6ed183b5824295b9c1b9e', 332, 8, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab3660f5b0>, (<function broadcast_to at 0x2aaab6a2a3b0>, (functools.partial(<function mean_agg at 0x2aab37881d80>, dtype=dtype('float32'), axis=(0,), keepdims=False), [{'n': array([[[[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]],
+
+        [[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]]]], dtype=float32), 'total': array([[[[354.24738, 355.2032 , 356.09534, ...,       nan,       nan,
+                nan],
+         [353.87457, 354.88898, 355.787  , ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-03 13:41:27,033 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-concatenate-store-map-7791f33e43c947d705213b399b223994', 171, 1, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab3660f5b0>, (<function broadcast_to at 0x2aaab6a2a3b0>, (functools.partial(<function mean_agg at 0x2aab37881d80>, dtype=dtype('float32'), axis=(0,), keepdims=False), [{'n': array([[[[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]],
+
+        [[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]]]], dtype=float32), 'total': array([[[[550.969  , 551.04675, 551.03455, ...,       nan,       nan,
+                nan],
+         [550.52795, 550.615  , 550.73096, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-03 13:41:28,235 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-concatenate-store-map-62b890564bc6ed183b5824295b9c1b9e', 309, 7, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab3660f5b0>, (<function broadcast_to at 0x2aaab6a2a3b0>, (functools.partial(<function mean_agg at 0x2aab37881d80>, dtype=dtype('float32'), axis=(0,), keepdims=False), [{'n': array([[[[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]],
+
+        [[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]]]], dtype=float32), 'total': array([[[[370.90686, 371.02917, 371.2152 , ...,       nan,       nan,
+                nan],
+         [370.35602, 370.4527 , 370.69073, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-03 13:41:29,070 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-concatenate-store-map-62b890564bc6ed183b5824295b9c1b9e', 332, 3, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab3660f5b0>, (<function broadcast_to at 0x2aaab6a2a3b0>, (functools.partial(<function mean_agg at 0x2aab37881d80>, dtype=dtype('float32'), axis=(0,), keepdims=False), [{'n': array([[[[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]],
+
+        [[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]]]], dtype=float32), 'total': array([[[[355.17316, 355.95178, 356.54285, ...,       nan,       nan,
+                nan],
+         [354.77838, 355.62073, 356.4037 , ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-03 13:43:23,787 - distributed.core - INFO - Connection to tcp://172.16.3.87:37981 has been closed.
+--- Logging error ---
+2023-05-03 13:43:23,826 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.189:41225. Reason: worker-handle-scheduler-connection-broken
+--- Logging error ---
+2023-05-03 13:43:26,025 - distributed.client - ERROR - 
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 292, in connect
+    comm = await wait_for(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 1850, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 511, in connect
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <distributed.comm.tcp.TCPConnector object at 0x2aaab68f8220>: ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 752, in wrapper
+    return await func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/client.py", line 1321, in _reconnect
+    await self._ensure_connected(timeout=timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/client.py", line 1351, in _ensure_connected
+    comm = await connect(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 316, in connect
+    await asyncio.sleep(backoff)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 605, in sleep
+    return await future
+asyncio.exceptions.CancelledError
+2023-05-03 13:43:26,042 - distributed.nanny - INFO - Worker closed
+2023-05-03 13:43:23,866 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.189:43814'. Reason: worker-handle-scheduler-connection-broken
+--- Logging error ---
+2023-05-03 13:43:28,506 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.189:43814'. Reason: nanny-close-gracefully
+2023-05-03 13:43:28,507 - distributed.dask_worker - INFO - End worker

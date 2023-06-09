@@ -1,0 +1,20 @@
+2023-05-08 15:05:15,566 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.132:33359'
+2023-05-08 15:05:16,063 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-b37vm440', purging
+2023-05-08 15:05:24,929 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.132:37434
+2023-05-08 15:05:24,930 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.132:37434
+2023-05-08 15:05:24,930 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-05-08 15:05:24,930 - distributed.worker - INFO -          dashboard at:         172.16.3.132:38310
+2023-05-08 15:05:24,930 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.158:34111
+2023-05-08 15:05:24,930 - distributed.worker - INFO - -------------------------------------------------
+2023-05-08 15:05:24,930 - distributed.worker - INFO -               Threads:                         36
+2023-05-08 15:05:24,930 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-08 15:05:24,930 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-_tguyym0
+2023-05-08 15:05:24,930 - distributed.worker - INFO - -------------------------------------------------
+2023-05-08 15:05:24,940 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.158:34111
+2023-05-08 15:05:24,940 - distributed.worker - INFO - -------------------------------------------------
+2023-05-08 15:05:24,940 - distributed.core - INFO - Starting established connection to tcp://172.16.3.158:34111
+2023-05-08 15:21:57,495 - distributed.utils_perf - INFO - full garbage collection released 53.77 MiB from 240 reference cycles (threshold: 9.54 MiB)
+2023-05-08 15:36:05,910 - distributed.utils_perf - INFO - full garbage collection released 465.45 MiB from 240 reference cycles (threshold: 9.54 MiB)
+2023-05-08 17:03:26,767 - distributed.core - INFO - Removing comms to tcp://172.16.3.80:41724
+2023-05-08 17:03:26,773 - distributed.core - INFO - Removing comms to tcp://172.16.3.133:33558
+slurmstepd: error: *** JOB 3084845 ON pn082 CANCELLED AT 2023-05-08T17:05:26 DUE TO TIME LIMIT ***

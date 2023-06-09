@@ -1,0 +1,457 @@
+2023-05-03 09:39:53,192 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.61:34140'
+2023-05-03 09:39:53,571 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-arg8wn17', purging
+2023-05-03 09:39:55,602 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.61:37998
+2023-05-03 09:39:55,602 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.61:37998
+2023-05-03 09:39:55,602 - distributed.worker - INFO -           Worker name:            SLURMCluster-10
+2023-05-03 09:39:55,602 - distributed.worker - INFO -          dashboard at:          172.16.3.61:44778
+2023-05-03 09:39:55,602 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.158:44343
+2023-05-03 09:39:55,602 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:39:55,602 - distributed.worker - INFO -               Threads:                         36
+2023-05-03 09:39:55,602 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-03 09:39:55,602 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-tnokopda
+2023-05-03 09:39:55,603 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:39:55,608 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.158:44343
+2023-05-03 09:39:55,608 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:39:55,608 - distributed.core - INFO - Starting established connection to tcp://172.16.3.158:44343
+2023-05-03 09:44:03,826 - distributed.utils_perf - INFO - full garbage collection released 117.03 MiB from 1380 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:44:28,431 - distributed.utils_perf - INFO - full garbage collection released 25.03 MiB from 499 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:44:59,330 - distributed.utils_perf - INFO - full garbage collection released 1.65 GiB from 499 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:45:22,664 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.27s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:46:01,804 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.08s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:46:13,192 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.79s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:46:22,067 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.58s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:46:29,663 - distributed.core - INFO - Event loop was unresponsive in Worker for 7.52s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:46:42,290 - distributed.utils_perf - WARNING - full garbage collections took 34% CPU time recently (threshold: 10%)
+2023-05-03 09:46:46,422 - distributed.utils_perf - WARNING - full garbage collections took 36% CPU time recently (threshold: 10%)
+2023-05-03 09:46:53,915 - distributed.utils_perf - WARNING - full garbage collections took 36% CPU time recently (threshold: 10%)
+2023-05-03 09:47:02,352 - distributed.utils_perf - WARNING - full garbage collections took 36% CPU time recently (threshold: 10%)
+2023-05-03 09:47:07,805 - distributed.utils_perf - WARNING - full garbage collections took 36% CPU time recently (threshold: 10%)
+2023-05-03 09:47:16,030 - distributed.utils_perf - WARNING - full garbage collections took 37% CPU time recently (threshold: 10%)
+2023-05-03 09:47:21,251 - distributed.utils_perf - WARNING - full garbage collections took 36% CPU time recently (threshold: 10%)
+2023-05-03 09:47:28,280 - distributed.utils_perf - WARNING - full garbage collections took 36% CPU time recently (threshold: 10%)
+2023-05-03 09:48:08,586 - distributed.utils_perf - WARNING - full garbage collections took 36% CPU time recently (threshold: 10%)
+2023-05-03 09:48:58,230 - distributed.utils_perf - WARNING - full garbage collections took 30% CPU time recently (threshold: 10%)
+2023-05-03 09:49:33,001 - distributed.core - INFO - Connection to tcp://172.16.3.158:44343 has been closed.
+2023-05-03 09:49:33,002 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.61:37998. Reason: worker-handle-scheduler-connection-broken
+2023-05-03 09:49:33,002 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1234, in heartbeat
+    response = await retry_operation(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils_comm.py", line 434, in retry_operation
+    return await retry(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils_comm.py", line 413, in retry
+    return await coro()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1268, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://172.16.3.61:44029 remote=tcp://172.16.3.158:44343>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-05-03 09:49:33,012 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.61:34140'. Reason: worker-handle-scheduler-connection-broken
+2023-05-03 09:49:33,045 - distributed.worker - ERROR - failed during get data with tcp://172.16.3.61:37998 -> tcp://172.16.3.93:44121
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1783, in get_data
+    response = await comm.read(deserializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.61:37998 remote=tcp://172.16.3.93:37577>: Stream is closed
+2023-05-03 09:49:33,052 - distributed.nanny - INFO - Worker closed
+2023-05-03 09:49:33,274 - distributed.protocol.core - CRITICAL - Failed to Serialize
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 109, in dumps
+    frames[0] = msgpack.dumps(msg, default=_encode_default, use_bin_type=True)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/msgpack/__init__.py", line 38, in packb
+    return Packer(**kwargs).pack(o)
+  File "msgpack/_packer.pyx", line 294, in msgpack._cmsgpack.Packer.pack
+  File "msgpack/_packer.pyx", line 300, in msgpack._cmsgpack.Packer.pack
+  File "msgpack/_packer.pyx", line 297, in msgpack._cmsgpack.Packer.pack
+  File "msgpack/_packer.pyx", line 231, in msgpack._cmsgpack.Packer._pack
+  File "msgpack/_packer.pyx", line 231, in msgpack._cmsgpack.Packer._pack
+  File "msgpack/_packer.pyx", line 285, in msgpack._cmsgpack.Packer._pack
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 100, in _encode_default
+    frames.extend(create_serialized_sub_frames(obj))
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 67, in create_serialized_sub_frames
+    _inplace_compress_frames(sub_header, sub_frames)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 50, in _inplace_compress_frames
+    compression[i], frames[i] = maybe_compress(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/contextlib.py", line 78, in inner
+    with self._recreate_cm():
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/metrics.py", line 275, in meter
+    self.digest_metric(label, delta, unit)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/metrics.py", line 225, in digest_metric
+    cb(label, value, unit)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 987, in metrics_callback
+    loop.call_soon_threadsafe(self.digest_metric, name, value)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/base_events.py", line 798, in call_soon_threadsafe
+    self._check_closed()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2023-05-03 09:49:33,275 - distributed.comm.utils - INFO - Unserializable Message: {'status': 'OK', 'data': {"('where-e2d34be3a24090d44bbd37dc29706930', 6, 0, 1, 0)": <Serialize: [[[[25.521378 25.520645 25.51918  ...       nan       nan       nan]
+   [25.45912  25.465714 25.46791  ...       nan       nan       nan]
+   [25.386608 25.394665 25.393932 ...       nan       nan       nan]
+   ...
+   [25.65102  25.631245 25.600483 ... 28.016083 27.96408  27.914272]
+   [25.541887 25.496475 25.47084  ... 27.97873  27.987518 27.96701 ]
+   [25.404919 25.405651 25.420301 ... 27.932585 27.99997  27.964813]]
+
+  [[25.519913 25.51918  25.518448 ...       nan       nan       nan]
+   [25.457655 25.464981 25.466446 ...       nan       nan       nan]
+   [25.385143 25.3932   25.392467 ...       nan       nan       nan]
+   ...
+   [25.650288 25.630512 25.600483 ... 28.016083 27.963348 27.914272]
+   [25.541155 25.496475 25.470108 ... 27.97873  27.987518 27.96701 ]
+   [25.404186 25.405651 25.419569 ... 27.932585 27.99997  27.964813]]
+
+  [[25.518448 25.518448 25.516983 ...       nan       nan       nan]
+   [25.45619  25.463516 25.465714 ...       nan       nan       nan]
+   [25.38441  25.392467 25.391003 ...       nan       nan       nan]
+   ...
+   [25.649555 25.630512 25.59975  ... 28.016083 27.963348 27.91354 ]
+   [25.541155 25.495743 25.469376 ... 27.97873  27.987518 27.96701 ]
+   [25.404186 25.404919 25.418837 ... 27.931852 27.99997  27.964813]]
+
+  ...
+
+  [[25.131718 25.187384 25.211555 ...       nan       nan       nan]
+   [24.990356 25.029907 25.007202 ...       nan       nan       nan]
+   [24.860714 24.824823 24.78527  ...       nan       nan       nan]
+   ...
+   [25.643696 25.625385 25.594624 ... 27.63448  27.845425 28.009491]
+   [25.536026 25.490616 25.463516 ... 27.512161 27.721642 27.856411]
+   [25.39613  25.396862 25.41151  ... 27.404491 27.54732  27.745811]]
+
+  [[24.893673 24.944212 24.950071 ...       nan       nan       nan]
+   [24.782341 24.81457  24.776482 ...       nan       nan       nan]
+   [24.690786 24.654163 24.610218 ...       nan       nan       nan]
+   ...
+   [25.642963 25.624653 25.594624 ... 27.471146 27.665243 27.857143]
+   [25.536026 25.490616 25.463516 ... 27.375927 27.558306 27.674032]
+   [25.39613  25.396862 25.41151  ... 27.306345 27.411816 27.523148]]
+
+  [[24.629993 24.712759 24.729607 ...       nan       nan       nan]
+   [24.5692   24.617542 24.562609 ...       nan       nan       nan]
+   [24.462996 24.411726 24.35606  ...       nan       nan       nan]
+   ...
+   [25.642963 25.624653 25.594624 ... 27.357616 27.52681  27.707724]
+   [25.536026 25.490616 25.463516 ... 27.290964 27.447706 27.540728]
+   [25.39613  25.396862 25.41151  ... 27.237495 27.31074  27.385448]]]
+
+
+ [[[25.372692 25.393932 25.418104 ...       nan       nan       nan]
+   [25.302378 25.32728  25.356579 ...       nan       nan       nan]
+   [25.252571 25.278206 25.314096 ...       nan       nan       nan]
+   ...
+   [25.66567  25.64516  25.614399 ... 27.801477 27.769981 27.706259]
+   [25.557268 25.515518 25.497208 ... 27.791956 27.772179 27.731163]
+   [25.445204 25.45326  25.47377  ... 27.809534 27.810999 27.813196]]
+
+  [[25.36903  25.389538 25.413708 ...       nan       nan       nan]
+   [25.298716 25.322886 25.352917 ...       nan       nan       nan]
+   [25.249641 25.274544 25.310434 ...       nan       nan       nan]
+   ...
+   [25.664938 25.644428 25.613667 ... 27.800745 27.769249 27.705526]
+   [25.556536 25.514786 25.496475 ... 27.791956 27.772179 27.73043 ]
+   [25.444471 25.452528 25.473038 ... 27.808802 27.810999 27.813196]]
+
+  [[25.361706 25.382214 25.406384 ...       nan       nan       nan]
+   [25.291391 25.315561 25.34486  ...       nan       nan       nan]
+   [25.24305  25.26722  25.30311  ...       nan       nan       nan]
+   ...
+   [25.664938 25.643696 25.612934 ... 27.800013 27.769249 27.705526]
+   [25.555803 25.514053 25.495743 ... 27.791224 27.771446 27.729698]
+   [25.443739 25.451796 25.472305 ... 27.808802 27.810266 27.812464]]
+
+  ...
+
+  [[24.81164  24.777214 24.766228 ...       nan       nan       nan]
+   [24.792597 24.752312 24.720818 ...       nan       nan       nan]
+   [24.825556 24.741325 24.700308 ...       nan       nan       nan]
+   ...
+   [25.650288 25.630512 25.598286 ... 28.183813 28.152317 28.174292]
+   [25.543352 25.500137 25.480362 ... 28.208715 28.225563 28.217506]
+   [25.426893 25.434217 25.454725 ... 28.183813 28.23362  28.220436]]
+
+  [[24.596302 24.543566 24.541368 ...       nan       nan       nan]
+   [24.621937 24.574327 24.532578 ...       nan       nan       nan]
+   [24.697378 24.593372 24.515    ...       nan       nan       nan]
+   ...
+   [25.650288 25.630512 25.598286 ... 28.183813 28.161839 28.211647]
+   [25.543352 25.500137 25.480362 ... 28.14719  28.202856 28.245338]
+   [25.426893 25.433485 25.453993 ... 28.072481 28.166967 28.114231]]
+
+  [[24.375103 24.295267 24.295267 ...       nan       nan       nan]
+   [24.453474 24.373638 24.337015 ...       nan       nan       nan]
+   [24.537706 24.42491  24.339947 ...       nan       nan       nan]
+   ...
+   [25.650288 25.630512 25.598286 ... 28.19187  28.176489 28.240211]
+   [25.543352 25.500137 25.480362 ... 28.085665 28.155247 28.188208]
+   [25.426893 25.433485 25.453993 ... 27.972137 28.040987 28.016815]]]
+
+
+ [[[25.533096 25.440077 25.37196  ...       nan       nan       nan]
+   [25.535294 25.44081  25.370495 ...       nan       nan       nan]
+   [25.551409 25.457655 25.381481 ...       nan       nan       nan]
+   ...
+   [25.679586 25.644428 25.618061 ... 27.674765 27.594929 27.557573]
+   [25.558    25.530167 25.531631 ... 27.66158  27.597126 27.590534]
+   [25.495743 25.511856 25.533096 ... 27.65865  27.62862  27.630817]]
+
+  [[25.523575 25.430555 25.361706 ...       nan       nan       nan]
+   [25.527237 25.43202  25.360973 ...       nan       nan       nan]
+   [25.544817 25.449598 25.37196  ...       nan       nan       nan]
+   ...
+   [25.678854 25.643696 25.617329 ... 27.674032 27.594196 27.557573]
+   [25.557268 25.529434 25.5309   ... 27.660847 27.596394 27.590534]
+   [25.494278 25.510391 25.532364 ... 27.657917 27.627888 27.630085]]
+
+  [[25.507462 25.412243 25.342663 ...       nan       nan       nan]
+   [25.511124 25.414442 25.34193  ...       nan       nan       nan]
+   [25.52797  25.43202  25.354382 ...       nan       nan       nan]
+   ...
+   [25.678122 25.642963 25.616596 ... 27.6733   27.593464 27.55684 ]
+   [25.556536 25.528702 25.530167 ... 27.660114 27.596394 27.589802]
+   [25.493546 25.509659 25.531631 ... 27.657917 27.627155 27.629353]]
+
+  ...
+
+  [[25.397594 25.284065 25.150028 ...       nan       nan       nan]
+   [25.422499 25.319956 25.193243 ...       nan       nan       nan]
+   [25.43788  25.341198 25.225471 ...       nan       nan       nan]
+   ...
+   [25.661274 25.624653 25.598286 ... 27.654255 27.616169 27.592   ]
+   [25.53749  25.508194 25.508194 ... 27.715782 27.719444 27.641071]
+   [25.47084  25.486221 25.508926 ... 27.894497 27.830042 27.854946]]
+
+  [[25.380749 25.263557 25.122196 ...       nan       nan       nan]
+   [25.402721 25.296518 25.155888 ...       nan       nan       nan]
+   [25.38734  25.283333 25.155888 ...       nan       nan       nan]
+   ...
+   [25.661274 25.624653 25.598286 ... 27.654987 27.623493 27.619099]
+   [25.53749  25.507462 25.508194 ... 27.755333 27.805872 27.783165]
+   [25.469376 25.485489 25.508194 ... 28.03659  28.071749 28.016815]]
+
+  [[25.332407 25.228401 25.053347 ...       nan       nan       nan]
+   [25.336071 25.220345 25.03357  ...       nan       nan       nan]
+   [25.262093 25.141972 25.00061  ...       nan       nan       nan]
+   ...
+   [25.661274 25.624653 25.598286 ... 27.681356 27.692343 27.73336 ]
+   [25.53749  25.507462 25.508194 ... 27.891567 27.9465   27.960417]
+   [25.469376 25.485489 25.508194 ... 28.156712 28.174292 28.143528]]]
+
+
+ ...
+
+
+ [[[25.578508 25.562395 25.577044 ...       nan       nan       nan]
+   [25.62685  25.620258 25.634174 ...       nan       nan       nan]
+   [25.659077 25.661274 25.672995 ...       nan       nan       nan]
+   ...
+   [25.090702 25.083376 25.048952 ... 27.167913 27.17304  27.16425 ]
+   [25.046022 25.026245 24.999146 ... 27.166449 27.177435 27.168646]
+   [25.017456 25.002808 24.991089 ... 27.166449 27.185492 27.171576]]
+
+  [[25.574846 25.558733 25.574114 ...       nan       nan       nan]
+   [25.62392  25.618061 25.631977 ...       nan       nan       nan]
+   [25.65688  25.659077 25.670797 ...       nan       nan       nan]
+   ...
+   [25.070925 25.064333 25.029907 ... 27.167181 27.171576 27.162785]
+   [25.02478  25.00647  24.97937  ... 27.165716 27.17597  27.167913]
+   [24.996216 24.9823   24.971313 ... 27.165716 27.18476  27.17011 ]]
+
+  [[25.565325 25.54848  25.564592 ...       nan       nan       nan]
+   [25.614399 25.60854  25.621723 ...       nan       nan       nan]
+   [25.647358 25.649555 25.661274 ...       nan       nan       nan]
+   ...
+   [25.04822  25.041628 25.007935 ... 27.162052 27.166449 27.157658]
+   [25.001343 24.983032 24.956663 ... 27.160587 27.171576 27.162785]
+   [24.972046 24.95886  24.948606 ... 27.16132  27.179632 27.165716]]
+
+  ...
+
+  [[25.502335 25.481827 25.496475 ...       nan       nan       nan]
+   [25.553606 25.547014 25.559465 ...       nan       nan       nan]
+   [25.591694 25.592426 25.60561  ...       nan       nan       nan]
+   ...
+   [24.952269 24.944212 24.909786 ... 27.13422  27.139347 27.129826]
+   [24.917112 24.897335 24.876095 ... 27.13422  27.146671 27.135685]
+   [24.89587  24.884151 24.879757 ... 27.134953 27.154728 27.139347]]
+
+  [[25.500137 25.478165 25.494278 ...       nan       nan       nan]
+   [25.553606 25.547014 25.558    ...       nan       nan       nan]
+   [25.591694 25.592426 25.60561  ...       nan       nan       nan]
+   ...
+   [24.911253 24.936888 24.930296 ... 27.132023 27.139347 27.127628]
+   [24.908321 24.906857 24.891476 ... 27.132023 27.151798 27.133488]
+   [24.906124 24.90173  24.881954 ... 27.132755 27.153996 27.138615]]
+
+  [[25.499405 25.477432 25.492813 ...       nan       nan       nan]
+   [25.553606 25.547014 25.558    ...       nan       nan       nan]
+   [25.591694 25.592426 25.60561  ...       nan       nan       nan]
+   ...
+   [24.619007 24.747185 24.841671 ... 27.14008  27.148869 27.130558]
+   [24.764763 24.839472 24.863644 ... 27.140812 27.156193 27.135685]
+   [24.8175   24.81164  24.762566 ... 27.140812 27.153996 27.140812]]]
+
+
+ [[[25.502335 25.520645 25.511124 ...       nan       nan       nan]
+   [25.564592 25.588032 25.5873   ...       nan       nan       nan]
+   [25.625385 25.644428 25.644428 ...       nan       nan       nan]
+   ...
+   [25.124393 25.076784 25.034302 ... 27.149601 27.135685 27.121769]
+   [25.048952 25.019653 25.005005 ... 27.153263 27.141544 27.129093]
+   [25.01892  25.011597 25.01233  ... 27.16425  27.148136 27.135685]]
+
+  [[25.50087  25.518448 25.509659 ...       nan       nan       nan]
+   [25.563128 25.586567 25.5851   ...       nan       nan       nan]
+   [25.62392  25.642963 25.642963 ...       nan       nan       nan]
+   ...
+   [25.103886 25.056276 25.013794 ... 27.148869 27.134953 27.121037]
+   [25.028442 24.999146 24.984497 ... 27.15253  27.140812 27.12836 ]
+   [24.999146 24.991821 24.992554 ... 27.163517 27.147404 27.134953]]
+
+  [[25.498672 25.51625  25.507462 ...       nan       nan       nan]
+   [25.56093  25.584368 25.583635 ...       nan       nan       nan]
+   [25.621723 25.640766 25.640766 ...       nan       nan       nan]
+   ...
+   [25.078249 25.031372 24.988892 ... 27.148136 27.13422  27.120304]
+   [25.002808 24.974243 24.960325 ... 27.15253  27.14008  27.127628]
+   [24.974243 24.968384 24.969849 ... 27.162785 27.146671 27.13422 ]]
+
+  ...
+
+  [[25.440077 25.461319 25.451063 ...       nan       nan       nan]
+   [25.505264 25.530167 25.529434 ...       nan       nan       nan]
+   [25.568987 25.588032 25.588764 ...       nan       nan       nan]
+   ...
+   [24.947142 24.912718 24.89587  ... 27.123966 27.11005  27.09467 ]
+   [24.903927 24.89587  24.897335 ... 27.129093 27.118107 27.102726]
+   [24.899532 24.8988   24.892208 ... 27.140812 27.124699 27.11005 ]]
+
+  [[25.43495  25.457655 25.448133 ...       nan       nan       nan]
+   [25.501602 25.52797  25.526505 ...       nan       nan       nan]
+   [25.56679  25.585833 25.5873   ...       nan       nan       nan]
+   ...
+   [24.960325 24.939817 24.914183 ... 27.122501 27.111515 27.093204]
+   [24.91638  24.899532 24.887814 ... 27.127628 27.120304 27.101261]
+   [24.887081 24.85339  24.809443 ... 27.138615 27.123966 27.11005 ]]
+
+  [[25.427626 25.453993 25.445204 ...       nan       nan       nan]
+   [25.498672 25.526505 25.52504  ...       nan       nan       nan]
+   [25.566057 25.584368 25.586567 ...       nan       nan       nan]
+   ...
+   [24.818232 24.879757 24.89001  ... 27.123234 27.120304 27.098331]
+   [24.852657 24.843136 24.803583 ... 27.129093 27.123966 27.108585]
+   [24.762566 24.703238 24.649036 ... 27.139347 27.126163 27.119572]]]
+
+
+ [[[25.325083 25.396862 25.448133 ...       nan       nan       nan]
+   [25.385876 25.457655 25.51918  ...       nan       nan       nan]
+   [25.443007 25.507462 25.567522 ...       nan       nan       nan]
+   ...
+   [25.141972 25.103153 25.084108 ... 27.100529 27.070498 27.058046]
+   [25.081179 25.07239  25.074587 ... 27.10712  27.080019 27.076357]
+   [25.071657 25.076052 25.080446 ... 27.115177 27.089542 27.095402]]
+
+  [[25.32435  25.39613  25.447401 ...       nan       nan       nan]
+   [25.38441  25.45619  25.517715 ...       nan       nan       nan]
+   [25.442274 25.505997 25.56679  ...       nan       nan       nan]
+   ...
+   [25.107548 25.067995 25.04822  ... 27.099796 27.069765 27.058046]
+   [25.046755 25.038696 25.040895 ... 27.10712  27.079287 27.076357]
+   [25.03943  25.044558 25.048952 ... 27.115177 27.089542 27.095402]]
+
+  [[25.322886 25.394665 25.445936 ...       nan       nan       nan]
+   [25.383678 25.455458 25.516983 ...       nan       nan       nan]
+   [25.44081  25.505264 25.566057 ...       nan       nan       nan]
+   ...
+   [25.071657 25.03064  25.010864 ... 27.099796 27.069765 27.057314]
+   [25.01233  25.00354  25.005737 ... 27.10712  27.079287 27.075624]
+   [25.00647  25.011597 25.015991 ... 27.115177 27.089542 27.095402]]
+
+  ...
+
+  [[25.2555   25.330942 25.388805 ...       nan       nan       nan]
+   [25.323618 25.396862 25.463516 ...       nan       nan       nan]
+   [25.385876 25.451063 25.514786 ...       nan       nan       nan]
+   ...
+   [24.933958 24.932493 24.935423 ... 27.090275 27.059511 27.050722]
+   [24.93176  24.93762  24.939817 ... 27.099064 27.069765 27.066103]
+   [24.933958 24.920042 24.884884 ... 27.107853 27.080751 27.085878]]
+
+  [[25.242317 25.317759 25.377087 ...       nan       nan       nan]
+   [25.315561 25.388073 25.454725 ...       nan       nan       nan]
+   [25.380016 25.443739 25.507462 ...       nan       nan       nan]
+   ...
+   [24.95593  24.939085 24.938353 ... 27.091007 27.060244 27.053652]
+   [24.928831 24.91638  24.895138 ... 27.098331 27.069765 27.066835]
+   [24.860714 24.804316 24.739128 ... 27.10712  27.080751 27.085878]]
+
+  [[25.224007 25.296518 25.358044 ...       nan       nan       nan]
+   [25.303843 25.37489  25.442274 ...       nan       nan       nan]
+   [25.370495 25.433485 25.497208 ...       nan       nan       nan]
+   ...
+   [24.893673 24.884884 24.860714 ... 27.09467  27.06537  27.06244 ]
+   [24.836542 24.792597 24.747917 ... 27.101261 27.074892 27.071962]
+   [24.696646 24.644642 24.599232 ... 27.11005  27.088078 27.09174 ]]]]>}}
+2023-05-03 09:49:33,285 - distributed.comm.utils - ERROR - Event loop is closed
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/utils.py", line 55, in _to_frames
+    return list(protocol.dumps(msg, **kwargs))
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 109, in dumps
+    frames[0] = msgpack.dumps(msg, default=_encode_default, use_bin_type=True)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/msgpack/__init__.py", line 38, in packb
+    return Packer(**kwargs).pack(o)
+  File "msgpack/_packer.pyx", line 294, in msgpack._cmsgpack.Packer.pack
+  File "msgpack/_packer.pyx", line 300, in msgpack._cmsgpack.Packer.pack
+  File "msgpack/_packer.pyx", line 297, in msgpack._cmsgpack.Packer.pack
+  File "msgpack/_packer.pyx", line 231, in msgpack._cmsgpack.Packer._pack
+  File "msgpack/_packer.pyx", line 231, in msgpack._cmsgpack.Packer._pack
+  File "msgpack/_packer.pyx", line 285, in msgpack._cmsgpack.Packer._pack
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 100, in _encode_default
+    frames.extend(create_serialized_sub_frames(obj))
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 67, in create_serialized_sub_frames
+    _inplace_compress_frames(sub_header, sub_frames)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 50, in _inplace_compress_frames
+    compression[i], frames[i] = maybe_compress(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/contextlib.py", line 78, in inner
+    with self._recreate_cm():
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/metrics.py", line 275, in meter
+    self.digest_metric(label, delta, unit)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/metrics.py", line 225, in digest_metric
+    cb(label, value, unit)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 987, in metrics_callback
+    loop.call_soon_threadsafe(self.digest_metric, name, value)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/base_events.py", line 798, in call_soon_threadsafe
+    self._check_closed()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2023-05-03 09:49:35,054 - distributed.nanny - ERROR - Worker process died unexpectedly
+2023-05-03 09:49:39,914 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.61:34140'. Reason: nanny-close-gracefully
+2023-05-03 09:49:39,915 - distributed.dask_worker - INFO - End worker

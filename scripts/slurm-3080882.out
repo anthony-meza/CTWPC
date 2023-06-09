@@ -1,0 +1,17 @@
+2023-05-02 13:19:19,609 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.54:35706'
+2023-05-02 13:19:28,050 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.54:46626
+2023-05-02 13:19:28,051 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.54:46626
+2023-05-02 13:19:28,051 - distributed.worker - INFO -           Worker name:             SLURMCluster-2
+2023-05-02 13:19:28,051 - distributed.worker - INFO -          dashboard at:          172.16.3.54:39738
+2023-05-02 13:19:28,051 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:37636
+2023-05-02 13:19:28,051 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 13:19:28,051 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 13:19:28,051 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-02 13:19:28,051 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-y8lo1dqk
+2023-05-02 13:19:28,051 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 13:19:28,059 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:37636
+2023-05-02 13:19:28,059 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 13:19:28,059 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:37636
+/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in divide
+  return func(*(_execute_task(a, cache) for a in args))
+slurmstepd: error: *** JOB 3080882 ON pn004 CANCELLED AT 2023-05-02T13:36:54 ***

@@ -1,0 +1,99 @@
+2023-05-03 09:51:36,714 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.62:44223'
+2023-05-03 09:51:38,482 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.62:43664
+2023-05-03 09:51:38,482 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.62:43664
+2023-05-03 09:51:38,482 - distributed.worker - INFO -           Worker name:            SLURMCluster-12
+2023-05-03 09:51:38,482 - distributed.worker - INFO -          dashboard at:          172.16.3.62:44063
+2023-05-03 09:51:38,482 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.158:45398
+2023-05-03 09:51:38,483 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:51:38,483 - distributed.worker - INFO -               Threads:                         36
+2023-05-03 09:51:38,483 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-03 09:51:38,483 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-p5ibtn_u
+2023-05-03 09:51:38,483 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:51:38,496 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.158:45398
+2023-05-03 09:51:38,496 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:51:38,496 - distributed.core - INFO - Starting established connection to tcp://172.16.3.158:45398
+2023-05-03 09:54:42,804 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.189:41839
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2891, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.62:49024 remote=tcp://172.16.3.189:41839>: Stream is closed
+2023-05-03 09:54:42,826 - distributed.core - INFO - Removing comms to tcp://172.16.3.189:41839
+2023-05-03 09:55:33,177 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.168:42978
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 235, in read
+    n = await stream.read_into(chunk)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2891, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.62:54285 remote=tcp://172.16.3.168:42978>: Stream is closed
+2023-05-03 09:55:33,193 - distributed.core - INFO - Removing comms to tcp://172.16.3.168:42978
+2023-05-03 10:03:28,729 - distributed.core - INFO - Removing comms to tcp://172.16.3.88:39818
+2023-05-03 10:03:28,730 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.88:39818
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2891, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.62:52827 remote=tcp://172.16.3.88:39818>: Stream is closed
+2023-05-03 10:05:41,878 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.190:41909
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2891, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.62:60644 remote=tcp://172.16.3.190:41909>: Stream is closed
+2023-05-03 10:05:42,205 - distributed.core - INFO - Removing comms to tcp://172.16.3.190:41909
+slurmstepd: error: *** JOB 3082154 ON pn012 CANCELLED AT 2023-05-03T10:08:33 ***

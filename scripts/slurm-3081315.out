@@ -1,0 +1,20 @@
+2023-05-02 17:01:18,921 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.53:43280'
+2023-05-02 17:01:20,024 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.53:40297
+2023-05-02 17:01:20,024 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.53:40297
+2023-05-02 17:01:20,025 - distributed.worker - INFO -           Worker name:            SLURMCluster-13
+2023-05-02 17:01:20,025 - distributed.worker - INFO -          dashboard at:          172.16.3.53:39057
+2023-05-02 17:01:20,025 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:44611
+2023-05-02 17:01:20,025 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:01:20,025 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 17:01:20,025 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-02 17:01:20,025 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-h5f1alt3
+2023-05-02 17:01:20,025 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:01:24,520 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:44611
+2023-05-02 17:01:24,521 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:01:24,521 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:44611
+2023-05-02 17:04:58,729 - distributed.core - INFO - Removing comms to tcp://172.16.3.167:38308
+2023-05-02 17:04:58,739 - distributed.core - INFO - Removing comms to tcp://172.16.3.190:36877
+2023-05-02 17:04:58,744 - distributed.core - INFO - Removing comms to tcp://172.16.3.189:43766
+2023-05-02 17:04:58,745 - distributed.core - INFO - Removing comms to tcp://172.16.3.188:35554
+slurmstepd: error: *** JOB 3081315 ON pn003 CANCELLED AT 2023-05-02T17:04:58 ***
+2023-05-02 17:04:58,756 - distributed.core - INFO - Removing comms to tcp://172.16.3.187:38962

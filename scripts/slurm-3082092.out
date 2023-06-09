@@ -1,0 +1,99 @@
+2023-05-03 09:10:27,707 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.166:43658'
+2023-05-03 09:10:32,030 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.166:34331
+2023-05-03 09:10:32,030 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.166:34331
+2023-05-03 09:10:32,030 - distributed.worker - INFO -           Worker name:             SLURMCluster-6
+2023-05-03 09:10:32,030 - distributed.worker - INFO -          dashboard at:         172.16.3.166:39083
+2023-05-03 09:10:32,030 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.158:34390
+2023-05-03 09:10:32,030 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:10:32,030 - distributed.worker - INFO -               Threads:                         36
+2023-05-03 09:10:32,030 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-03 09:10:32,030 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-83ts_32m
+2023-05-03 09:10:32,030 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:10:32,038 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.158:34390
+2023-05-03 09:10:32,038 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:10:32,039 - distributed.core - INFO - Starting established connection to tcp://172.16.3.158:34390
+2023-05-03 09:12:47,693 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.73s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:13:28,254 - distributed.core - INFO - Removing comms to tcp://172.16.3.105:34566
+2023-05-03 09:13:51,168 - distributed.worker.memory - WARNING - Worker is at 82% memory usage. Pausing worker.  Process memory: 76.66 GiB -- Worker memory limit: 93.13 GiB
+2023-05-03 09:13:51,170 - distributed.core - INFO - Event loop was unresponsive in Worker for 10.39s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:13:51,963 - distributed.worker.memory - WARNING - Worker is at 79% memory usage. Resuming worker. Process memory: 74.34 GiB -- Worker memory limit: 93.13 GiB
+2023-05-03 09:13:52,071 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 75.14 GiB -- Worker memory limit: 93.13 GiB
+2023-05-03 09:13:55,856 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.69s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:13:57,042 - distributed.nanny.memory - WARNING - Worker tcp://172.16.3.166:34331 (pid=68104) exceeded 95% memory budget. Restarting...
+2023-05-03 09:14:01,899 - distributed.nanny - INFO - Worker process 68104 was killed by signal 15
+2023-05-03 09:14:12,270 - distributed.nanny - WARNING - Restarting worker
+2023-05-03 09:14:19,299 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.166:45310
+2023-05-03 09:14:19,300 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.166:45310
+2023-05-03 09:14:19,300 - distributed.worker - INFO -           Worker name:             SLURMCluster-6
+2023-05-03 09:14:19,300 - distributed.worker - INFO -          dashboard at:         172.16.3.166:33953
+2023-05-03 09:14:19,300 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.158:34390
+2023-05-03 09:14:19,300 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:14:19,300 - distributed.worker - INFO -               Threads:                         36
+2023-05-03 09:14:19,300 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-03 09:14:19,300 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-iaez7b20
+2023-05-03 09:14:19,302 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:14:49,302 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.158:34390
+2023-05-03 09:15:12,271 - distributed.nanny - ERROR - Timed out connecting Nanny '<Nanny: tcp://172.16.3.166:34331, threads: 36>' to scheduler 'tcp://172.16.3.158:34390'
+2023-05-03 09:15:12,271 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.166:43658'. Reason: nanny-instantiate-timeout
+2023-05-03 09:15:15,388 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.166:45310. Reason: worker-close
+2023-05-03 09:15:15,388 - distributed.worker - INFO - Closed worker has not yet started: Status.init
+2023-05-03 09:15:15,390 - distributed.nanny - ERROR - Failed to start worker
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 292, in connect
+    comm = await wait_for(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 1850, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 511, in connect
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <distributed.comm.tcp.TCPConnector object at 0x2aaacb06f220>: ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1472, in start_unsafe
+    await self._register_with_scheduler()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1163, in _register_with_scheduler
+    comm = await connect(self.scheduler.address, **self.connection_args)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 316, in connect
+    await asyncio.sleep(backoff)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 605, in sleep
+    return await future
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 456, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 537, in start
+    await wait_for(self.start_unsafe(), timeout=timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 1850, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 458, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/nanny.py", line 930, in run
+    async with worker:
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 550, in __aenter__
+    await self
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 540, in start
+    raise asyncio.TimeoutError(
+asyncio.exceptions.TimeoutError: Worker start timed out after 60s.
+slurmstepd: error: *** JOB 3082092 ON pn116 CANCELLED AT 2023-05-03T11:10:37 DUE TO TIME LIMIT ***

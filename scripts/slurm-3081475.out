@@ -1,0 +1,22 @@
+2023-05-02 17:14:16,520 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.55:40280'
+2023-05-02 17:14:16,971 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-kii_trc0', purging
+2023-05-02 17:14:19,082 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.55:45512
+2023-05-02 17:14:19,082 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.55:45512
+2023-05-02 17:14:19,082 - distributed.worker - INFO -           Worker name:             SLURMCluster-5
+2023-05-02 17:14:19,082 - distributed.worker - INFO -          dashboard at:          172.16.3.55:43998
+2023-05-02 17:14:19,082 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:44257
+2023-05-02 17:14:19,082 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:14:19,083 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 17:14:19,083 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 17:14:19,083 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-xgh_zhjk
+2023-05-02 17:14:19,083 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:14:19,088 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:44257
+2023-05-02 17:14:19,088 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:14:19,089 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:44257
+2023-05-02 17:15:02,665 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.48s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-02 17:17:42,735 - distributed.core - INFO - Connection to tcp://172.16.3.106:44257 has been closed.
+2023-05-02 17:17:42,735 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.55:45512. Reason: worker-handle-scheduler-connection-broken
+2023-05-02 17:17:42,738 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.55:40280'. Reason: worker-handle-scheduler-connection-broken
+2023-05-02 17:18:12,742 - distributed.nanny - INFO - Worker closed
+2023-05-02 17:18:39,798 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.55:40280'. Reason: nanny-close-gracefully
+2023-05-02 17:18:39,799 - distributed.dask_worker - INFO - End worker

@@ -1,0 +1,89 @@
+2023-04-18 16:32:05,263 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.186:44812'
+2023-04-18 16:32:05,660 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-lonqlc_9', purging
+/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/contextlib.py:142: UserWarning: Creating scratch directories is taking a surprisingly long time. (2.68s) This is often due to running workers on a network file system. Consider specifying a local-directory to point workers to write scratch data to a local disk.
+  next(self.gen)
+2023-04-18 16:32:10,709 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.186:41449
+2023-04-18 16:32:10,709 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.186:41449
+2023-04-18 16:32:10,709 - distributed.worker - INFO -           Worker name:             SLURMCluster-1
+2023-04-18 16:32:10,709 - distributed.worker - INFO -          dashboard at:         172.16.3.186:42238
+2023-04-18 16:32:10,709 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.91:39170
+2023-04-18 16:32:10,709 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:32:10,709 - distributed.worker - INFO -               Threads:                         30
+2023-04-18 16:32:10,709 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-04-18 16:32:10,709 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-2doqf04z
+2023-04-18 16:32:10,709 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:32:10,715 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.91:39170
+2023-04-18 16:32:10,715 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:32:10,715 - distributed.core - INFO - Starting established connection to tcp://172.16.3.91:39170
+2023-04-18 16:35:15,483 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.35s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:35:22,343 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.86s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:35:42,104 - distributed.core - INFO - Event loop was unresponsive in Worker for 19.76s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:36:19,386 - distributed.core - INFO - Event loop was unresponsive in Worker for 37.28s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:36:20,997 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-getitem-concatenate-store-map-55ab86d866dbfceeb7763a2d234b66e6', 185, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab410596c0>, (<function broadcast_to at 0x2aaab6b3ed40>, (functools.partial(<function mean_agg at 0x2aab40f1eb90>, dtype=dtype('float32'), axis=(0,), keepdims=False), [(subgraph_callable-fbf35cab-3ff6-4fe9-858e-410098bedd80, (<function getitem at 0x2aaacfd8d480>, array([[[-105.231445, -113.58418 , -124.59798 , ...,   26.490509,
+           25.455658,   24.49472 ],
+        [-126.889435, -138.42065 , -152.46509 , ...,   27.155762,
+           26.046997,   25.012146],
+        [-135.46393 , -138.1989  , -137.97714 , ...,   27.821014,
+           26.71225 ,   25.603485],
+        ...,
+        [-220.76535 , -215.14758 , -207.75577 , ..., -154.09128 ,
+         -162.81361 , -166.4356  ],
+        [-218.54782 , -212.56046 , -203.91205 , ..., -145.88638 ,
+         -150.61713 , -154.01736 ],
+        [-214.33449 , -208.12537 , -199.55087 , ..., -134.57692 ,
+         -139.15984 , -144.48193 ]],
+
+       [[-103.013916, -111.58841 , -122.528275, ...,   28.190613,
+           2
+kwargs:    {}
+Exception: "OSError('Timed out trying to connect to tcp://172.16.3.91:39170 after 30 s')"
+
+2023-04-18 16:36:21,000 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-getitem-concatenate-store-map-55ab86d866dbfceeb7763a2d234b66e6', 304, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab410596c0>, (<function broadcast_to at 0x2aaab6b3ed40>, (functools.partial(<function mean_agg at 0x2aab40f1eb90>, dtype=dtype('float32'), axis=(0,), keepdims=False), [(subgraph_callable-2a0630ad-aabd-4591-b601-6f87cefb3411, (<function getitem at 0x2aaacfd8d480>, array([[[-105.231445, -113.58418 , -124.59798 , ...,   26.490509,
+           25.455658,   24.49472 ],
+        [-126.889435, -138.42065 , -152.46509 , ...,   27.155762,
+           26.046997,   25.012146],
+        [-135.46393 , -138.1989  , -137.97714 , ...,   27.821014,
+           26.71225 ,   25.603485],
+        ...,
+        [-220.76535 , -215.14758 , -207.75577 , ..., -154.09128 ,
+         -162.81361 , -166.4356  ],
+        [-218.54782 , -212.56046 , -203.91205 , ..., -145.88638 ,
+         -150.61713 , -154.01736 ],
+        [-214.33449 , -208.12537 , -199.55087 , ..., -134.57692 ,
+         -139.15984 , -144.48193 ]],
+
+       [[-103.013916, -111.58841 , -122.528275, ...,   28.190613,
+           2
+kwargs:    {}
+Exception: "OSError('Timed out trying to connect to tcp://172.16.3.91:39170 after 30 s')"
+
+2023-04-18 16:36:21,001 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-getitem-concatenate-store-map-55ab86d866dbfceeb7763a2d234b66e6', 30, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aab410596c0>, (<function broadcast_to at 0x2aaab6b3ed40>, (functools.partial(<function mean_agg at 0x2aab40f1eb90>, dtype=dtype('float32'), axis=(0,), keepdims=False), [(subgraph_callable-943c80ff-338f-4aab-8ecd-411c21d2f94f, (<function getitem at 0x2aaacfd8d480>, array([[[-105.231445, -113.58418 , -124.59798 , ...,   26.490509,
+           25.455658,   24.49472 ],
+        [-126.889435, -138.42065 , -152.46509 , ...,   27.155762,
+           26.046997,   25.012146],
+        [-135.46393 , -138.1989  , -137.97714 , ...,   27.821014,
+           26.71225 ,   25.603485],
+        ...,
+        [-220.76535 , -215.14758 , -207.75577 , ..., -154.09128 ,
+         -162.81361 , -166.4356  ],
+        [-218.54782 , -212.56046 , -203.91205 , ..., -145.88638 ,
+         -150.61713 , -154.01736 ],
+        [-214.33449 , -208.12537 , -199.55087 , ..., -134.57692 ,
+         -139.15984 , -144.48193 ]],
+
+       [[-103.013916, -111.58841 , -122.528275, ...,   28.190613,
+           2
+kwargs:    {}
+Exception: "OSError('Timed out trying to connect to tcp://172.16.3.91:39170 after 30 s')"
+
+2023-04-18 16:36:40,009 - distributed.core - INFO - Event loop was unresponsive in Worker for 19.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+slurmstepd: error: *** JOB 3066585 ON pn136 CANCELLED AT 2023-04-18T16:36:56 ***

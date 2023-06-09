@@ -1,0 +1,22 @@
+2023-05-04 14:25:32,372 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.69:36291'
+2023-05-04 14:25:41,391 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.69:44899
+2023-05-04 14:25:41,392 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.69:44899
+2023-05-04 14:25:41,392 - distributed.worker - INFO -           Worker name:             SLURMCluster-5
+2023-05-04 14:25:41,392 - distributed.worker - INFO -          dashboard at:          172.16.3.69:39924
+2023-05-04 14:25:41,392 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:43862
+2023-05-04 14:25:41,392 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 14:25:41,392 - distributed.worker - INFO -               Threads:                         36
+2023-05-04 14:25:41,392 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-04 14:25:41,392 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-n8tcv3yx
+2023-05-04 14:25:41,392 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 14:25:41,401 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:43862
+2023-05-04 14:25:41,401 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 14:25:41,401 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:43862
+2023-05-04 14:26:17,732 - distributed.utils_perf - INFO - full garbage collection released 830.67 MiB from 199 reference cycles (threshold: 9.54 MiB)
+2023-05-04 14:26:22,860 - distributed.utils_perf - INFO - full garbage collection released 434.60 MiB from 260 reference cycles (threshold: 9.54 MiB)
+2023-05-04 14:26:30,632 - distributed.utils_perf - INFO - full garbage collection released 1.58 GiB from 420 reference cycles (threshold: 9.54 MiB)
+2023-05-04 14:26:34,790 - distributed.utils_perf - INFO - full garbage collection released 853.45 MiB from 399 reference cycles (threshold: 9.54 MiB)
+2023-05-04 14:57:44,157 - distributed.core - INFO - Removing comms to tcp://172.16.3.103:41902
+2023-05-04 14:57:44,239 - distributed.core - INFO - Removing comms to tcp://172.16.3.104:33022
+2023-05-04 15:24:44,864 - distributed.core - INFO - Removing comms to tcp://172.16.3.185:41432
+slurmstepd: error: *** JOB 3082967 ON pn019 CANCELLED AT 2023-05-04T16:25:43 DUE TO TIME LIMIT ***

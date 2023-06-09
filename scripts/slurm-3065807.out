@@ -1,0 +1,19 @@
+2023-04-17 22:09:12,999 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.95:38109'
+2023-04-17 22:09:13,388 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-jzpm9wul', purging
+2023-04-17 22:09:14,900 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.95:44175
+2023-04-17 22:09:14,900 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.95:44175
+2023-04-17 22:09:14,900 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2023-04-17 22:09:14,900 - distributed.worker - INFO -          dashboard at:          172.16.3.95:42878
+2023-04-17 22:09:14,900 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.64:44989
+2023-04-17 22:09:14,900 - distributed.worker - INFO - -------------------------------------------------
+2023-04-17 22:09:14,900 - distributed.worker - INFO -               Threads:                         36
+2023-04-17 22:09:14,900 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-04-17 22:09:14,900 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-o8azzo7u
+2023-04-17 22:09:14,900 - distributed.worker - INFO - -------------------------------------------------
+2023-04-17 22:09:14,909 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.64:44989
+2023-04-17 22:09:14,909 - distributed.worker - INFO - -------------------------------------------------
+2023-04-17 22:09:14,909 - distributed.core - INFO - Starting established connection to tcp://172.16.3.64:44989
+2023-04-17 22:18:33,443 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.05s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-17 22:41:16,517 - distributed.utils_perf - INFO - full garbage collection released 50.57 MiB from 9433 reference cycles (threshold: 9.54 MiB)
+2023-04-17 23:19:23,738 - distributed.utils_perf - INFO - full garbage collection released 67.06 MiB from 8607 reference cycles (threshold: 9.54 MiB)
+slurmstepd: error: *** JOB 3065807 ON pn045 CANCELLED AT 2023-04-18T00:09:18 DUE TO TIME LIMIT ***

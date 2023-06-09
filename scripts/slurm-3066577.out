@@ -1,0 +1,96 @@
+2023-04-18 16:18:14,608 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.186:37710'
+2023-04-18 16:18:21,493 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.186:39976
+2023-04-18 16:18:21,493 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.186:39976
+2023-04-18 16:18:21,493 - distributed.worker - INFO -           Worker name:             SLURMCluster-7
+2023-04-18 16:18:21,493 - distributed.worker - INFO -          dashboard at:         172.16.3.186:41768
+2023-04-18 16:18:21,493 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.91:40558
+2023-04-18 16:18:21,493 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:18:21,493 - distributed.worker - INFO -               Threads:                         30
+2023-04-18 16:18:21,493 - distributed.worker - INFO -                Memory:                  37.25 GiB
+2023-04-18 16:18:21,493 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-jt9yojh4
+2023-04-18 16:18:21,493 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:18:21,500 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.91:40558
+2023-04-18 16:18:21,500 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:18:21,500 - distributed.core - INFO - Starting established connection to tcp://172.16.3.91:40558
+/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/xarray/core/common.py:965: FutureWarning: 'base' in .resample() and in Grouper() is deprecated.
+The new arguments that you should use are 'offset' or 'origin'.
+
+>>> df.resample(freq="3s", base=2)
+
+becomes:
+
+>>> df.resample(freq="3s", offset="2s")
+
+  grouper = pd.Grouper(
+/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/xarray/core/common.py:965: FutureWarning: 'base' in .resample() and in Grouper() is deprecated.
+The new arguments that you should use are 'offset' or 'origin'.
+
+>>> df.resample(freq="3s", base=2)
+
+becomes:
+
+>>> df.resample(freq="3s", offset="2s")
+
+  grouper = pd.Grouper(
+2023-04-18 16:28:59,006 - distributed.utils_perf - INFO - full garbage collection released 1.27 GiB from 14 reference cycles (threshold: 9.54 MiB)
+2023-04-18 16:29:02,590 - distributed.core - INFO - Event loop was unresponsive in Worker for 11.79s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:29:04,747 - distributed.worker_memory - WARNING - Worker tcp://172.16.3.186:39976 (pid=213970) exceeded 95% memory budget. Restarting...
+2023-04-18 16:29:06,881 - distributed.nanny - INFO - Worker process 213970 was killed by signal 15
+2023-04-18 16:29:08,394 - distributed.nanny - WARNING - Restarting worker
+2023-04-18 16:29:12,261 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.186:41146
+2023-04-18 16:29:12,262 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.186:41146
+2023-04-18 16:29:12,262 - distributed.worker - INFO -           Worker name:             SLURMCluster-7
+2023-04-18 16:29:12,262 - distributed.worker - INFO -          dashboard at:         172.16.3.186:39871
+2023-04-18 16:29:12,262 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.91:40558
+2023-04-18 16:29:12,262 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:29:12,262 - distributed.worker - INFO -               Threads:                         30
+2023-04-18 16:29:12,262 - distributed.worker - INFO -                Memory:                  37.25 GiB
+2023-04-18 16:29:12,262 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-lonqlc_9
+2023-04-18 16:29:12,262 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:29:12,274 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.91:40558
+2023-04-18 16:29:12,274 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:29:12,275 - distributed.core - INFO - Starting established connection to tcp://172.16.3.91:40558
+2023-04-18 16:29:32,022 - distributed.utils_perf - INFO - full garbage collection released 671.73 MiB from 56 reference cycles (threshold: 9.54 MiB)
+2023-04-18 16:29:32,022 - distributed.worker_memory - WARNING - Worker is at 84% memory usage. Pausing worker.  Process memory: 31.42 GiB -- Worker memory limit: 37.25 GiB
+2023-04-18 16:29:38,773 - distributed.worker_memory - WARNING - Worker is at 70% memory usage. Resuming worker. Process memory: 26.15 GiB -- Worker memory limit: 37.25 GiB
+2023-04-18 16:29:41,729 - distributed.core - INFO - Event loop was unresponsive in Worker for 13.53s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:29:49,655 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.68s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:29:58,339 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.185:43278
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 235, in read
+    n = await stream.read_into(chunk)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 2051, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 2840, in get_data_from_worker
+    return await retry_operation(_get_data, operation="get_data_from_worker")
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/utils_comm.py", line 386, in retry_operation
+    return await retry(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/utils_comm.py", line 371, in retry
+    return await coro()
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 2820, in _get_data
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/core.py", line 928, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.186:35649 remote=tcp://172.16.3.185:43278>: Stream is closed
+2023-04-18 16:29:58,340 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.06s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:30:10,507 - distributed.core - INFO - Event loop was unresponsive in Worker for 7.79s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:30:20,853 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.90s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:30:39,164 - distributed.core - INFO - Event loop was unresponsive in Worker for 12.29s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:30:42,996 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.83s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:30:49,056 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.06s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:30:58,924 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.69s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:31:01,443 - distributed.utils_perf - INFO - full garbage collection released 2.01 GiB from 77 reference cycles (threshold: 9.54 MiB)
+2023-04-18 16:31:01,443 - distributed.worker_memory - WARNING - Worker is at 83% memory usage. Pausing worker.  Process memory: 31.14 GiB -- Worker memory limit: 37.25 GiB
+2023-04-18 16:31:05,171 - distributed.utils_perf - INFO - full garbage collection released 2.25 GiB from 0 reference cycles (threshold: 9.54 MiB)
+2023-04-18 16:31:05,171 - distributed.worker_memory - WARNING - Worker is at 72% memory usage. Resuming worker. Process memory: 26.88 GiB -- Worker memory limit: 37.25 GiB
+2023-04-18 16:31:05,172 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.25s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+slurmstepd: error: *** JOB 3066577 ON pn136 CANCELLED AT 2023-04-18T16:31:07 ***

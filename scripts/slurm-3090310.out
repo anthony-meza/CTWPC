@@ -1,0 +1,20 @@
+2023-05-11 08:40:15,267 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.87:46041'
+2023-05-11 08:40:15,681 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-3un2if80', purging
+2023-05-11 08:40:17,436 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.87:45973
+2023-05-11 08:40:17,437 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.87:45973
+2023-05-11 08:40:17,437 - distributed.worker - INFO -           Worker name:             SLURMCluster-1
+2023-05-11 08:40:17,437 - distributed.worker - INFO -          dashboard at:          172.16.3.87:42681
+2023-05-11 08:40:17,437 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:35778
+2023-05-11 08:40:17,437 - distributed.worker - INFO - -------------------------------------------------
+2023-05-11 08:40:17,437 - distributed.worker - INFO -               Threads:                         36
+2023-05-11 08:40:17,437 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-11 08:40:17,437 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-2ztc9odf
+2023-05-11 08:40:17,437 - distributed.worker - INFO - -------------------------------------------------
+2023-05-11 08:40:17,442 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:35778
+2023-05-11 08:40:17,443 - distributed.worker - INFO - -------------------------------------------------
+2023-05-11 08:40:17,443 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:35778
+2023-05-11 09:33:08,275 - distributed.core - INFO - Removing comms to tcp://172.16.3.97:46468
+2023-05-11 09:33:08,281 - distributed.core - INFO - Removing comms to tcp://172.16.3.82:39214
+2023-05-11 09:33:08,296 - distributed.core - INFO - Removing comms to tcp://172.16.3.99:37257
+slurmstepd: error: *** JOB 3090310 ON pn037 CANCELLED AT 2023-05-11T09:33:08 ***
+2023-05-11 09:33:08,303 - distributed.core - INFO - Removing comms to tcp://172.16.3.98:38563

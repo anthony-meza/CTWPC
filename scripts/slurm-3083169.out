@@ -1,0 +1,19 @@
+2023-05-05 00:24:21,472 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.72:43353'
+2023-05-05 00:24:21,870 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-eg2386sg', purging
+2023-05-05 00:24:23,615 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.72:37342
+2023-05-05 00:24:23,615 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.72:37342
+2023-05-05 00:24:23,615 - distributed.worker - INFO -           Worker name:             SLURMCluster-2
+2023-05-05 00:24:23,615 - distributed.worker - INFO -          dashboard at:          172.16.3.72:37624
+2023-05-05 00:24:23,615 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:44250
+2023-05-05 00:24:23,615 - distributed.worker - INFO - -------------------------------------------------
+2023-05-05 00:24:23,615 - distributed.worker - INFO -               Threads:                         36
+2023-05-05 00:24:23,615 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-05 00:24:23,615 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-ptt17r_9
+2023-05-05 00:24:23,615 - distributed.worker - INFO - -------------------------------------------------
+2023-05-05 00:24:23,620 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:44250
+2023-05-05 00:24:23,620 - distributed.worker - INFO - -------------------------------------------------
+2023-05-05 00:24:23,621 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:44250
+2023-05-05 00:39:12,089 - distributed.utils_perf - INFO - full garbage collection released 172.54 MiB from 138 reference cycles (threshold: 9.54 MiB)
+2023-05-05 00:54:36,847 - distributed.core - INFO - Removing comms to tcp://172.16.3.62:34844
+slurmstepd: error: *** JOB 3083169 ON pn022 CANCELLED AT 2023-05-05T00:54:36 ***
+2023-05-05 00:54:36,853 - distributed.core - INFO - Removing comms to tcp://172.16.3.61:33912

@@ -1,0 +1,20 @@
+2023-05-02 22:58:28,668 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.83:42398'
+2023-05-02 22:58:29,061 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-f7k7t4mi', purging
+2023-05-02 22:58:31,289 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.83:34001
+2023-05-02 22:58:31,289 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.83:34001
+2023-05-02 22:58:31,289 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2023-05-02 22:58:31,289 - distributed.worker - INFO -          dashboard at:          172.16.3.83:43864
+2023-05-02 22:58:31,289 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.55:46537
+2023-05-02 22:58:31,289 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:58:31,289 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 22:58:31,289 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 22:58:31,289 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-u4n77ho5
+2023-05-02 22:58:31,290 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:58:31,295 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.55:46537
+2023-05-02 22:58:31,295 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:58:31,296 - distributed.core - INFO - Starting established connection to tcp://172.16.3.55:46537
+2023-05-02 23:00:56,372 - distributed.core - INFO - Event loop was unresponsive in Worker for 17.18s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-02 23:03:37,237 - distributed.core - INFO - Removing comms to tcp://172.16.3.93:35030
+2023-05-02 23:03:37,243 - distributed.core - INFO - Removing comms to tcp://172.16.3.63:39165
+2023-05-02 23:03:37,257 - distributed.core - INFO - Removing comms to tcp://172.16.3.53:45005
+slurmstepd: error: *** JOB 3081857 ON pn033 CANCELLED AT 2023-05-02T23:03:37 ***

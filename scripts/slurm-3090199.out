@@ -1,0 +1,25 @@
+2023-05-10 21:30:14,752 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.128:46768'
+2023-05-10 21:30:16,454 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.128:36174
+2023-05-10 21:30:16,454 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.128:36174
+2023-05-10 21:30:16,454 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2023-05-10 21:30:16,455 - distributed.worker - INFO -          dashboard at:         172.16.3.128:33604
+2023-05-10 21:30:16,455 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:34946
+2023-05-10 21:30:16,455 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 21:30:16,455 - distributed.worker - INFO -               Threads:                         36
+2023-05-10 21:30:16,455 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-10 21:30:16,455 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-gyimau1g
+2023-05-10 21:30:16,455 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 21:30:16,459 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:34946
+2023-05-10 21:30:16,459 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 21:30:16,460 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:34946
+/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in divide
+  return func(*(_execute_task(a, cache) for a in args))
+2023-05-10 21:33:03,996 - distributed.utils_perf - INFO - full garbage collection released 226.15 MiB from 203 reference cycles (threshold: 9.54 MiB)
+2023-05-10 21:34:38,277 - distributed.utils_perf - INFO - full garbage collection released 633.75 MiB from 177 reference cycles (threshold: 9.54 MiB)
+2023-05-10 21:35:43,039 - distributed.utils_perf - INFO - full garbage collection released 397.54 MiB from 242 reference cycles (threshold: 9.54 MiB)
+2023-05-10 21:37:09,340 - distributed.utils_perf - INFO - full garbage collection released 445.63 MiB from 244 reference cycles (threshold: 9.54 MiB)
+2023-05-10 21:38:24,054 - distributed.utils_perf - INFO - full garbage collection released 233.51 MiB from 181 reference cycles (threshold: 9.54 MiB)
+2023-05-10 21:41:27,664 - distributed.utils_perf - INFO - full garbage collection released 429.84 MiB from 263 reference cycles (threshold: 9.54 MiB)
+2023-05-10 21:43:13,365 - distributed.utils_perf - INFO - full garbage collection released 383.03 MiB from 238 reference cycles (threshold: 9.54 MiB)
+2023-05-10 21:48:22,426 - distributed.utils_perf - INFO - full garbage collection released 158.78 MiB from 333 reference cycles (threshold: 9.54 MiB)
+slurmstepd: error: *** JOB 3090199 ON pn078 CANCELLED AT 2023-05-10T21:51:16 ***

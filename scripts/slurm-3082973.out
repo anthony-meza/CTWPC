@@ -1,0 +1,35 @@
+2023-05-04 15:19:18,162 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.83:36067'
+2023-05-04 15:19:27,281 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.83:42714
+2023-05-04 15:19:27,281 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.83:42714
+2023-05-04 15:19:27,281 - distributed.worker - INFO -           Worker name:            SLURMCluster-10
+2023-05-04 15:19:27,281 - distributed.worker - INFO -          dashboard at:          172.16.3.83:42745
+2023-05-04 15:19:27,281 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:43862
+2023-05-04 15:19:27,281 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 15:19:27,281 - distributed.worker - INFO -               Threads:                         36
+2023-05-04 15:19:27,281 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-04 15:19:27,281 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-im70nfkd
+2023-05-04 15:19:27,281 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 15:19:27,288 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:43862
+2023-05-04 15:19:27,289 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 15:19:27,289 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:43862
+2023-05-04 15:24:44,860 - distributed.core - INFO - Removing comms to tcp://172.16.3.185:41432
+2023-05-04 16:25:43,283 - distributed.core - INFO - Removing comms to tcp://172.16.3.65:37409
+2023-05-04 16:25:43,289 - distributed.core - INFO - Removing comms to tcp://172.16.3.67:44799
+2023-05-04 16:25:43,289 - distributed.core - INFO - Removing comms to tcp://172.16.3.63:33229
+2023-05-04 16:25:43,296 - distributed.core - INFO - Removing comms to tcp://172.16.3.68:32915
+2023-05-04 16:25:43,327 - distributed.core - INFO - Removing comms to tcp://172.16.3.64:40969
+2023-05-04 16:25:43,340 - distributed.core - INFO - Removing comms to tcp://172.16.3.70:38567
+2023-05-04 16:25:43,345 - distributed.core - INFO - Removing comms to tcp://172.16.3.69:44899
+2023-05-04 16:43:17,888 - distributed.utils_perf - INFO - full garbage collection released 839.79 MiB from 100 reference cycles (threshold: 9.54 MiB)
+2023-05-04 16:44:04,550 - distributed.utils_perf - INFO - full garbage collection released 4.28 GiB from 1040 reference cycles (threshold: 9.54 MiB)
+2023-05-04 16:44:13,367 - distributed.utils_perf - INFO - full garbage collection released 1.30 GiB from 1473 reference cycles (threshold: 9.54 MiB)
+2023-05-04 16:44:17,441 - distributed.utils_perf - INFO - full garbage collection released 4.19 GiB from 869 reference cycles (threshold: 9.54 MiB)
+2023-05-04 16:44:34,621 - distributed.utils_perf - INFO - full garbage collection released 1.79 GiB from 757 reference cycles (threshold: 9.54 MiB)
+2023-05-04 16:44:38,990 - distributed.utils_perf - INFO - full garbage collection released 13.11 MiB from 718 reference cycles (threshold: 9.54 MiB)
+2023-05-04 16:44:59,008 - distributed.utils_perf - INFO - full garbage collection released 7.18 GiB from 958 reference cycles (threshold: 9.54 MiB)
+2023-05-04 16:45:16,432 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.78s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 16:45:27,976 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.04s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 16:45:43,771 - distributed.core - INFO - Event loop was unresponsive in Worker for 22.79s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 16:46:02,377 - distributed.core - INFO - Event loop was unresponsive in Worker for 18.61s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 16:46:26,981 - distributed.core - INFO - Event loop was unresponsive in Worker for 23.31s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+slurmstepd: error: *** JOB 3082973 ON pn033 CANCELLED AT 2023-05-04T16:46:51 ***

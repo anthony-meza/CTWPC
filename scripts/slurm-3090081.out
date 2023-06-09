@@ -1,0 +1,1376 @@
+2023-05-10 21:15:25,382 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.127:44777'
+2023-05-10 21:15:31,415 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.127:44596
+2023-05-10 21:15:31,416 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.127:44596
+2023-05-10 21:15:31,416 - distributed.worker - INFO -           Worker name:             SLURMCluster-1
+2023-05-10 21:15:31,416 - distributed.worker - INFO -          dashboard at:         172.16.3.127:32988
+2023-05-10 21:15:31,416 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:42322
+2023-05-10 21:15:31,416 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 21:15:31,416 - distributed.worker - INFO -               Threads:                         36
+2023-05-10 21:15:31,416 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-10 21:15:31,416 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-ct4rdkwj
+2023-05-10 21:15:31,416 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 21:15:31,427 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:42322
+2023-05-10 21:15:31,427 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 21:15:31,428 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:42322
+/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in divide
+  return func(*(_execute_task(a, cache) for a in args))
+2023-05-10 21:17:45,445 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.77s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-10 21:18:32,999 - distributed.utils_perf - INFO - full garbage collection released 268.54 MiB from 40 reference cycles (threshold: 9.54 MiB)
+2023-05-10 21:18:32,999 - distributed.worker.memory - WARNING - Worker is at 87% memory usage. Pausing worker.  Process memory: 81.25 GiB -- Worker memory limit: 93.13 GiB
+2023-05-10 21:18:41,464 - distributed.nanny.memory - WARNING - Worker tcp://172.16.3.127:44596 (pid=273591) exceeded 95% memory budget. Restarting...
+2023-05-10 21:18:50,886 - distributed.nanny - INFO - Worker process 273591 was killed by signal 15
+2023-05-10 21:18:51,383 - distributed.nanny - WARNING - Restarting worker
+2023-05-10 21:19:02,972 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.127:46815
+2023-05-10 21:19:02,972 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.127:46815
+2023-05-10 21:19:02,972 - distributed.worker - INFO -           Worker name:             SLURMCluster-1
+2023-05-10 21:19:02,972 - distributed.worker - INFO -          dashboard at:         172.16.3.127:38941
+2023-05-10 21:19:02,972 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:42322
+2023-05-10 21:19:02,972 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 21:19:02,972 - distributed.worker - INFO -               Threads:                         36
+2023-05-10 21:19:02,972 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-10 21:19:02,972 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-shsmh7j8
+2023-05-10 21:19:02,972 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 21:19:02,988 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:42322
+2023-05-10 21:19:02,988 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 21:19:02,989 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:42322
+/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in divide
+  return func(*(_execute_task(a, cache) for a in args))
+2023-05-10 21:24:14,408 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 25, 6, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,445 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 25, 13, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,448 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 6, 16, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,451 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 14, 2, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,453 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 14, 13, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,455 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 11, 9, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,457 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 25, 12, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,458 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 11, 16, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,461 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 26, 0, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,463 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 15, 2, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,464 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 3, 2, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,466 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 13, 9, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,468 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 3, 3, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,470 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 3, 14, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,471 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 25, 11, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,473 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 21, 8, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,475 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 26, 14, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,476 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 6, 15, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,478 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 26, 2, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,479 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 2, 8, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,480 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 7, 16, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,482 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 3, 9, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,483 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 6, 17, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,484 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 18, 5, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,487 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 3, 7, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,489 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 14, 14, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,491 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 25, 17, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,492 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 22, 3, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,494 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 10, 3, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,496 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 6, 8, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,497 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 9, 16, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,499 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 2, 10, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,501 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 7, 4, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,502 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 2, 13, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,505 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 22, 9, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:14,506 - distributed.worker - ERROR - Exception during execution of task ('open_dataset-getitem-333101a37a1bcad799afae0e7ff912a9', 6, 14, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: 'original-open_dataset-5b47ba4e2cfb85a1bbe9ced7c81b7504thetao-258b2fcaa88d6456558b9d08d27fbd2c'
+2023-05-10 21:24:16,859 - distributed.core - INFO - Connection to tcp://172.16.3.56:42322 has been closed.
+2023-05-10 21:24:16,859 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.127:46815. Reason: worker-handle-scheduler-connection-broken
+2023-05-10 21:24:16,868 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.127:44777'. Reason: worker-handle-scheduler-connection-broken
+2023-05-10 21:24:16,878 - distributed.nanny - INFO - Worker closed
+2023-05-10 21:24:18,881 - distributed.nanny - ERROR - Worker process died unexpectedly
+2023-05-10 21:24:19,154 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.127:44777'. Reason: nanny-close-gracefully
+2023-05-10 21:24:19,156 - distributed.dask_worker - INFO - End worker

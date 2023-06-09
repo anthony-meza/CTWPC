@@ -1,0 +1,33 @@
+2023-05-10 08:37:53,993 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.129:39289'
+2023-05-10 08:38:01,991 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.129:43962
+2023-05-10 08:38:01,991 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.129:43962
+2023-05-10 08:38:01,991 - distributed.worker - INFO -           Worker name:             SLURMCluster-4
+2023-05-10 08:38:01,991 - distributed.worker - INFO -          dashboard at:         172.16.3.129:33819
+2023-05-10 08:38:01,991 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:37266
+2023-05-10 08:38:01,991 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 08:38:01,992 - distributed.worker - INFO -               Threads:                         30
+2023-05-10 08:38:01,992 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-10 08:38:01,992 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-dhbis7iz
+2023-05-10 08:38:01,992 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 08:38:02,000 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:37266
+2023-05-10 08:38:02,000 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 08:38:02,001 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:37266
+2023-05-10 08:42:23,513 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 33.16 GiB -- Worker memory limit: 46.57 GiB
+2023-05-10 08:42:24,335 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 37.59 GiB -- Worker memory limit: 46.57 GiB
+2023-05-10 08:42:25,928 - distributed.nanny.memory - WARNING - Worker tcp://172.16.3.129:43962 (pid=232792) exceeded 95% memory budget. Restarting...
+2023-05-10 08:42:30,961 - distributed.nanny - INFO - Worker process 232792 was killed by signal 15
+2023-05-10 08:42:30,970 - distributed.nanny - WARNING - Restarting worker
+2023-05-10 08:42:42,406 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.129:37538
+2023-05-10 08:42:42,407 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.129:37538
+2023-05-10 08:42:42,407 - distributed.worker - INFO -           Worker name:             SLURMCluster-4
+2023-05-10 08:42:42,407 - distributed.worker - INFO -          dashboard at:         172.16.3.129:33256
+2023-05-10 08:42:42,407 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:37266
+2023-05-10 08:42:42,407 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 08:42:42,407 - distributed.worker - INFO -               Threads:                         30
+2023-05-10 08:42:42,407 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-10 08:42:42,407 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-lck31yho
+2023-05-10 08:42:42,407 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 08:42:48,944 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:37266
+2023-05-10 08:42:48,944 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 08:42:48,945 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:37266
+slurmstepd: error: *** JOB 3085333 ON pn079 CANCELLED AT 2023-05-10T08:42:48 ***

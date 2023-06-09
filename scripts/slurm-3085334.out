@@ -1,0 +1,60 @@
+2023-05-10 08:37:53,993 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.185:39067'
+2023-05-10 08:38:01,991 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.185:33858
+2023-05-10 08:38:01,991 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.185:33858
+2023-05-10 08:38:01,991 - distributed.worker - INFO -           Worker name:             SLURMCluster-2
+2023-05-10 08:38:01,991 - distributed.worker - INFO -          dashboard at:         172.16.3.185:35905
+2023-05-10 08:38:01,992 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:37266
+2023-05-10 08:38:01,992 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 08:38:01,992 - distributed.worker - INFO -               Threads:                         30
+2023-05-10 08:38:01,992 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-10 08:38:01,992 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-2idsb3no
+2023-05-10 08:38:01,992 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 08:38:01,998 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:37266
+2023-05-10 08:38:01,998 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 08:38:01,998 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:37266
+2023-05-10 08:42:22,808 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 32.83 GiB -- Worker memory limit: 46.57 GiB
+2023-05-10 08:42:23,736 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 37.47 GiB -- Worker memory limit: 46.57 GiB
+2023-05-10 08:42:24,427 - distributed.nanny.memory - WARNING - Worker tcp://172.16.3.185:33858 (pid=271366) exceeded 95% memory budget. Restarting...
+2023-05-10 08:42:29,859 - distributed.nanny - INFO - Worker process 271366 was killed by signal 15
+2023-05-10 08:42:29,862 - distributed.nanny - WARNING - Restarting worker
+2023-05-10 08:42:36,436 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.185:38899
+2023-05-10 08:42:36,436 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.185:38899
+2023-05-10 08:42:36,436 - distributed.worker - INFO -           Worker name:             SLURMCluster-2
+2023-05-10 08:42:36,436 - distributed.worker - INFO -          dashboard at:         172.16.3.185:33622
+2023-05-10 08:42:36,436 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:37266
+2023-05-10 08:42:36,436 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 08:42:36,436 - distributed.worker - INFO -               Threads:                         30
+2023-05-10 08:42:36,437 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-10 08:42:36,437 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-27_dzsm3
+2023-05-10 08:42:36,437 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 08:42:36,442 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:37266
+2023-05-10 08:42:36,442 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 08:42:36,443 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:37266
+2023-05-10 08:42:37,964 - distributed.core - INFO - Removing comms to tcp://172.16.3.102:42970
+2023-05-10 08:42:38,385 - distributed.core - INFO - Removing comms to tcp://172.16.3.159:46738
+2023-05-10 08:42:38,986 - distributed.core - INFO - Removing comms to tcp://172.16.3.106:33412
+2023-05-10 08:42:40,277 - distributed.core - INFO - Removing comms to tcp://172.16.3.168:37837
+2023-05-10 08:42:40,278 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.168:37837
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2060, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2895, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1028, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.185:52309 remote=tcp://172.16.3.168:37837>: Stream is closed
+2023-05-10 08:42:45,778 - distributed.core - INFO - Removing comms to tcp://172.16.3.101:33924
+2023-05-10 08:42:48,971 - distributed.core - INFO - Removing comms to tcp://172.16.3.128:37976
+2023-05-10 08:42:48,984 - distributed.core - INFO - Removing comms to tcp://172.16.3.129:37538
+slurmstepd: error: *** JOB 3085334 ON pn135 CANCELLED AT 2023-05-10T08:42:50 ***

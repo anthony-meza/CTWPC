@@ -1,0 +1,80 @@
+2023-05-02 23:53:30,608 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.53:40324'
+2023-05-02 23:53:35,862 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.53:43183
+2023-05-02 23:53:35,862 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.53:43183
+2023-05-02 23:53:35,862 - distributed.worker - INFO -           Worker name:             SLURMCluster-2
+2023-05-02 23:53:35,862 - distributed.worker - INFO -          dashboard at:          172.16.3.53:45005
+2023-05-02 23:53:35,862 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.60:40715
+2023-05-02 23:53:35,862 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 23:53:35,862 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 23:53:35,862 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 23:53:35,862 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-0fzqpn0n
+2023-05-02 23:53:35,862 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 23:53:36,179 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.60:40715
+2023-05-02 23:53:36,179 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 23:53:36,179 - distributed.core - INFO - Starting established connection to tcp://172.16.3.60:40715
+2023-05-03 00:02:48,488 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-03 00:02:51,068 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-03 00:02:54,304 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-03 00:02:59,212 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-03 00:03:02,621 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-03 00:03:07,187 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-03 00:03:09,227 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-03 00:03:14,861 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-03 00:03:16,732 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:03:21,421 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:03:23,590 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:03:28,633 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:03:34,270 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:03:35,632 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:03:37,263 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:03:42,814 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:03:44,586 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:03:46,653 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:03:50,957 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:03:57,545 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:03:59,497 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:04:04,211 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:04:07,347 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:04:11,399 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:04:13,785 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:04:20,073 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:04:23,187 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:04:30,046 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:04:34,185 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:04:38,594 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:04:41,078 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:04:45,428 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:04:53,180 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:04:56,322 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-03 00:05:01,541 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:05:07,190 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:05:09,632 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:05:16,399 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:05:20,512 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:05:26,593 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:05:28,561 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:05:36,625 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:05:40,702 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:05:44,217 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:05:50,896 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:05:52,585 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:05:55,369 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:05:59,701 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:06:07,888 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:06:12,871 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:06:17,892 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:06:21,120 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:06:23,168 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:06:30,474 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:06:38,165 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:06:40,803 - distributed.utils_perf - WARNING - full garbage collections took 13% CPU time recently (threshold: 10%)
+2023-05-03 00:06:45,681 - distributed.utils_perf - WARNING - full garbage collections took 13% CPU time recently (threshold: 10%)
+2023-05-03 00:06:58,775 - distributed.utils_perf - WARNING - full garbage collections took 13% CPU time recently (threshold: 10%)
+2023-05-03 00:07:08,351 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:07:10,065 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:07:12,070 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:07:18,860 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:07:20,352 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-03 00:07:54,891 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-03 00:35:20,409 - distributed.core - INFO - Removing comms to tcp://172.16.3.90:35092
+slurmstepd: error: *** JOB 3081947 ON pn003 CANCELLED AT 2023-05-03T01:53:36 DUE TO TIME LIMIT ***

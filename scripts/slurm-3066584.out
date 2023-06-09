@@ -1,0 +1,30 @@
+2023-04-18 16:32:02,972 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.185:33127'
+2023-04-18 16:32:03,365 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-7kmnhg3e', purging
+2023-04-18 16:32:03,915 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.185:45687
+2023-04-18 16:32:03,915 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.185:45687
+2023-04-18 16:32:03,915 - distributed.worker - INFO -           Worker name:             SLURMCluster-7
+2023-04-18 16:32:03,915 - distributed.worker - INFO -          dashboard at:         172.16.3.185:36365
+2023-04-18 16:32:03,915 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.91:39170
+2023-04-18 16:32:03,915 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:32:03,915 - distributed.worker - INFO -               Threads:                         30
+2023-04-18 16:32:03,915 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-04-18 16:32:03,915 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-8crzy7wr
+2023-04-18 16:32:03,915 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:32:03,920 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.91:39170
+2023-04-18 16:32:03,920 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:32:03,921 - distributed.core - INFO - Starting established connection to tcp://172.16.3.91:39170
+/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/xarray/core/common.py:965: FutureWarning: 'base' in .resample() and in Grouper() is deprecated.
+The new arguments that you should use are 'offset' or 'origin'.
+
+>>> df.resample(freq="3s", base=2)
+
+becomes:
+
+>>> df.resample(freq="3s", offset="2s")
+
+  grouper = pd.Grouper(
+2023-04-18 16:33:22,375 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.67s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:36:03,642 - distributed.core - INFO - Event loop was unresponsive in Worker for 10.32s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:36:23,270 - distributed.core - INFO - Event loop was unresponsive in Worker for 19.63s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:36:36,821 - distributed.core - INFO - Event loop was unresponsive in Worker for 13.55s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+slurmstepd: error: *** JOB 3066584 ON pn135 CANCELLED AT 2023-04-18T16:36:56 ***

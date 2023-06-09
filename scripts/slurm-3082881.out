@@ -1,0 +1,54 @@
+2023-05-04 10:56:23,344 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.103:46041'
+2023-05-04 10:56:27,727 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.103:35471
+2023-05-04 10:56:27,727 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.103:35471
+2023-05-04 10:56:27,727 - distributed.worker - INFO -           Worker name:            SLURMCluster-15
+2023-05-04 10:56:27,727 - distributed.worker - INFO -          dashboard at:         172.16.3.103:39865
+2023-05-04 10:56:27,727 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.87:40251
+2023-05-04 10:56:27,727 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 10:56:27,727 - distributed.worker - INFO -               Threads:                         36
+2023-05-04 10:56:27,728 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-04 10:56:27,728 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-1ivudlv2
+2023-05-04 10:56:27,728 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 10:56:27,734 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.87:40251
+2023-05-04 10:56:27,734 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 10:56:27,734 - distributed.core - INFO - Starting established connection to tcp://172.16.3.87:40251
+2023-05-04 11:06:10,507 - distributed.utils_perf - INFO - full garbage collection released 59.00 MiB from 343 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:06:31,672 - distributed.utils_perf - INFO - full garbage collection released 14.20 MiB from 220 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:07:14,903 - distributed.utils_perf - INFO - full garbage collection released 21.95 MiB from 331 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:07:57,056 - distributed.utils_perf - INFO - full garbage collection released 36.72 MiB from 493 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:08:05,072 - distributed.utils_perf - INFO - full garbage collection released 37.14 MiB from 438 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:09:03,275 - distributed.utils_perf - INFO - full garbage collection released 49.41 MiB from 558 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:10:07,883 - distributed.utils_perf - INFO - full garbage collection released 35.13 MiB from 729 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:10:40,560 - distributed.utils_perf - INFO - full garbage collection released 11.39 MiB from 615 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:11:01,646 - distributed.utils_perf - INFO - full garbage collection released 13.76 MiB from 988 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:12:28,164 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:12:40,871 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:12:55,175 - distributed.utils_perf - INFO - full garbage collection released 12.76 MiB from 1081 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:13:20,525 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:13:20,526 - distributed.utils_perf - INFO - full garbage collection released 28.75 MiB from 1042 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:13:34,354 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:13:50,035 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:14:05,423 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:14:23,598 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:14:23,599 - distributed.utils_perf - INFO - full garbage collection released 23.88 MiB from 974 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:14:43,412 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:15:01,639 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:15:21,412 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:15:41,035 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:16:00,389 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:16:00,389 - distributed.utils_perf - INFO - full garbage collection released 54.28 MiB from 1416 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:16:21,968 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:16:43,657 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:17:07,321 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:17:29,436 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:17:29,439 - distributed.utils_perf - INFO - full garbage collection released 17.43 MiB from 1571 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:18:16,303 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:18:37,549 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:18:37,550 - distributed.utils_perf - INFO - full garbage collection released 21.70 MiB from 1551 reference cycles (threshold: 9.54 MiB)
+2023-05-04 11:19:02,316 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:19:27,317 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:19:53,361 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:20:17,362 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2023-05-04 11:20:17,364 - distributed.utils_perf - INFO - full garbage collection released 71.61 MiB from 1772 reference cycles (threshold: 9.54 MiB)
+2023-05-04 12:56:13,881 - distributed.core - INFO - Removing comms to tcp://172.16.3.104:45578
+slurmstepd: error: *** JOB 3082881 ON pn053 CANCELLED AT 2023-05-04T12:56:43 DUE TO TIME LIMIT ***

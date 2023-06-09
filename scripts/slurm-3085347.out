@@ -1,0 +1,20 @@
+2023-05-10 09:33:14,992 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.159:46439'
+2023-05-10 09:33:15,385 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-_8099jzl', purging
+/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/contextlib.py:142: UserWarning: Creating scratch directories is taking a surprisingly long time. (2.27s) This is often due to running workers on a network file system. Consider specifying a local-directory to point workers to write scratch data to a local disk.
+  next(self.gen)
+2023-05-10 09:33:19,708 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.159:34256
+2023-05-10 09:33:19,708 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.159:34256
+2023-05-10 09:33:19,708 - distributed.worker - INFO -           Worker name:             SLURMCluster-7
+2023-05-10 09:33:19,708 - distributed.worker - INFO -          dashboard at:         172.16.3.159:38187
+2023-05-10 09:33:19,708 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:33291
+2023-05-10 09:33:19,708 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 09:33:19,708 - distributed.worker - INFO -               Threads:                         30
+2023-05-10 09:33:19,708 - distributed.worker - INFO -                Memory:                 139.70 GiB
+2023-05-10 09:33:19,709 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-2x5znrxz
+2023-05-10 09:33:19,709 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 09:33:19,714 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:33291
+2023-05-10 09:33:19,714 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 09:33:19,714 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:33291
+2023-05-10 10:14:05,534 - distributed.core - INFO - Removing comms to tcp://172.16.3.185:36490
+2023-05-10 10:14:05,546 - distributed.core - INFO - Removing comms to tcp://172.16.3.129:37884
+slurmstepd: error: *** JOB 3085347 ON pn109 CANCELLED AT 2023-05-10T10:14:05 ***

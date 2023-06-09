@@ -1,0 +1,258 @@
+2023-04-18 10:50:21,230 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.67:40025'
+2023-04-18 10:50:30,554 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.67:39594
+2023-04-18 10:50:30,554 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.67:39594
+2023-04-18 10:50:30,554 - distributed.worker - INFO -           Worker name:             SLURMCluster-1
+2023-04-18 10:50:30,554 - distributed.worker - INFO -          dashboard at:          172.16.3.67:38305
+2023-04-18 10:50:30,554 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.91:40166
+2023-04-18 10:50:30,554 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 10:50:30,554 - distributed.worker - INFO -               Threads:                         36
+2023-04-18 10:50:30,554 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-04-18 10:50:30,554 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-gat61ic8
+2023-04-18 10:50:30,554 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 10:50:30,561 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.91:40166
+2023-04-18 10:50:30,561 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 10:50:30,561 - distributed.core - INFO - Starting established connection to tcp://172.16.3.91:40166
+2023-04-18 10:58:05,016 - distributed.core - INFO - Event loop was unresponsive in Worker for 8.05s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 11:58:24,265 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.31s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:04:40,080 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.74s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:04:44,743 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.48s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:04:59,385 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.28s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:05:06,187 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.33s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:05:19,601 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.27s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:05:27,723 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.31s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:05:34,470 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.27s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:05:38,786 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.32s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:06:44,564 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.79s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:07:29,200 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.62s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:07:34,718 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.54s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:07:41,044 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.12s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:07:48,470 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.63s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:07:57,933 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.64s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:09:25,436 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.28s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:10:19,527 - distributed.core - INFO - Event loop was unresponsive in Worker for 8.57s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:10:30,259 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.38s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:10:44,446 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.17s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:10:52,201 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.18s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:12:40,889 - distributed.core - INFO - Event loop was unresponsive in Worker for 16.89s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:14:13,223 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.100:46427
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 867, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 1140, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 2051, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 2840, in get_data_from_worker
+    return await retry_operation(_get_data, operation="get_data_from_worker")
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/utils_comm.py", line 386, in retry_operation
+    return await retry(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/utils_comm.py", line 371, in retry
+    return await coro()
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 2820, in _get_data
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/core.py", line 928, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.67:54721 remote=tcp://172.16.3.100:46427>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-04-18 12:14:27,397 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.06s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:16:01,511 - distributed.core - INFO - Event loop was unresponsive in Worker for 92.45s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:18:02,058 - distributed.core - INFO - Event loop was unresponsive in Nanny for 7.34s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 12:19:38,194 - distributed.core - INFO - Event loop was unresponsive in Worker for 216.69s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/protocol/serialize.py", line 491, in merge_and_deserialize
+    merged = merge_memoryviews(subframes)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/protocol/utils.py", line 116, in merge_memoryviews
+    raise TypeError(f"Expected memoryview; got {type(first)}")
+TypeError: Expected memoryview; got <class 'bytes'>
+
+During handling of the above exception, another exception occurred:
+
+SystemError: deallocated bytearray object has exported buffers
+2023-04-18 12:22:18,081 - distributed.worker - ERROR - 
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/protocol/serialize.py", line 491, in merge_and_deserialize
+    merged = merge_memoryviews(subframes)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/protocol/utils.py", line 116, in merge_memoryviews
+    raise TypeError(f"Expected memoryview; got {type(first)}")
+TypeError: Expected memoryview; got <class 'bytes'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 192, in wrapper
+    return method(self, *args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 1928, in handle_stimulus
+    super().handle_stimulus(*stims)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 3627, in handle_stimulus
+    instructions = self.state.handle_stimulus(*stims)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1331, in handle_stimulus
+    instructions += self._transitions(recs, stimulus_id=stim.stimulus_id)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 2691, in _transitions
+    process_recs(recommendations.copy())
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 2685, in process_recs
+    a_recs, a_instructions = self._transition(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 2603, in _transition
+    recs, instructions = func(self, ts, *args, stimulus_id=stimulus_id)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1978, in _transition_memory_released
+    recs, instructions = self._transition_generic_released(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1908, in _transition_generic_released
+    self._purge_state(ts)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1460, in _purge_state
+    self.data.pop(key, None)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/_collections_abc.py", line 957, in pop
+    value = self[key]
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/zict/buffer.py", line 106, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/zict/buffer.py", line 92, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/zict/cache.py", line 55, in __getitem__
+    value = self.data[key]
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/zict/func.py", line 55, in __getitem__
+    return self.load(self.d[key])  # type: ignore
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/protocol/serialize.py", line 670, in deserialize_bytes
+    return merge_and_deserialize(header, frames)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/protocol/serialize.py", line 493, in merge_and_deserialize
+    merged = bytearray().join(subframes)
+MemoryError
+2023-04-18 12:22:18,089 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.67:39594. Reason: worker-handle-scheduler-connection-broken
+2023-04-18 12:22:23,809 - distributed.batched - INFO - Batched Comm Closed <TCP (closed) Worker->Scheduler local=tcp://172.16.3.67:52233 remote=tcp://172.16.3.91:40166>
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/batched.py", line 115, in _background_send
+    nbytes = yield coro
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/gen.py", line 762, in run
+    value = future.result()
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 269, in write
+    raise CommClosedError()
+distributed.comm.core.CommClosedError
+2023-04-18 12:22:23,829 - distributed.comm.tcp - INFO - Connection from tcp://172.16.3.91:46748 closed before handshake completed
+2023-04-18 12:22:23,829 - distributed.comm.tcp - INFO - Connection from tcp://172.16.3.91:46764 closed before handshake completed
+2023-04-18 12:22:23,829 - distributed.comm.tcp - INFO - Connection from tcp://172.16.3.91:46798 closed before handshake completed
+2023-04-18 12:22:23,829 - distributed.comm.tcp - INFO - Connection from tcp://172.16.3.91:46826 closed before handshake completed
+2023-04-18 12:22:23,918 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.67:40025'. Reason: worker-handle-scheduler-connection-broken
+2023-04-18 12:22:24,397 - distributed.nanny - INFO - Worker closed
+2023-04-18 12:22:24,398 - tornado.application - ERROR - Exception in callback functools.partial(<bound method IOLoop._discard_future_result of <tornado.platform.asyncio.AsyncIOMainLoop object at 0x2aaab75dcbb0>>, <Task finished name='Task-6' coro=<Worker.handle_scheduler() done, defined at /vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py:176> exception=MemoryError()>)
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/protocol/serialize.py", line 491, in merge_and_deserialize
+    merged = merge_memoryviews(subframes)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/protocol/utils.py", line 116, in merge_memoryviews
+    raise TypeError(f"Expected memoryview; got {type(first)}")
+TypeError: Expected memoryview; got <class 'bytes'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/ioloop.py", line 765, in _discard_future_result
+    future.result()
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 179, in wrapper
+    return await method(self, *args, **kwargs)  # type: ignore
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 1261, in handle_scheduler
+    await self.handle_stream(comm)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/core.py", line 855, in handle_stream
+    handler(**merge(extra, msg))
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 1903, in _
+    self.handle_stimulus(event)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 192, in wrapper
+    return method(self, *args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 1928, in handle_stimulus
+    super().handle_stimulus(*stims)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 3627, in handle_stimulus
+    instructions = self.state.handle_stimulus(*stims)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1331, in handle_stimulus
+    instructions += self._transitions(recs, stimulus_id=stim.stimulus_id)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 2691, in _transitions
+    process_recs(recommendations.copy())
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 2685, in process_recs
+    a_recs, a_instructions = self._transition(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 2603, in _transition
+    recs, instructions = func(self, ts, *args, stimulus_id=stimulus_id)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1978, in _transition_memory_released
+    recs, instructions = self._transition_generic_released(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1908, in _transition_generic_released
+    self._purge_state(ts)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1460, in _purge_state
+    self.data.pop(key, None)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/_collections_abc.py", line 957, in pop
+    value = self[key]
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/zict/buffer.py", line 106, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/zict/buffer.py", line 92, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/zict/cache.py", line 55, in __getitem__
+    value = self.data[key]
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/zict/func.py", line 55, in __getitem__
+    return self.load(self.d[key])  # type: ignore
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/protocol/serialize.py", line 670, in deserialize_bytes
+    return merge_and_deserialize(header, frames)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/protocol/serialize.py", line 493, in merge_and_deserialize
+    merged = bytearray().join(subframes)
+MemoryError
+ERROR:asyncio:unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-6' coro=<Worker.handle_scheduler() done, defined at /vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py:176> exception=MemoryError()>
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/protocol/serialize.py", line 491, in merge_and_deserialize
+    merged = merge_memoryviews(subframes)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/protocol/utils.py", line 116, in merge_memoryviews
+    raise TypeError(f"Expected memoryview; got {type(first)}")
+TypeError: Expected memoryview; got <class 'bytes'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/ioloop.py", line 741, in _run_callback
+    ret = callback()
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/ioloop.py", line 765, in _discard_future_result
+    future.result()
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 179, in wrapper
+    return await method(self, *args, **kwargs)  # type: ignore
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 1261, in handle_scheduler
+    await self.handle_stream(comm)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/core.py", line 855, in handle_stream
+    handler(**merge(extra, msg))
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 1903, in _
+    self.handle_stimulus(event)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 192, in wrapper
+    return method(self, *args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 1928, in handle_stimulus
+    super().handle_stimulus(*stims)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 3627, in handle_stimulus
+    instructions = self.state.handle_stimulus(*stims)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1331, in handle_stimulus
+    instructions += self._transitions(recs, stimulus_id=stim.stimulus_id)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 2691, in _transitions
+    process_recs(recommendations.copy())
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 2685, in process_recs
+    a_recs, a_instructions = self._transition(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 2603, in _transition
+    recs, instructions = func(self, ts, *args, stimulus_id=stimulus_id)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1978, in _transition_memory_released
+    recs, instructions = self._transition_generic_released(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1908, in _transition_generic_released
+    self._purge_state(ts)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1460, in _purge_state
+    self.data.pop(key, None)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/_collections_abc.py", line 957, in pop
+    value = self[key]
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/zict/buffer.py", line 106, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/zict/buffer.py", line 92, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/zict/cache.py", line 55, in __getitem__
+    value = self.data[key]
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/zict/func.py", line 55, in __getitem__
+    return self.load(self.d[key])  # type: ignore
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/protocol/serialize.py", line 670, in deserialize_bytes
+    return merge_and_deserialize(header, frames)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/protocol/serialize.py", line 493, in merge_and_deserialize
+    merged = bytearray().join(subframes)
+MemoryError
+slurmstepd: error: *** JOB 3065911 ON pn017 CANCELLED AT 2023-04-18T12:22:33 ***

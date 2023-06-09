@@ -1,0 +1,2397 @@
+2023-05-09 21:15:12,512 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.81:34193'
+2023-05-09 21:15:13,911 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.81:45931
+2023-05-09 21:15:13,911 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.81:45931
+2023-05-09 21:15:13,911 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2023-05-09 21:15:13,911 - distributed.worker - INFO -          dashboard at:          172.16.3.81:34267
+2023-05-09 21:15:13,911 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:38364
+2023-05-09 21:15:13,911 - distributed.worker - INFO - -------------------------------------------------
+2023-05-09 21:15:13,911 - distributed.worker - INFO -               Threads:                         36
+2023-05-09 21:15:13,911 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-09 21:15:13,911 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-qa_6ucvg
+2023-05-09 21:15:13,912 - distributed.worker - INFO - -------------------------------------------------
+2023-05-09 21:15:13,917 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:38364
+2023-05-09 21:15:13,917 - distributed.worker - INFO - -------------------------------------------------
+2023-05-09 21:15:13,917 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:38364
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 1:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 648 in H5D__write(): unable to initialize storage
+    major: Dataset
+    minor: Unable to initialize object
+  #006: H5Dint.c line 2346 in H5D__alloc_storage(): unable to initialize dataset with fill value
+    major: Dataset
+    minor: Unable to initialize object
+  #007: H5Dint.c line 2404 in H5D__init_storage(): unable to allocate all chunks of dataset
+    major: Dataset
+    minor: Unable to initialize object
+  #008: H5Dcontig.c line 312 in H5D__contig_fill(): unable to write fill value to dataset
+    major: Dataset
+    minor: Unable to initialize object
+  #009: H5Dcontig.c line 958 in H5D__contig_write_one(): vector write failed
+    major: Low-level I/O
+    minor: Write failed
+  #010: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #011: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #012: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #013: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #014: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #015: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #016: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+    major: Low-level I/O
+    minor: Write failed
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 2:
+    major: Dataset
+    major: Dataset
+2023-05-09 21:16:45,468 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-703489acd73f3c302eb2ca88b2a9dde6', 19, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-4a17df1f-189d-41ca-a889-7c4509ff63ed, array([[[18.42046657, 17.00138895, 14.97308433, ...,  2.13306591,
+          2.32788976,  2.43226948],
+        [12.02823425, 10.60556027, 10.50078522, ...,  1.71634736,
+          1.96608283,  2.12639056],
+        [10.13916901, 11.59046349, 13.88533519, ...,  1.24063701,
+          1.62007056,  1.93596324],
+        ...,
+        [33.80773009, 34.30980974, 34.82288122, ..., 15.62067343,
+         17.4814779 , 18.27684991],
+        [33.18430847, 33.66700025, 34.11249306, ..., 13.87260618,
+         14.5014912 , 14.62385589],
+        [32.52666792, 33.00705259, 33.4510431 , ..., 11.1665717 ,
+         11.46997754, 11.01012221]],
+
+       [[19.24550998, 17.82740723, 15.80361231, ...,  2.86368516,
+          3.06651855,  3.17316765],
+        [12.75669697, 11.3430181 , 11.27971275, ...,  2.4384131 ,
+          2.69460786,  2.85687896],
+        [10.83606799, 12.32421762, 14.67647978, ...,  1.95060751,
+  
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-09 21:16:45,813 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-703489acd73f3c302eb2ca88b2a9dde6', 23, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-4a17df1f-189d-41ca-a889-7c4509ff63ed, array([[[  28.81474516,   28.4800236 ,   28.01088989, ...,
+            0.8632166 ,    0.88974672,    0.90205346],
+        [  25.14671865,   24.91984383,   26.07894708, ...,
+            0.89280514,    0.92939517,    0.95068579],
+        [  24.85113203,   26.24493039,   28.3899918 , ...,
+            0.92543552,    0.97396081,    1.01634206],
+        ...,
+        [ -11.20346396,  -10.70754844,  -10.24321606, ...,
+         -183.5414828 , -182.17660351, -181.52889842],
+        [ -12.75744917,  -12.26380024,  -11.85693033, ...,
+         -184.69830757, -182.80706062, -182.50699977],
+        [ -14.37413046,  -13.88612817,  -13.47561369, ...,
+         -185.21763626, -183.50592803, -184.11127234]],
+
+       [[  28.80134521,   28.46720408,   27.99371569, ...,
+            0.64787938,    0.67287212,    0.68455377],
+        [  25.10256767,   24.86869191,   26.01158445, ...,
+            0.68493141,    
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-09 21:16:45,882 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-703489acd73f3c302eb2ca88b2a9dde6', 1, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-4a17df1f-189d-41ca-a889-7c4509ff63ed, array([[[ 41.56028774,  41.13157737,  40.8251409 , ...,  20.04498504,
+          19.93544608,  19.75646512],
+        [ 36.83761772,  36.78263882,  38.7070923 , ...,  20.44888175,
+          20.38575722,  20.23885078],
+        [ 37.3024865 ,  39.71347196,  42.80424821, ...,  20.87613026,
+          20.87296603,  20.80850797],
+        ...,
+        [ 35.27644695,  35.60225988,  35.89500262, ..., -27.25556016,
+         -25.13994482, -24.16582472],
+        [ 34.05948819,  34.38797061,  34.67554082, ..., -28.21646938,
+         -26.93159406, -26.74762994],
+        [ 32.7845206 ,  33.14722795,  33.43627571, ..., -29.55113952,
+         -28.64143116, -29.90354002]],
+
+       [[ 40.88127091,  40.44628728,  40.10869736, ...,  20.56456449,
+          20.44530658,  20.25612025],
+        [ 36.17161435,  36.08975881,  37.93941445, ...,  20.95064825,
+          20.87644502,  20.71973914],
+        [ 36.5566330
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-09 21:16:47,636 - distributed.worker - ERROR - Exception during execution of task ('rechunk-merge-42eaa4f733dbd61f2ff8170da0a670d4', 6, 0, 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 184, in __getitem__
+    return self.fast[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/lru.py", line 117, in __getitem__
+    result = self.d[key]
+KeyError: "('rechunk-split-rechunk-merge-rechunk-merge-42eaa4f733dbd61f2ff8170da0a670d4', 6, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2385, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/spill.py", line 215, in __getitem__
+    return super().__getitem__(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 186, in __getitem__
+    return self.slow_to_fast(key)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/buffer.py", line 153, in slow_to_fast
+    value = self.slow[key]
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/common.py", line 127, in wrapper
+    return func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/zict/cache.py", line 67, in __getitem__
+    gen = self._last_updated[key]
+KeyError: "('rechunk-split-rechunk-merge-rechunk-merge-42eaa4f733dbd61f2ff8170da0a670d4', 6, 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2253, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2389, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: "('rechunk-split-rechunk-merge-rechunk-merge-42eaa4f733dbd61f2ff8170da0a670d4', 6, 0, 0)"
+--- Logging error ---
+2023-05-09 21:16:47,673 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-703489acd73f3c302eb2ca88b2a9dde6', 3, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-4a17df1f-189d-41ca-a889-7c4509ff63ed, array([[[ 1.50620049e+01,  1.36578703e+01,  1.16460134e+01, ...,
+         -9.07722520e-01, -7.43188831e-01, -6.37994349e-01],
+        [ 9.22216001e+00,  7.78459409e+00,  7.52777538e+00, ...,
+         -1.19942143e+00, -9.80881074e-01, -8.21517299e-01],
+        [ 7.59446170e+00,  8.87712041e+00,  1.08982032e+01, ...,
+         -1.51607655e+00, -1.18385293e+00, -8.80893474e-01],
+        ...,
+        [ 3.26802501e+01,  3.31658616e+01,  3.36581790e+01, ...,
+          1.22522223e+01,  1.40557001e+01,  1.48305162e+01],
+        [ 3.20841916e+01,  3.25499767e+01,  3.29718124e+01, ...,
+          1.05266554e+01,  1.11717653e+01,  1.12897714e+01],
+        [ 3.14712654e+01,  3.19283563e+01,  3.23476771e+01, ...,
+          7.94105859e+00,  8.26522447e+00,  7.81662691e+00]],
+
+       [[ 1.54119095e+01,  1.40029735e+01,  1.19841527e+01, ...,
+         -5.81862242e-01, -4.15572006e-01, -3.13120403e-01],
+  
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-09 21:16:48,559 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-703489acd73f3c302eb2ca88b2a9dde6', 20, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-4a17df1f-189d-41ca-a889-7c4509ff63ed, array([[[ 23.30854475,  22.22911177,  20.36973355, ...,   8.56213798,
+           8.8206554 ,   8.99712714],
+        [ 16.68607984,  15.5017394 ,  15.77363374, ...,   7.99925981,
+           8.28750893,   8.50257357],
+        [ 14.20092944,  15.79969212,  18.73284944, ...,   7.42272368,
+           7.76555379,   8.06145679],
+        ...,
+        [ 12.59329628,  12.94496902,  13.38748684, ...,  16.93720433,
+          18.58104809,  18.86977704],
+        [ 12.18713223,  12.51165044,  12.85283308, ...,  16.11945818,
+          16.6660062 ,  16.24843307],
+        [ 11.80148511,  12.1177229 ,  12.46032803, ...,  14.40828519,
+          14.58546813,  13.34998577]],
+
+       [[ 23.37192635,  22.28355565,  20.4079365 , ...,   7.8968281 ,
+           8.16612396,   8.35470295],
+        [ 16.67527452,  15.47401006,  15.74146023, ...,   7.3192566 ,
+           7.61811018,   7.84466246],
+        [ 14.1525115
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-09 21:16:49,070 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-703489acd73f3c302eb2ca88b2a9dde6', 25, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-4a17df1f-189d-41ca-a889-7c4509ff63ed, array([[[ 34.86176817,  34.41094687,  33.81588354, ...,  24.06672385,
+          23.88791147,  23.63064535],
+        [ 30.35532395,  30.08211644,  31.31506669, ...,  24.3353269 ,
+          24.19358207,  23.97532307],
+        [ 30.15396788,  32.00369685,  34.50871005, ...,  24.66196928,
+          24.57364375,  24.42896417],
+        ...,
+        [ 28.49342688,  28.83052169,  29.16367848, ..., -53.78046584,
+         -51.50802032, -50.12933054],
+        [ 27.13289891,  27.4764998 ,  27.81099181, ..., -54.18089066,
+         -52.45165175, -51.80716272],
+        [ 25.73371031,  26.11521235,  26.45049774, ..., -54.72142866,
+         -53.34350718, -54.24556794]],
+
+       [[ 34.26450087,  33.8145546 ,  33.19719727, ...,  24.19219128,
+          24.01102284,  23.750736  ],
+        [ 29.78268712,  29.49490314,  30.67429158, ...,  24.45286715,
+          24.30870048,  24.08829303],
+        [ 29.5313884
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-09 21:16:49,381 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-703489acd73f3c302eb2ca88b2a9dde6', 26, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-4a17df1f-189d-41ca-a889-7c4509ff63ed, array([[[27.83831282, 27.25371919, 26.52005746, ..., 16.72263264,
+         16.41519811, 16.09991096],
+        [22.23390779, 21.96536588, 23.29200515, ..., 16.78200719,
+         16.5267116 , 16.2464885 ],
+        [21.4957292 , 23.69461803, 26.33450416, ..., 16.9166031 ,
+         16.73306424, 16.52628818],
+        ...,
+        [41.7642572 , 42.17988819, 42.58630852, ..., 15.52191089,
+         17.28698099, 17.87604157],
+        [40.81569143, 41.21848268, 41.60213667, ..., 13.72719333,
+         14.15985584, 13.93415247],
+        [39.85889336, 40.26398004, 40.64668019, ..., 10.90189353,
+         10.9885184 ,  9.80300872]],
+
+       [[28.62532984, 28.05309803, 27.3325152 , ..., 16.51319144,
+         16.21423768, 15.90055494],
+        [23.04939415, 22.79477955, 24.15203903, ..., 16.59603858,
+         16.35173448, 16.0737485 ],
+        [22.38023529, 24.59074334, 27.25699988, ..., 16.74850561,
+  
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-09 21:16:49,687 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-703489acd73f3c302eb2ca88b2a9dde6', 7, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-4a17df1f-189d-41ca-a889-7c4509ff63ed, array([[[  28.89598572,   28.57719619,   28.14717389, ...,
+            2.50127804,    2.53055936,    2.54076254],
+        [  25.35632824,   25.18663046,   26.46645777, ...,
+            2.47286563,    2.50969998,    2.52944598],
+        [  25.3463362 ,   26.85126538,   29.07599828, ...,
+            2.44732278,    2.4938313 ,    2.53519541],
+        ...,
+        [  -7.23554399,   -6.77513002,   -6.34650519, ...,
+         -192.79590079, -190.82853352, -189.53750432],
+        [  -8.81023473,   -8.34888537,   -7.98333274, ...,
+         -193.82651717, -191.28485566, -190.35194311],
+        [ -10.49210675,  -10.02443038,   -9.65398539, ...,
+         -194.17364363, -191.80620606, -191.78121465]],
+
+       [[  28.89219873,   28.56898702,   28.13170381, ...,
+            2.19335388,    2.22303505,    2.23434393],
+        [  25.33956204,   25.15960939,   26.41856666, ...,
+            2.17572705,    
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-09 21:16:50,005 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-0c319ee7382323b9b5e98011ffe419d1', 11, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-111e63ed-9382-4940-b350-3817b415c134, array([[[ -25.93197218,  -28.11806702,  -32.60742086, ...,
+           29.11167871,   28.89287495,   28.70036259],
+        [ -36.53271089,  -39.29736023,  -42.80275657, ...,
+           30.68327749,   30.55330748,   30.37579793],
+        [ -45.99562826,  -46.00557758,  -43.86865417, ...,
+           32.60536153,   32.52604713,   32.44091771],
+        ...,
+        [-275.9780451 , -275.61548743, -275.30195698, ...,
+         -173.14596395, -176.79638574, -181.11612909],
+        [-276.06425473, -275.71380865, -275.38908023, ...,
+         -174.86598303, -179.10481992, -184.25444083],
+        [-275.97585312, -275.63745733, -275.31364483, ...,
+         -175.24458433, -179.58156824, -185.47359842]],
+
+       [[ -25.76680081,  -27.99895075,  -32.54862063, ...,
+           28.96882954,   28.74238917,   28.54316464],
+        [ -36.44815399,  -39.27160637,  -42.85802099, ...,
+           30.54641135,   3
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-09 21:16:50,321 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-0c319ee7382323b9b5e98011ffe419d1', 13, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-111e63ed-9382-4940-b350-3817b415c134, array([[[ -19.82656526,  -22.10598343,  -25.78728566, ...,
+           13.58200843,   13.47141378,   13.35301523],
+        [ -29.56364996,  -32.67672877,  -36.73317679, ...,
+           13.81028247,   13.71648222,   13.60061335],
+        [ -39.09994826,  -39.73776772,  -38.67956554, ...,
+           14.04609228,   13.95644917,   13.86281835],
+        ...,
+        [-304.71077216, -304.65329371, -304.5712544 , ...,
+         -114.65538639, -116.40500177, -118.45726113],
+        [-303.89244435, -303.86252017, -303.86470236, ...,
+         -113.54291496, -115.3729389 , -118.08606041],
+        [-303.03637372, -302.99023479, -302.98976384, ...,
+         -111.76958631, -113.71509571, -117.88271806]],
+
+       [[ -20.10339818,  -22.40201313,  -26.11671112, ...,
+           13.77871548,   13.66430732,   13.54206403],
+        [ -29.98270453,  -33.12720183,  -37.22886865, ...,
+           13.99412359,   1
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-09 21:16:50,640 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-0c319ee7382323b9b5e98011ffe419d1', 10, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-111e63ed-9382-4940-b350-3817b415c134, array([[[ 8.52154792e-01, -1.63520266e+00, -6.17389165e+00, ...,
+          6.92994910e+01,  6.91090835e+01,  6.89078985e+01],
+        [-5.72686062e+00, -8.62199199e+00, -1.23446140e+01, ...,
+          7.14834718e+01,  7.15303686e+01,  7.14045665e+01],
+        [-9.22162054e+00, -9.39315167e+00, -7.89274736e+00, ...,
+          7.42059100e+01,  7.43222375e+01,  7.43709554e+01],
+        ...,
+        [-2.48102599e+02, -2.47898836e+02, -2.47706889e+02, ...,
+         -1.49973930e+02, -1.53262365e+02, -1.57336090e+02],
+        [-2.47502061e+02, -2.47310849e+02, -2.47141417e+02, ...,
+         -1.52368887e+02, -1.56257584e+02, -1.61184709e+02],
+        [-2.46832409e+02, -2.46620891e+02, -2.46448031e+02, ...,
+         -1.52970470e+02, -1.57005148e+02, -1.62973570e+02]],
+
+       [[ 4.66768979e-01, -2.04062042e+00, -6.59440610e+00, ...,
+          7.00292765e+01,  6.98359165e+01,  6.96335036e+01],
+  
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-09 21:16:50,993 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-0c319ee7382323b9b5e98011ffe419d1', 12, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-111e63ed-9382-4940-b350-3817b415c134, array([[[ -32.29765047,  -34.64464465,  -38.92103519, ...,
+           19.07611046,   18.76909949,   18.47890623],
+        [ -44.58633041,  -47.77301169,  -51.79156621, ...,
+           20.39736445,   20.14301549,   19.85795661],
+        [ -56.59638056,  -56.67729365,  -54.58600733, ...,
+           21.76770432,   21.56108545,   21.34835225],
+        ...,
+        [-255.68559441, -255.53009222, -255.40914774, ...,
+         -144.85535417, -147.74783358, -151.27280326],
+        [-256.69119623, -256.57195114, -256.53745116, ...,
+         -146.72074969, -150.19452129, -154.57170456],
+        [-257.82778838, -257.75750249, -257.72420549, ...,
+         -147.64509042, -151.25704796, -156.96372646]],
+
+       [[ -33.26896997,  -35.63805729,  -39.96258693, ...,
+           19.68000758,   19.35969626,   19.05607956],
+        [ -45.76022351,  -48.97626695,  -53.02635138, ...,
+           20.99646001,   2
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-09 21:18:11,127 - distributed.utils_perf - INFO - full garbage collection released 457.95 MiB from 195 reference cycles (threshold: 9.54 MiB)
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 13:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 648 in H5D__write(): unable to initialize storage
+    major: Dataset
+    minor: Unable to initialize object
+  #006: H5Dint.c line 2346 in H5D__alloc_storage(): unable to initialize dataset with fill value
+    major: Dataset
+    minor: Unable to initialize object
+  #007: H5Dint.c line 2404 in H5D__init_storage(): unable to allocate all chunks of dataset
+    major: Dataset
+    minor: Unable to initialize object
+  #008: H5Dcontig.c line 312 in H5D__contig_fill(): unable to write fill value to dataset
+    major: Dataset
+    minor: Unable to initialize object
+  #009: H5Dcontig.c line 958 in H5D__contig_write_one(): vector write failed
+    major: Low-level I/O
+    minor: Write failed
+  #010: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #011: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #012: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #013: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #014: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #015: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #016: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #017: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:18:22 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aab04100010, total write size = 1048576, bytes this sub-write = 1048576, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:18:22,847 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-0c29a489a33ab6187045d5727e115ba0', 10, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-89392ee9-8d84-4d37-96f1-0043bf8098ad, array([[[ 2.53185482e+01,  2.46452349e+01,  2.38691521e+01, ...,
+          1.83781878e+01,  1.80603234e+01,  1.77686618e+01],
+        [ 1.96702764e+01,  1.93463890e+01,  2.06182087e+01, ...,
+          1.83648181e+01,  1.80754943e+01,  1.78134346e+01],
+        [ 1.88542494e+01,  2.10814978e+01,  2.36496107e+01, ...,
+          1.84559841e+01,  1.82285751e+01,  1.80255886e+01],
+        ...,
+        [ 4.24261175e+01,  4.28278002e+01,  4.32038582e+01, ...,
+          1.99699247e+01,  2.16465169e+01,  2.21474006e+01],
+        [ 4.14133895e+01,  4.18074464e+01,  4.21769674e+01, ...,
+          1.79056944e+01,  1.81943022e+01,  1.79042029e+01],
+        [ 4.03644150e+01,  4.07877712e+01,  4.11590119e+01, ...,
+          1.47301517e+01,  1.46810083e+01,  1.35669942e+01]],
+
+       [[ 2.53367318e+01,  2.46772224e+01,  2.39047029e+01, ...,
+          1.81276577e+01,  1.78057050e+01,  1.75074077e+01],
+  
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 14:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 648 in H5D__write(): unable to initialize storage
+    major: Dataset
+    minor: Unable to initialize object
+  #006: H5Dint.c line 2346 in H5D__alloc_storage(): unable to initialize dataset with fill value
+    major: Dataset
+    minor: Unable to initialize object
+  #007: H5Dint.c line 2404 in H5D__init_storage(): unable to allocate all chunks of dataset
+    major: Dataset
+    minor: Unable to initialize object
+  #008: H5Dcontig.c line 312 in H5D__contig_fill(): unable to write fill value to dataset
+    major: Dataset
+    minor: Unable to initialize object
+  #009: H5Dcontig.c line 958 in H5D__contig_write_one(): vector write failed
+    major: Low-level I/O
+    minor: Write failed
+  #010: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #011: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #012: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #013: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #014: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #015: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #016: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #017: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:18:23 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aab04100010, total write size = 1048576, bytes this sub-write = 1048576, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:18:23,380 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-0c29a489a33ab6187045d5727e115ba0', 1, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-89392ee9-8d84-4d37-96f1-0043bf8098ad, array([[[ 41.56028774,  41.13157737,  40.8251409 , ...,  20.04498504,
+          19.93544608,  19.75646512],
+        [ 36.83761772,  36.78263882,  38.7070923 , ...,  20.44888175,
+          20.38575722,  20.23885078],
+        [ 37.3024865 ,  39.71347196,  42.80424821, ...,  20.87613026,
+          20.87296603,  20.80850797],
+        ...,
+        [ 35.27644695,  35.60225988,  35.89500262, ..., -27.25556016,
+         -25.13994482, -24.16582472],
+        [ 34.05948819,  34.38797061,  34.67554082, ..., -28.21646938,
+         -26.93159406, -26.74762994],
+        [ 32.7845206 ,  33.14722795,  33.43627571, ..., -29.55113952,
+         -28.64143116, -29.90354002]],
+
+       [[ 40.88127091,  40.44628728,  40.10869736, ...,  20.56456449,
+          20.44530658,  20.25612025],
+        [ 36.17161435,  36.08975881,  37.93941445, ...,  20.95064825,
+          20.87644502,  20.71973914],
+        [ 36.5566330
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 15:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:18:23 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aadcbf74010, total write size = 164288208, bytes this sub-write = 164288208, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:18:23,391 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-0c29a489a33ab6187045d5727e115ba0', 0, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-89392ee9-8d84-4d37-96f1-0043bf8098ad, array([[[  28.8570147 ,   28.55367437,   28.14467416, ...,
+            3.47360822,    3.49956544,    3.50463172],
+        [  25.33469878,   25.1940714 ,   26.53143836, ...,
+            3.41251403,    3.44482438,    3.45991252],
+        [  25.39893333,   26.96943424,   29.26106449, ...,
+            3.35528578,    3.39651669,    3.43388213],
+        ...,
+        [  -5.27923953,   -4.83415061,   -4.41556432, ...,
+         -195.87574022, -193.6007896 , -191.9999466 ],
+        [  -6.87026096,   -6.42252191,   -6.06723277, ...,
+         -196.80362994, -193.94594698, -192.71324652],
+        [  -8.5810746 ,   -8.11974064,   -7.75917127, ...,
+         -197.02767576, -194.34535704, -194.03037639]],
+
+       [[  28.87931494,   28.57056022,   28.15478095, ...,
+            3.14386712,    3.17127772,    3.17834972],
+        [  25.3546433 ,   25.20475187,   26.5241066 , ...,
+            3.09356288,    
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 3:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 648 in H5D__write(): unable to initialize storage
+    major: Dataset
+    minor: Unable to initialize object
+  #006: H5Dint.c line 2346 in H5D__alloc_storage(): unable to initialize dataset with fill value
+    major: Dataset
+    minor: Unable to initialize object
+  #007: H5Dint.c line 2404 in H5D__init_storage(): unable to allocate all chunks of dataset
+    major: Dataset
+    minor: Unable to initialize object
+  #008: H5Dcontig.c line 312 in H5D__contig_fill(): unable to write fill value to dataset
+    major: Dataset
+    minor: Unable to initialize object
+  #009: H5Dcontig.c line 958 in H5D__contig_write_one(): vector write failed
+    major: Low-level I/O
+    minor: Write failed
+  #010: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #011: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #012: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #013: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #014: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #015: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #016: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #017: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:18:23 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aab04100010, total write size = 1048576, bytes this sub-write = 1048576, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:18:23,400 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-061c5f946151b13c3dcb68688a3c683f', 29, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-11a1cbe1-3457-4430-a86e-ec87d5db4dde, array([[[ -21.49039115,  -23.87026613,  -27.74640277, ...,
+           14.972059  ,   14.84276334,   14.70698328],
+        [ -32.04750455,  -35.33651459,  -39.65168873, ...,
+           15.18539534,   15.08302484,   14.95342178],
+        [ -42.67821223,  -43.34055349,  -42.17021692, ...,
+           15.43681237,   15.34186465,   15.24487356],
+        ...,
+        [-305.29041677, -305.13544082, -304.95567614, ...,
+         -112.89232272, -114.73792101, -117.03303901],
+        [-304.84282327, -304.71823771, -304.64764503, ...,
+         -113.43270188, -115.44590151, -118.43701265],
+        [-304.24807745, -304.10977932, -304.0356785 , ...,
+         -113.46055143, -115.59731693, -119.88788137]],
+
+       [[ -21.64910024,  -24.0364416 ,  -27.93176981, ...,
+           15.16553229,   15.03576755,   14.89998419],
+        [ -32.2802116 ,  -35.58441158,  -39.92249299, ...,
+           15.39409676,   1
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 16:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:18:23 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aadd5c22010, total write size = 191269848, bytes this sub-write = 191269848, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:18:23,409 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-0c29a489a33ab6187045d5727e115ba0', 12, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-89392ee9-8d84-4d37-96f1-0043bf8098ad, array([[[ 23.024719  ,  21.97772862,  20.18309443, ...,  10.75867022,
+          10.98725342,  11.13059182],
+        [ 16.65931578,  15.53430728,  15.82676254, ...,  10.26580509,
+          10.52384129,  10.70734811],
+        [ 14.31504188,  15.89696603,  18.73078795, ...,   9.75401668,
+          10.0683603 ,  10.33576538],
+        ...,
+        [ 11.81807154,  12.2067554 ,  12.67874782, ...,  16.24400671,
+          17.82225339,  18.06645101],
+        [ 11.43006105,  11.79605325,  12.18413314, ...,  15.51258396,
+          16.02835782,  15.55936098],
+        [ 11.05108547,  11.41375693,  11.80297118, ...,  13.93853307,
+          14.08563983,  12.75789468]],
+
+       [[ 23.13324966,  22.07450357,  20.25572773, ...,  10.00131701,
+          10.23937965,  10.39311497],
+        [ 16.67784375,  15.53177439,  15.81613174, ...,   9.48110561,
+           9.7488345 ,   9.94227009],
+        [ 14.2832230
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 12:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:18:23 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aad93a41010, total write size = 191869440, bytes this sub-write = 191869440, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:18:23,539 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-0c29a489a33ab6187045d5727e115ba0', 18, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-89392ee9-8d84-4d37-96f1-0043bf8098ad, array([[[ 2.57176801e+01,  2.50841103e+01,  2.43194360e+01, ...,
+          1.76359873e+01,  1.73115654e+01,  1.70029624e+01],
+        [ 2.00583850e+01,  1.97517795e+01,  2.10166673e+01, ...,
+          1.76338455e+01,  1.73491916e+01,  1.70726450e+01],
+        [ 1.91920052e+01,  2.13871576e+01,  2.39629943e+01, ...,
+          1.77264219e+01,  1.75079341e+01,  1.72957725e+01],
+        ...,
+        [ 4.21399767e+01,  4.25493736e+01,  4.29397952e+01, ...,
+          1.79853443e+01,  1.97072283e+01,  2.02511545e+01],
+        [ 4.11531125e+01,  4.15528432e+01,  4.19313329e+01, ...,
+          1.60340300e+01,  1.63888775e+01,  1.61297898e+01],
+        [ 4.01435743e+01,  4.05602197e+01,  4.09391954e+01, ...,
+          1.30016234e+01,  1.30155230e+01,  1.18709554e+01]],
+
+       [[ 2.60819532e+01,  2.54607901e+01,  2.47013332e+01, ...,
+          1.73975221e+01,  1.70746727e+01,  1.67625502e+01],
+  
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 17:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:18:23 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aadf0391010, total write size = 191869440, bytes this sub-write = 191869440, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:18:23,547 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-0c29a489a33ab6187045d5727e115ba0', 20, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-89392ee9-8d84-4d37-96f1-0043bf8098ad, array([[[ 23.30854475,  22.22911177,  20.36973355, ...,   8.56213798,
+           8.8206554 ,   8.99712714],
+        [ 16.68607984,  15.5017394 ,  15.77363374, ...,   7.99925981,
+           8.28750893,   8.50257357],
+        [ 14.20092944,  15.79969212,  18.73284944, ...,   7.42272368,
+           7.76555379,   8.06145679],
+        ...,
+        [ 12.59329628,  12.94496902,  13.38748684, ...,  16.93720433,
+          18.58104809,  18.86977704],
+        [ 12.18713223,  12.51165044,  12.85283308, ...,  16.11945818,
+          16.6660062 ,  16.24843307],
+        [ 11.80148511,  12.1177229 ,  12.46032803, ...,  14.40828519,
+          14.58546813,  13.34998577]],
+
+       [[ 23.37192635,  22.28355565,  20.4079365 , ...,   7.8968281 ,
+           8.16612396,   8.35470295],
+        [ 16.67527452,  15.47401006,  15.74146023, ...,   7.3192566 ,
+           7.61811018,   7.84466246],
+        [ 14.1525115
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+2023-05-09 21:18:40,826 - distributed.worker - WARNING - Compute Failed
+Key:       open_dataset-1541402b-bb6e-4e83-8ac7-46fb8f7cb798
+Function:  execute_task
+args:      ((<function apply at 0x2aaab31b9750>, <function open_dataset at 0x2aaacb55e9e0>, ['/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterVars_NE_PAC_daily.nc'], (<class 'dict'>, [['engine', 'scipy'], ['chunks', (<class 'dict'>, [['longitude', -1], ['latitude', -1], ['time', 320]])]])))
+kwargs:    {}
+Exception: "TypeError('Error: /vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterVars_NE_PAC_daily.nc is not a valid NetCDF 3 file\\n            If this is a NetCDF4 file, you may need to install the\\n            netcdf4 library, e.g.,\\n\\n            $ pip install netcdf4\\n            ')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 18:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:19:40 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aadd5c22010, total write size = 164288208, bytes this sub-write = 164288208, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:19:41,247 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-5c743606c067a05bce3c29cb67ff87c7', 0, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-935146cc-1f3d-4a37-beb1-a1104c0e6267, array([[[  28.8570147 ,   28.55367437,   28.14467416, ...,
+            3.47360822,    3.49956544,    3.50463172],
+        [  25.33469878,   25.1940714 ,   26.53143836, ...,
+            3.41251403,    3.44482438,    3.45991252],
+        [  25.39893333,   26.96943424,   29.26106449, ...,
+            3.35528578,    3.39651669,    3.43388213],
+        ...,
+        [  -5.27923953,   -4.83415061,   -4.41556432, ...,
+         -195.87574022, -193.6007896 , -191.9999466 ],
+        [  -6.87026096,   -6.42252191,   -6.06723277, ...,
+         -196.80362994, -193.94594698, -192.71324652],
+        [  -8.5810746 ,   -8.11974064,   -7.75917127, ...,
+         -197.02767576, -194.34535704, -194.03037639]],
+
+       [[  28.87931494,   28.57056022,   28.15478095, ...,
+            3.14386712,    3.17127772,    3.17834972],
+        [  25.3546433 ,   25.20475187,   26.5241066 , ...,
+            3.09356288,    
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 19:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:19:42 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aae376fc010, total write size = 191869440, bytes this sub-write = 191869440, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:19:42,935 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-5c743606c067a05bce3c29cb67ff87c7', 1, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-935146cc-1f3d-4a37-beb1-a1104c0e6267, array([[[ 41.56028774,  41.13157737,  40.8251409 , ...,  20.04498504,
+          19.93544608,  19.75646512],
+        [ 36.83761772,  36.78263882,  38.7070923 , ...,  20.44888175,
+          20.38575722,  20.23885078],
+        [ 37.3024865 ,  39.71347196,  42.80424821, ...,  20.87613026,
+          20.87296603,  20.80850797],
+        ...,
+        [ 35.27644695,  35.60225988,  35.89500262, ..., -27.25556016,
+         -25.13994482, -24.16582472],
+        [ 34.05948819,  34.38797061,  34.67554082, ..., -28.21646938,
+         -26.93159406, -26.74762994],
+        [ 32.7845206 ,  33.14722795,  33.43627571, ..., -29.55113952,
+         -28.64143116, -29.90354002]],
+
+       [[ 40.88127091,  40.44628728,  40.10869736, ...,  20.56456449,
+          20.44530658,  20.25612025],
+        [ 36.17161435,  36.08975881,  37.93941445, ...,  20.95064825,
+          20.87644502,  20.71973914],
+        [ 36.5566330
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 20:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:19:42 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aae2c000010, total write size = 191869440, bytes this sub-write = 191869440, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:19:42,943 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-5c743606c067a05bce3c29cb67ff87c7', 15, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-935146cc-1f3d-4a37-beb1-a1104c0e6267, array([[[  28.86737366,   28.53708475,   28.08568705, ...,
+            1.61475931,    1.64417305,    1.65676437],
+        [  25.27791709,   25.07767917,   26.29456407, ...,
+            1.61768575,    1.65593534,    1.67774081],
+        [  25.14263447,   26.5859232 ,   28.759387  , ...,
+            1.62313246,    1.67209856,    1.71516639],
+        ...,
+        [  -9.27085212,   -8.79222093,   -8.347074  , ...,
+         -188.66471064, -187.00554294, -186.03645731],
+        [ -10.83248079,  -10.35462754,   -9.97061667, ...,
+         -189.76831344, -187.55382164, -186.93570527],
+        [ -12.48157869,  -12.00409721,  -11.61578255, ...,
+         -190.21128745, -188.17235216, -188.45857382]],
+
+       [[  28.84987687,   28.51717386,   28.0592413 , ...,
+            1.34747549,    1.37624124,    1.38902027],
+        [  25.23698657,   25.02714337,   26.22364253, ...,
+            1.35993622,    
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 21:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:19:42 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aae4c000010, total write size = 191869440, bytes this sub-write = 191869440, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:19:42,951 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-5c743606c067a05bce3c29cb67ff87c7', 10, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-935146cc-1f3d-4a37-beb1-a1104c0e6267, array([[[ 2.53185482e+01,  2.46452349e+01,  2.38691521e+01, ...,
+          1.83781878e+01,  1.80603234e+01,  1.77686618e+01],
+        [ 1.96702764e+01,  1.93463890e+01,  2.06182087e+01, ...,
+          1.83648181e+01,  1.80754943e+01,  1.78134346e+01],
+        [ 1.88542494e+01,  2.10814978e+01,  2.36496107e+01, ...,
+          1.84559841e+01,  1.82285751e+01,  1.80255886e+01],
+        ...,
+        [ 4.24261175e+01,  4.28278002e+01,  4.32038582e+01, ...,
+          1.99699247e+01,  2.16465169e+01,  2.21474006e+01],
+        [ 4.14133895e+01,  4.18074464e+01,  4.21769674e+01, ...,
+          1.79056944e+01,  1.81943022e+01,  1.79042029e+01],
+        [ 4.03644150e+01,  4.07877712e+01,  4.11590119e+01, ...,
+          1.47301517e+01,  1.46810083e+01,  1.35669942e+01]],
+
+       [[ 2.53367318e+01,  2.46772224e+01,  2.39047029e+01, ...,
+          1.81276577e+01,  1.78057050e+01,  1.75074077e+01],
+  
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 22:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:19:42 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aae576fc010, total write size = 191869440, bytes this sub-write = 191869440, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:19:42,958 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-5c743606c067a05bce3c29cb67ff87c7', 11, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-935146cc-1f3d-4a37-beb1-a1104c0e6267, array([[[ 1.63718759e+01,  1.49560171e+01,  1.29277442e+01, ...,
+          2.96725188e-01,  4.71091017e-01,  5.71645978e-01],
+        [ 1.02714387e+01,  8.83360432e+00,  8.63111873e+00, ...,
+         -7.06319957e-02,  1.60286743e-01,  3.16635003e-01],
+        [ 8.50484621e+00,  9.85919899e+00,  1.19974925e+01, ...,
+         -4.82209633e-01, -1.27747940e-01,  1.80124523e-01],
+        ...,
+        [ 3.33508215e+01,  3.38466496e+01,  3.43515287e+01, ...,
+          1.33947820e+01,  1.52440029e+01,  1.60456967e+01],
+        [ 3.27414687e+01,  3.32176756e+01,  3.36535136e+01, ...,
+          1.16688456e+01,  1.23243991e+01,  1.24601491e+01],
+        [ 3.21058488e+01,  3.25762977e+01,  3.30101017e+01, ...,
+          9.03661474e+00,  9.36915445e+00,  8.92676146e+00]],
+
+       [[ 1.69776759e+01,  1.55597561e+01,  1.35293941e+01, ...,
+          8.44005681e-01,  1.02431713e+00,  1.12543878e+00],
+  
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 23:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:19:43 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aab1a0b0010, total write size = 191869440, bytes this sub-write = 191869440, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:19:43,093 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-5c743606c067a05bce3c29cb67ff87c7', 18, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-935146cc-1f3d-4a37-beb1-a1104c0e6267, array([[[ 2.57176801e+01,  2.50841103e+01,  2.43194360e+01, ...,
+          1.76359873e+01,  1.73115654e+01,  1.70029624e+01],
+        [ 2.00583850e+01,  1.97517795e+01,  2.10166673e+01, ...,
+          1.76338455e+01,  1.73491916e+01,  1.70726450e+01],
+        [ 1.91920052e+01,  2.13871576e+01,  2.39629943e+01, ...,
+          1.77264219e+01,  1.75079341e+01,  1.72957725e+01],
+        ...,
+        [ 4.21399767e+01,  4.25493736e+01,  4.29397952e+01, ...,
+          1.79853443e+01,  1.97072283e+01,  2.02511545e+01],
+        [ 4.11531125e+01,  4.15528432e+01,  4.19313329e+01, ...,
+          1.60340300e+01,  1.63888775e+01,  1.61297898e+01],
+        [ 4.01435743e+01,  4.05602197e+01,  4.09391954e+01, ...,
+          1.30016234e+01,  1.30155230e+01,  1.18709554e+01]],
+
+       [[ 2.60819532e+01,  2.54607901e+01,  2.47013332e+01, ...,
+          1.73975221e+01,  1.70746727e+01,  1.67625502e+01],
+  
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 24:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:19:43 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aae68976010, total write size = 191869440, bytes this sub-write = 191869440, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:19:43,102 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-5c743606c067a05bce3c29cb67ff87c7', 2, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-935146cc-1f3d-4a37-beb1-a1104c0e6267, array([[[25.90416519, 25.18467208, 24.39357429, ..., 19.12610102,
+         18.83194708, 18.56530232],
+        [20.28623929, 19.94431581, 21.24980089, ..., 19.12651836,
+         18.84876412, 18.60943901],
+        [19.60862248, 21.88278068, 24.47160523, ..., 19.23577231,
+         19.01628888, 18.83275926],
+        ...,
+        [42.62194412, 43.01562981, 43.37878674, ..., 22.08846218,
+         23.71535773, 24.17362992],
+        [41.59085166, 41.97830833, 42.33711862, ..., 19.9233781 ,
+         20.14705034, 19.82886919],
+        [40.50970095, 40.93844692, 41.3001642 , ..., 16.62328526,
+         16.51178823, 15.43369224]],
+
+       [[25.60861516, 24.90541061, 24.12050943, ..., 18.87970043,
+         18.57574768, 18.29997304],
+        [19.98037186, 19.64516832, 20.9377338 , ..., 18.87324936,
+         18.58979368, 18.34206181],
+        [19.24996781, 21.50777756, 24.08694185, ..., 18.97486425,
+  
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 25:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:19:43 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aae79bf0010, total write size = 191869440, bytes this sub-write = 191869440, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 11:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:19:43 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aae8ae6a010, total write size = 191869440, bytes this sub-write = 191869440, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:19:43,110 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-5c743606c067a05bce3c29cb67ff87c7', 23, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-935146cc-1f3d-4a37-beb1-a1104c0e6267, array([[[  28.81474516,   28.4800236 ,   28.01088989, ...,
+            0.8632166 ,    0.88974672,    0.90205346],
+        [  25.14671865,   24.91984383,   26.07894708, ...,
+            0.89280514,    0.92939517,    0.95068579],
+        [  24.85113203,   26.24493039,   28.3899918 , ...,
+            0.92543552,    0.97396081,    1.01634206],
+        ...,
+        [ -11.20346396,  -10.70754844,  -10.24321606, ...,
+         -183.5414828 , -182.17660351, -181.52889842],
+        [ -12.75744917,  -12.26380024,  -11.85693033, ...,
+         -184.69830757, -182.80706062, -182.50699977],
+        [ -14.37413046,  -13.88612817,  -13.47561369, ...,
+         -185.21763626, -183.50592803, -184.11127234]],
+
+       [[  28.80134521,   28.46720408,   27.99371569, ...,
+            0.64787938,    0.67287212,    0.68455377],
+        [  25.10256767,   24.86869191,   26.01158445, ...,
+            0.68493141,    
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+2023-05-09 21:19:43,117 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-5c743606c067a05bce3c29cb67ff87c7', 27, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-935146cc-1f3d-4a37-beb1-a1104c0e6267, array([[[21.06444655, 19.65159493, 17.64460739, ...,  4.46462866,
+          4.68348019,  4.79481853],
+        [14.39382369, 13.00458872, 13.03603062, ...,  4.0355864 ,
+          4.30322353,  4.46905593],
+        [12.43084553, 13.99787203, 16.46765582, ...,  3.53936512,
+          3.93846464,  4.25963436],
+        ...,
+        [34.17672748, 34.6815811 , 35.19832264, ..., 18.58801795,
+         20.43222333, 21.19703716],
+        [33.53557629, 34.0213596 , 34.4722913 , ..., 16.79486955,
+         17.37077141, 17.45843212],
+        [32.85363613, 33.34136518, 33.79135799, ..., 13.99225865,
+         14.24034534, 13.75065453]],
+
+       [[22.03996128, 20.6314662 , 18.63706229, ...,  5.32079734,
+          5.54704038,  5.66034423],
+        [15.28746231, 13.91381445, 13.99789927, ...,  4.89669247,
+          5.16873896,  5.33572776],
+        [13.31574119, 14.92420288, 17.45241578, ...,  4.40438372,
+  
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 26:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:19:43 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aab8699c010, total write size = 157093104, bytes this sub-write = 157093104, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:19:43,125 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-5c743606c067a05bce3c29cb67ff87c7', 29, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-935146cc-1f3d-4a37-beb1-a1104c0e6267, array([[[  22.06235389,   21.30777607,   20.17472157, ...,
+            3.84610768,    3.83730531,    3.80673997],
+        [  16.78141942,   16.00388267,   16.54052139, ...,
+            3.78590843,    3.79808997,    3.78059265],
+        [  14.47430276,   15.72496772,   18.12317917, ...,
+            3.70725913,    3.75060203,    3.77606341],
+        ...,
+        [ -17.76417733,  -17.11238944,  -16.47159462, ...,
+          -14.99601578,  -15.1933606 ,  -16.27127027],
+        [ -17.63424913,  -16.98086013,  -16.35507426, ...,
+          -14.4794834 ,  -15.40893478,  -17.18860149],
+        [ -17.50661568,  -16.84590445,  -16.21904185, ...,
+          -14.36245492,  -15.66095456,  -18.68661802]],
+
+       [[  22.18274873,   21.41948058,   20.27248486, ...,
+            4.21679545,    4.21681069,    4.19469713],
+        [  16.85333814,   16.06335138,   16.59211746, ...,
+            4.16433907,    
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 27:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:20:04 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aab8ab5e010, total write size = 191869440, bytes this sub-write = 191869440, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:20:04,918 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-1a986644c250c60cb0293034fe52b71e', 16, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-32623e93-eca0-4775-8b18-98720bca2597, array([[[ -11.51964704,  -13.50506057,  -16.7497699 , ...,
+           19.75173075,   19.6973864 ,   19.64855165],
+        [ -17.9558577 ,  -20.39656434,  -23.56083648, ...,
+           20.99467582,   20.98521817,   20.94364484],
+        [ -23.06127839,  -23.1170208 ,  -21.94270618, ...,
+           22.31558242,   22.3069636 ,   22.29630736],
+        ...,
+        [-204.7386742 , -205.14625614, -205.57954977, ...,
+         -109.30740857, -108.8301707 , -108.05140283],
+        [-203.77079612, -204.2179136 , -204.73903409, ...,
+         -101.53855397, -100.63261375, -100.18937749],
+        [-202.98118876, -203.4038473 , -203.91779141, ...,
+          -92.84243523,  -92.05259581,  -93.3298538 ]],
+
+       [[ -11.74503424,  -13.71660617,  -16.93815458, ...,
+           19.1957827 ,   19.14078735,   19.09050694],
+        [ -18.17364637,  -20.59439558,  -23.73315852, ...,
+           20.41908046,   2
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 4:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:20:06 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aab798e4010, total write size = 191869440, bytes this sub-write = 191869440, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:20:06,441 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-e310234f183540149c6a3b3b221e6392', 2, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-4c38fc26-3316-490e-8c73-3dfcfc5174bd, array([[[25.90416519, 25.18467208, 24.39357429, ..., 19.12610102,
+         18.83194708, 18.56530232],
+        [20.28623929, 19.94431581, 21.24980089, ..., 19.12651836,
+         18.84876412, 18.60943901],
+        [19.60862248, 21.88278068, 24.47160523, ..., 19.23577231,
+         19.01628888, 18.83275926],
+        ...,
+        [42.62194412, 43.01562981, 43.37878674, ..., 22.08846218,
+         23.71535773, 24.17362992],
+        [41.59085166, 41.97830833, 42.33711862, ..., 19.9233781 ,
+         20.14705034, 19.82886919],
+        [40.50970095, 40.93844692, 41.3001642 , ..., 16.62328526,
+         16.51178823, 15.43369224]],
+
+       [[25.60861516, 24.90541061, 24.12050943, ..., 18.87970043,
+         18.57574768, 18.29997304],
+        [19.98037186, 19.64516832, 20.9377338 , ..., 18.87324936,
+         18.58979368, 18.34206181],
+        [19.24996781, 21.50777756, 24.08694185, ..., 18.97486425,
+  
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 28:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:20:06 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aabe3a5c010, total write size = 191869440, bytes this sub-write = 191869440, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:20:06,452 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-1a986644c250c60cb0293034fe52b71e', 19, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-32623e93-eca0-4775-8b18-98720bca2597, array([[[ -25.48715987,  -27.81629055,  -32.48879697, ...,
+           28.86556399,   28.62844041,   28.41931118],
+        [ -36.33392542,  -39.2786782 ,  -43.03006637, ...,
+           30.46983036,   30.32145112,   30.12543259],
+        [ -45.95262379,  -45.984594  ,  -43.79289311, ...,
+           32.37834682,   32.27279067,   32.16250184],
+        ...,
+        [-278.13873839, -277.77666079, -277.46023924, ...,
+         -171.74727441, -175.3437895 , -179.64655343],
+        [-278.03522534, -277.68757309, -277.36813524, ...,
+         -173.49378985, -177.70166575, -182.84132779],
+        [-277.74751298, -277.42149861, -277.10360599, ...,
+         -173.91497668, -178.22465172, -184.11322011]],
+
+       [[ -25.35576194,  -27.73441652,  -32.46760733, ...,
+           28.89306493,   28.65321826,   28.44119827],
+        [ -36.28240958,  -39.28771962,  -43.1206573 , ...,
+           30.51818598,   3
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 15:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+  #012: H5Fio.c line 190 in H5F_shared_block_write(): write through page buffer failed
+    major: Low-level I/O
+    minor: Write failed
+  #013: H5PB.c line 1017 in H5PB_write(): write through metadata accumulator failed
+    major: Page Buffering
+    minor: Write failed
+  #014: H5Faccum.c line 832 in H5F__accum_write(): file write failed
+    major: Low-level I/O
+    minor: Write failed
+  #015: H5FDint.c line 306 in H5FD_write(): driver write request failed
+    major: Virtual File Layer
+    minor: Write failed
+  #016: H5FDsec2.c line 850 in H5FD__sec2_write(): file write failed: time = Tue May  9 21:20:06 2023
+, filename = '/vortexfs1/home/anthony.meza/Atmospheric Rivers and Waves/GLORYS_processed/ERA5_WaterAnomaliesBandPass.nc', file descriptor = 29, errno = 122, error message = 'Disk quota exceeded', buf = 0x2aab5b5b3010, total write size = 191869440, bytes this sub-write = 191869440, bytes actually written = 18446744073709551615, offset = 0
+    major: Low-level I/O
+    minor: Write failed
+2023-05-09 21:20:06,461 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-1a986644c250c60cb0293034fe52b71e', 18, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-32623e93-eca0-4775-8b18-98720bca2597, array([[[  -0.53171138,   -3.081166  ,   -7.66551725, ...,
+           70.98209193,   70.78795708,   70.58838774],
+        [  -7.18753155,  -10.15999474,  -13.94765458, ...,
+           73.29716843,   73.33064252,   73.20120167],
+        [ -10.67459364,  -10.86742316,   -9.39560529, ...,
+           76.16031271,   76.25557505,   76.28828511],
+        ...,
+        [-246.02173925, -245.80891394, -245.6135598 , ...,
+         -148.31702454, -151.46522878, -155.37891119],
+        [-245.43058756, -245.226494  , -245.04812248, ...,
+         -150.67458486, -154.41331045, -159.1883342 ],
+        [-244.81271388, -244.5727144 , -244.3890475 , ...,
+         -151.23542726, -155.12855704, -161.02700159]],
+
+       [[  -1.12916601,   -3.70008836,   -8.29927359, ...,
+           71.20637228,   71.01448214,   70.81902333],
+        [  -7.82187228,  -10.81879764,  -14.62471678, ...,
+           73.58036974,   7
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+2023-05-09 21:22:05,072 - distributed.utils_perf - INFO - full garbage collection released 1.58 GiB from 804 reference cycles (threshold: 9.54 MiB)
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 29:
+  #000: H5F.c line 836 in H5Fopen(): unable to synchronously open file
+    major: File accessibility
+    minor: Unable to open file
+  #001: H5F.c line 796 in H5F__open_api_common(): unable to open file
+    major: File accessibility
+    minor: Unable to open file
+  #002: H5VLcallback.c line 3863 in H5VL_file_open(): open failed
+    major: Virtual Object Layer
+    minor: Can't open object
+  #003: H5VLcallback.c line 3675 in H5VL__file_open(): open failed
+    major: Virtual Object Layer
+    minor: Can't open object
+  #004: H5VLnative_file.c line 128 in H5VL__native_file_open(): unable to open file
+    major: File accessibility
+    minor: Unable to open file
+  #005: H5Fint.c line 1965 in H5F_open(): unable to read superblock
+    major: File accessibility
+    minor: Read failed
+  #006: H5Fsuper.c line 614 in H5F__super_read(): truncated file: eof = 25605740388, sblock->base_addr = 0, stored_eof = 28450804428
+    major: File accessibility
+    minor: File has been truncated
+2023-05-09 21:22:05,121 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-98f4286ecf6af4f69d4dbf69a194a5dd', 10, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-8ad191ed-bf18-442b-bba0-c7dccbc9715c, array([[[ 2.53185482e+01,  2.46452349e+01,  2.38691521e+01, ...,
+          1.83781878e+01,  1.80603234e+01,  1.77686618e+01],
+        [ 1.96702764e+01,  1.93463890e+01,  2.06182087e+01, ...,
+          1.83648181e+01,  1.80754943e+01,  1.78134346e+01],
+        [ 1.88542494e+01,  2.10814978e+01,  2.36496107e+01, ...,
+          1.84559841e+01,  1.82285751e+01,  1.80255886e+01],
+        ...,
+        [ 4.24261175e+01,  4.28278002e+01,  4.32038582e+01, ...,
+          1.99699247e+01,  2.16465169e+01,  2.21474006e+01],
+        [ 4.14133895e+01,  4.18074464e+01,  4.21769674e+01, ...,
+          1.79056944e+01,  1.81943022e+01,  1.79042029e+01],
+        [ 4.03644150e+01,  4.07877712e+01,  4.11590119e+01, ...,
+          1.47301517e+01,  1.46810083e+01,  1.35669942e+01]],
+
+       [[ 2.53367318e+01,  2.46772224e+01,  2.39047029e+01, ...,
+          1.81276577e+01,  1.78057050e+01,  1.75074077e+01],
+  
+kwargs:    {}
+Exception: "OSError(-101, 'NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 8:
+  #000: H5F.c line 836 in H5Fopen(): unable to synchronously open file
+    major: File accessibility
+    minor: Unable to open file
+  #001: H5F.c line 796 in H5F__open_api_common(): unable to open file
+    major: File accessibility
+    minor: Unable to open file
+  #002: H5VLcallback.c line 3863 in H5VL_file_open(): open failed
+    major: Virtual Object Layer
+    minor: Can't open object
+  #003: H5VLcallback.c line 3675 in H5VL__file_open(): open failed
+    major: Virtual Object Layer
+    minor: Can't open object
+  #004: H5VLnative_file.c line 128 in H5VL__native_file_open(): unable to open file
+    major: File accessibility
+    minor: Unable to open file
+  #005: H5Fint.c line 1965 in H5F_open(): unable to read superblock
+    major: File accessibility
+    minor: Read failed
+  #006: H5Fsuper.c line 614 in H5F__super_read(): truncated file: eof = 25605740388, sblock->base_addr = 0, stored_eof = 28450804428
+    major: File accessibility
+    minor: File has been truncated
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 9:
+  #000: H5F.c line 836 in H5Fopen(): unable to synchronously open file
+    major: File accessibility
+    minor: Unable to open file
+  #001: H5F.c line 796 in H5F__open_api_common(): unable to open file
+    major: File accessibility
+    minor: Unable to open file
+  #002: H5VLcallback.c line 3863 in H5VL_file_open(): open failed
+    major: Virtual Object Layer
+    minor: Can't open object
+  #003: H5VLcallback.c line 3675 in H5VL__file_open(): open failed
+    major: Virtual Object Layer
+    minor: Can't open object
+  #004: H5VLnative_file.c line 128 in H5VL__native_file_open(): unable to open file
+    major: File accessibility
+    minor: Unable to open file
+  #005: H5Fint.c line 1965 in H5F_open(): unable to read superblock
+    major: File accessibility
+    minor: Read failed
+  #006: H5Fsuper.c line 614 in H5F__super_read(): truncated file: eof = 25605740388, sblock->base_addr = 0, stored_eof = 28450804428
+    major: File accessibility
+    minor: File has been truncated
+2023-05-09 21:22:05,406 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-98f4286ecf6af4f69d4dbf69a194a5dd', 12, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-8ad191ed-bf18-442b-bba0-c7dccbc9715c, array([[[ 23.024719  ,  21.97772862,  20.18309443, ...,  10.75867022,
+          10.98725342,  11.13059182],
+        [ 16.65931578,  15.53430728,  15.82676254, ...,  10.26580509,
+          10.52384129,  10.70734811],
+        [ 14.31504188,  15.89696603,  18.73078795, ...,   9.75401668,
+          10.0683603 ,  10.33576538],
+        ...,
+        [ 11.81807154,  12.2067554 ,  12.67874782, ...,  16.24400671,
+          17.82225339,  18.06645101],
+        [ 11.43006105,  11.79605325,  12.18413314, ...,  15.51258396,
+          16.02835782,  15.55936098],
+        [ 11.05108547,  11.41375693,  11.80297118, ...,  13.93853307,
+          14.08563983,  12.75789468]],
+
+       [[ 23.13324966,  22.07450357,  20.25572773, ...,  10.00131701,
+          10.23937965,  10.39311497],
+        [ 16.67784375,  15.53177439,  15.81613174, ...,   9.48110561,
+           9.7488345 ,   9.94227009],
+        [ 14.2832230
+kwargs:    {}
+Exception: "OSError(-101, 'NetCDF: HDF error')"
+
+2023-05-09 21:22:05,413 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-98f4286ecf6af4f69d4dbf69a194a5dd', 13, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-8ad191ed-bf18-442b-bba0-c7dccbc9715c, array([[[  20.54957362,   19.88939226,   18.89253019, ...,
+            2.55756338,    2.51061795,    2.44205317],
+        [  15.69859085,   15.04019018,   15.62705059, ...,
+            2.49615764,    2.46436182,    2.40590002],
+        [  13.66512389,   14.90051395,   17.14045394, ...,
+            2.4106735 ,    2.40194616,    2.377121  ],
+        ...,
+        [ -22.65699746,  -22.05502591,  -21.42020363, ...,
+          -39.67958736,  -39.16550482,  -39.58322039],
+        [ -22.68771548,  -22.08872524,  -21.48747989, ...,
+          -39.30196137,  -39.24607788,  -40.31046407],
+        [ -22.71955466,  -22.1258421 ,  -21.52096968, ...,
+          -38.99425594,  -39.29056854,  -41.62523463]],
+
+       [[  20.82675674,   20.14977839,   19.13009711, ...,
+            2.62319521,    2.57878864,    2.51288776],
+        [  15.9070105 ,   15.22915025,   15.81063642, ...,
+            2.55662071,    
+kwargs:    {}
+Exception: "OSError(-101, 'NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 30:
+  #000: H5F.c line 836 in H5Fopen(): unable to synchronously open file
+    major: File accessibility
+    minor: Unable to open file
+  #001: H5F.c line 796 in H5F__open_api_common(): unable to open file
+    major: File accessibility
+    minor: Unable to open file
+  #002: H5VLcallback.c line 3863 in H5VL_file_open(): open failed
+    major: Virtual Object Layer
+    minor: Can't open object
+  #003: H5VLcallback.c line 3675 in H5VL__file_open(): open failed
+    major: Virtual Object Layer
+    minor: Can't open object
+  #004: H5VLnative_file.c line 128 in H5VL__native_file_open(): unable to open file
+    major: File accessibility
+    minor: Unable to open file
+  #005: H5Fint.c line 1965 in H5F_open(): unable to read superblock
+    major: File accessibility
+    minor: Read failed
+  #006: H5Fsuper.c line 614 in H5F__super_read(): truncated file: eof = 25605740388, sblock->base_addr = 0, stored_eof = 28450804428
+    major: File accessibility
+    minor: File has been truncated
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 19:
+  #000: H5F.c line 836 in H5Fopen(): unable to synchronously open file
+    major: File accessibility
+    minor: Unable to open file
+  #001: H5F.c line 796 in H5F__open_api_common(): unable to open file
+    major: File accessibility
+    minor: Unable to open file
+  #002: H5VLcallback.c line 3863 in H5VL_file_open(): open failed
+    major: Virtual Object Layer
+    minor: Can't open object
+  #003: H5VLcallback.c line 3675 in H5VL__file_open(): open failed
+    major: Virtual Object Layer
+    minor: Can't open object
+  #004: H5VLnative_file.c line 128 in H5VL__native_file_open(): unable to open file
+    major: File accessibility
+    minor: Unable to open file
+  #005: H5Fint.c line 1965 in H5F_open(): unable to read superblock
+    major: File accessibility
+    minor: Read failed
+  #006: H5Fsuper.c line 614 in H5F__super_read(): truncated file: eof = 25605740388, sblock->base_addr = 0, stored_eof = 28450804428
+    major: File accessibility
+    minor: File has been truncated
+2023-05-09 21:22:05,420 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-98f4286ecf6af4f69d4dbf69a194a5dd', 14, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-8ad191ed-bf18-442b-bba0-c7dccbc9715c, array([[[  23.66552625,   23.23910217,   22.70286154, ...,
+            1.16490675,    1.19630796,    1.20560911],
+        [  20.47351847,   20.21326362,   21.24924842, ...,
+            1.16400034,    1.20692155,    1.22223188],
+        [  20.48073213,   21.84002366,   23.81165941, ...,
+            1.16787788,    1.21785929,    1.24931258],
+        ...,
+        [ -18.83174975,  -18.3527608 ,  -17.89580967, ...,
+         -141.2942053 , -141.37989485, -142.20846629],
+        [ -19.73451635,  -19.24520512,  -18.82655286, ...,
+         -142.87524391, -142.54941566, -143.7714499 ],
+        [ -20.73259511,  -20.20359446,  -19.77413798, ...,
+         -143.84437286, -143.74135771, -145.63562849]],
+
+       [[  22.95077776,   22.51764644,   21.97101795, ...,
+            1.25592849,    1.2889662 ,    1.30013374],
+        [  19.79861654,   19.52426666,   20.5099305 , ...,
+            1.25708236,    
+kwargs:    {}
+Exception: "OSError(-101, 'NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 17:
+  #000: H5F.c line 836 in H5Fopen(): unable to synchronously open file
+    major: File accessibility
+    minor: Unable to open file
+  #001: H5F.c line 796 in H5F__open_api_common(): unable to open file
+    major: File accessibility
+    minor: Unable to open file
+  #002: H5VLcallback.c line 3863 in H5VL_file_open(): open failed
+    major: Virtual Object Layer
+    minor: Can't open object
+  #003: H5VLcallback.c line 3675 in H5VL__file_open(): open failed
+    major: Virtual Object Layer
+    minor: Can't open object
+  #004: H5VLnative_file.c line 128 in H5VL__native_file_open(): unable to open file
+    major: File accessibility
+    minor: Unable to open file
+  #005: H5Fint.c line 1965 in H5F_open(): unable to read superblock
+    major: File accessibility
+    minor: Read failed
+  #006: H5Fsuper.c line 614 in H5F__super_read(): truncated file: eof = 25605740388, sblock->base_addr = 0, stored_eof = 28450804428
+    major: File accessibility
+    minor: File has been truncated
+2023-05-09 21:22:05,429 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-98f4286ecf6af4f69d4dbf69a194a5dd', 2, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-8ad191ed-bf18-442b-bba0-c7dccbc9715c, array([[[25.90416519, 25.18467208, 24.39357429, ..., 19.12610102,
+         18.83194708, 18.56530232],
+        [20.28623929, 19.94431581, 21.24980089, ..., 19.12651836,
+         18.84876412, 18.60943901],
+        [19.60862248, 21.88278068, 24.47160523, ..., 19.23577231,
+         19.01628888, 18.83275926],
+        ...,
+        [42.62194412, 43.01562981, 43.37878674, ..., 22.08846218,
+         23.71535773, 24.17362992],
+        [41.59085166, 41.97830833, 42.33711862, ..., 19.9233781 ,
+         20.14705034, 19.82886919],
+        [40.50970095, 40.93844692, 41.3001642 , ..., 16.62328526,
+         16.51178823, 15.43369224]],
+
+       [[25.60861516, 24.90541061, 24.12050943, ..., 18.87970043,
+         18.57574768, 18.29997304],
+        [19.98037186, 19.64516832, 20.9377338 , ..., 18.87324936,
+         18.58979368, 18.34206181],
+        [19.24996781, 21.50777756, 24.08694185, ..., 18.97486425,
+  
+kwargs:    {}
+Exception: "OSError(-101, 'NetCDF: HDF error')"
+
+2023-05-09 21:22:05,439 - distributed.worker - WARNING - Compute Failed
+Key:       ('sub-store-map-98f4286ecf6af4f69d4dbf69a194a5dd', 3, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaad719cc10>, (subgraph_callable-8ad191ed-bf18-442b-bba0-c7dccbc9715c, array([[[ 1.50620049e+01,  1.36578703e+01,  1.16460134e+01, ...,
+         -9.07722520e-01, -7.43188831e-01, -6.37994349e-01],
+        [ 9.22216001e+00,  7.78459409e+00,  7.52777538e+00, ...,
+         -1.19942143e+00, -9.80881074e-01, -8.21517299e-01],
+        [ 7.59446170e+00,  8.87712041e+00,  1.08982032e+01, ...,
+         -1.51607655e+00, -1.18385293e+00, -8.80893474e-01],
+        ...,
+        [ 3.26802501e+01,  3.31658616e+01,  3.36581790e+01, ...,
+          1.22522223e+01,  1.40557001e+01,  1.48305162e+01],
+        [ 3.20841916e+01,  3.25499767e+01,  3.29718124e+01, ...,
+          1.05266554e+01,  1.11717653e+01,  1.12897714e+01],
+        [ 3.14712654e+01,  3.19283563e+01,  3.23476771e+01, ...,
+          7.94105859e+00,  8.26522447e+00,  7.81662691e+00]],
+
+       [[ 1.54119095e+01,  1.40029735e+01,  1.19841527e+01, ...,
+         -5.81862242e-01, -4.15572006e-01, -3.13120403e-01],
+  
+kwargs:    {}
+Exception: "OSError(-101, 'NetCDF: HDF error')"
+
+2023-05-09 21:30:46,889 - distributed.utils_perf - INFO - full garbage collection released 2.22 GiB from 818 reference cycles (threshold: 9.54 MiB)
+2023-05-09 21:36:45,991 - distributed.core - INFO - Connection to tcp://172.16.3.56:38364 has been closed.
+2023-05-09 21:36:45,991 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.81:45931. Reason: worker-handle-scheduler-connection-broken
+2023-05-09 21:36:45,993 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1237, in heartbeat
+    response = await retry_operation(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils_comm.py", line 434, in retry_operation
+    return await retry(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils_comm.py", line 413, in retry
+    return await coro()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1269, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1028, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://172.16.3.81:43068 remote=tcp://172.16.3.56:38364>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-05-09 21:36:46,027 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.81:34193'. Reason: worker-handle-scheduler-connection-broken
+2023-05-09 21:36:48,143 - distributed.client - ERROR - 
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 292, in connect
+    comm = await wait_for(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 1878, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 511, in connect
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <distributed.comm.tcp.TCPConnector object at 0x2aab0403d300>: ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 754, in wrapper
+    return await func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/client.py", line 1323, in _reconnect
+    await self._ensure_connected(timeout=timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/client.py", line 1353, in _ensure_connected
+    comm = await connect(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 316, in connect
+    await asyncio.sleep(backoff)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 605, in sleep
+    return await future
+asyncio.exceptions.CancelledError
+2023-05-09 21:36:48,149 - distributed.nanny - INFO - Worker closed
+2023-05-09 21:36:50,151 - distributed.nanny - ERROR - Worker process died unexpectedly
+2023-05-09 21:36:50,498 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.81:34193'. Reason: nanny-close-gracefully
+2023-05-09 21:36:50,499 - distributed.dask_worker - INFO - End worker

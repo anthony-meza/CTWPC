@@ -1,0 +1,174 @@
+2023-04-18 16:18:14,609 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.165:43909'
+2023-04-18 16:18:21,493 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.165:43505
+2023-04-18 16:18:21,493 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.165:43505
+2023-04-18 16:18:21,493 - distributed.worker - INFO -           Worker name:             SLURMCluster-5
+2023-04-18 16:18:21,493 - distributed.worker - INFO -          dashboard at:         172.16.3.165:46587
+2023-04-18 16:18:21,493 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.91:40558
+2023-04-18 16:18:21,493 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:18:21,493 - distributed.worker - INFO -               Threads:                         30
+2023-04-18 16:18:21,493 - distributed.worker - INFO -                Memory:                  37.25 GiB
+2023-04-18 16:18:21,493 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-tf2v0nw7
+2023-04-18 16:18:21,493 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:18:21,591 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.91:40558
+2023-04-18 16:18:21,591 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:18:21,593 - distributed.core - INFO - Starting established connection to tcp://172.16.3.91:40558
+/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/xarray/core/common.py:965: FutureWarning: 'base' in .resample() and in Grouper() is deprecated.
+The new arguments that you should use are 'offset' or 'origin'.
+
+>>> df.resample(freq="3s", base=2)
+
+becomes:
+
+>>> df.resample(freq="3s", offset="2s")
+
+  grouper = pd.Grouper(
+2023-04-18 16:28:59,643 - distributed.worker_memory - WARNING - Worker tcp://172.16.3.165:43505 (pid=369115) exceeded 95% memory budget. Restarting...
+2023-04-18 16:29:01,301 - distributed.nanny - INFO - Worker process 369115 was killed by signal 15
+2023-04-18 16:29:01,758 - distributed.nanny - WARNING - Restarting worker
+2023-04-18 16:29:07,716 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.165:43206
+2023-04-18 16:29:07,716 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.165:43206
+2023-04-18 16:29:07,716 - distributed.worker - INFO -           Worker name:             SLURMCluster-5
+2023-04-18 16:29:07,716 - distributed.worker - INFO -          dashboard at:         172.16.3.165:34678
+2023-04-18 16:29:07,716 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.91:40558
+2023-04-18 16:29:07,716 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:29:07,716 - distributed.worker - INFO -               Threads:                         30
+2023-04-18 16:29:07,717 - distributed.worker - INFO -                Memory:                  37.25 GiB
+2023-04-18 16:29:07,717 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-ikuutrge
+2023-04-18 16:29:07,717 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:29:07,731 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.91:40558
+2023-04-18 16:29:07,731 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:29:07,731 - distributed.core - INFO - Starting established connection to tcp://172.16.3.91:40558
+2023-04-18 16:29:20,842 - distributed.worker_memory - WARNING - Worker tcp://172.16.3.165:43206 (pid=370740) exceeded 95% memory budget. Restarting...
+2023-04-18 16:29:21,414 - distributed.nanny - INFO - Worker process 370740 was killed by signal 15
+2023-04-18 16:29:21,543 - distributed.nanny - WARNING - Restarting worker
+2023-04-18 16:29:24,272 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.165:40235
+2023-04-18 16:29:24,273 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.165:40235
+2023-04-18 16:29:24,274 - distributed.worker - INFO -           Worker name:             SLURMCluster-5
+2023-04-18 16:29:24,274 - distributed.worker - INFO -          dashboard at:         172.16.3.165:46263
+2023-04-18 16:29:24,274 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.91:40558
+2023-04-18 16:29:24,274 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:29:24,274 - distributed.worker - INFO -               Threads:                         30
+2023-04-18 16:29:24,274 - distributed.worker - INFO -                Memory:                  37.25 GiB
+2023-04-18 16:29:24,274 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-4or_jxo2
+2023-04-18 16:29:24,274 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:29:24,279 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.91:40558
+2023-04-18 16:29:24,279 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 16:29:24,280 - distributed.core - INFO - Starting established connection to tcp://172.16.3.91:40558
+2023-04-18 16:30:04,734 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.33s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:30:15,868 - distributed.worker - ERROR - failed during get data with tcp://172.16.3.165:40235 -> tcp://172.16.3.130:43559
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 867, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 1140, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 1758, in get_data
+    response = await comm.read(deserializers=serializers)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.165:40235 remote=tcp://172.16.3.130:42745>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-04-18 16:30:15,869 - distributed.core - INFO - Lost connection to 'tcp://172.16.3.130:42745'
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 867, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 1140, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/core.py", line 771, in _handle_comm
+    result = await result
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 1758, in get_data
+    response = await comm.read(deserializers=serializers)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.165:40235 remote=tcp://172.16.3.130:42745>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-04-18 16:30:16,182 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.130:43559
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.165:37829 remote=tcp://172.16.3.130:43559>: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 2051, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 2840, in get_data_from_worker
+    return await retry_operation(_get_data, operation="get_data_from_worker")
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/utils_comm.py", line 386, in retry_operation
+    return await retry(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/utils_comm.py", line 371, in retry
+    return await coro()
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 2817, in _get_data
+    comm = await rpc.connect(worker)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/core.py", line 1381, in connect
+    return await connect_attempt
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/core.py", line 1317, in _connect
+    comm = await connect(
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://172.16.3.130:43559 after 30 s
+2023-04-18 16:30:34,350 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.97s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 16:30:41,270 - distributed.worker - ERROR - failed during get data with tcp://172.16.3.165:40235 -> tcp://172.16.3.185:41825
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 867, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 1140, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 1758, in get_data
+    response = await comm.read(deserializers=serializers)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.165:40235 remote=tcp://172.16.3.185:36719>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-04-18 16:30:41,270 - distributed.core - INFO - Lost connection to 'tcp://172.16.3.185:36719'
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 867, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/tornado/iostream.py", line 1140, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/core.py", line 771, in _handle_comm
+    result = await result
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 1758, in get_data
+    response = await comm.read(deserializers=serializers)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.165:40235 remote=tcp://172.16.3.185:36719>: ConnectionResetError: [Errno 104] Connection reset by peer
+slurmstepd: error: *** JOB 3066575 ON pn115 CANCELLED AT 2023-04-18T16:31:07 ***

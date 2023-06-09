@@ -1,0 +1,17 @@
+2023-05-11 09:38:19,747 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.98:46526'
+2023-05-11 09:38:20,121 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-i02872rr', purging
+2023-05-11 09:38:21,107 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.98:34838
+2023-05-11 09:38:21,107 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.98:34838
+2023-05-11 09:38:21,107 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2023-05-11 09:38:21,107 - distributed.worker - INFO -          dashboard at:          172.16.3.98:42891
+2023-05-11 09:38:21,107 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:39597
+2023-05-11 09:38:21,107 - distributed.worker - INFO - -------------------------------------------------
+2023-05-11 09:38:21,107 - distributed.worker - INFO -               Threads:                         36
+2023-05-11 09:38:21,107 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-11 09:38:21,108 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-uli0_t1m
+2023-05-11 09:38:21,108 - distributed.worker - INFO - -------------------------------------------------
+2023-05-11 09:38:21,112 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:39597
+2023-05-11 09:38:21,113 - distributed.worker - INFO - -------------------------------------------------
+2023-05-11 09:38:21,113 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:39597
+slurmstepd: error: *** JOB 3090926 ON pn048 CANCELLED AT 2023-05-11T11:38:47 DUE TO TIME LIMIT ***
+2023-05-11 11:38:47,512 - distributed.core - INFO - Removing comms to tcp://172.16.3.81:39536

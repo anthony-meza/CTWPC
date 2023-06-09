@@ -1,0 +1,18 @@
+2023-05-16 11:55:14,887 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.101:43334'
+2023-05-16 11:55:15,356 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-ueiljlf3', purging
+2023-05-16 11:55:41,397 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.101:41495
+2023-05-16 11:55:41,399 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.101:41495
+2023-05-16 11:55:41,399 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2023-05-16 11:55:41,399 - distributed.worker - INFO -          dashboard at:         172.16.3.101:37815
+2023-05-16 11:55:41,399 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:46483
+2023-05-16 11:55:41,399 - distributed.worker - INFO - -------------------------------------------------
+2023-05-16 11:55:41,399 - distributed.worker - INFO -               Threads:                         36
+2023-05-16 11:55:41,399 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-16 11:55:41,399 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-q1l37iqf
+2023-05-16 11:55:41,399 - distributed.worker - INFO - -------------------------------------------------
+2023-05-16 11:55:41,410 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:46483
+2023-05-16 11:55:41,410 - distributed.worker - INFO - -------------------------------------------------
+2023-05-16 11:55:41,411 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:46483
+2023-05-16 11:55:45,565 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.15s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-16 12:06:13,983 - distributed.utils_perf - INFO - full garbage collection released 30.43 MiB from 284 reference cycles (threshold: 9.54 MiB)
+slurmstepd: error: *** JOB 3099161 ON pn051 CANCELLED AT 2023-05-16T13:55:39 DUE TO TIME LIMIT ***

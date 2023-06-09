@@ -1,0 +1,18 @@
+2023-05-16 22:37:20,555 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.88:40737'
+2023-05-16 22:37:31,310 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.88:46689
+2023-05-16 22:37:31,313 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.88:46689
+2023-05-16 22:37:31,313 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2023-05-16 22:37:31,313 - distributed.worker - INFO -          dashboard at:          172.16.3.88:42158
+2023-05-16 22:37:31,313 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.127:41429
+2023-05-16 22:37:31,313 - distributed.worker - INFO - -------------------------------------------------
+2023-05-16 22:37:31,313 - distributed.worker - INFO -               Threads:                         36
+2023-05-16 22:37:31,314 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-16 22:37:31,314 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-lte_cpg9
+2023-05-16 22:37:31,314 - distributed.worker - INFO - -------------------------------------------------
+2023-05-16 22:37:31,331 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.127:41429
+2023-05-16 22:37:31,331 - distributed.worker - INFO - -------------------------------------------------
+2023-05-16 22:37:31,332 - distributed.core - INFO - Starting established connection to tcp://172.16.3.127:41429
+2023-05-16 22:41:16,895 - distributed.utils_perf - INFO - full garbage collection released 56.89 MiB from 261 reference cycles (threshold: 9.54 MiB)
+2023-05-16 22:41:18,589 - distributed.utils_perf - INFO - full garbage collection released 91.41 MiB from 153 reference cycles (threshold: 9.54 MiB)
+2023-05-16 22:41:23,402 - distributed.utils_perf - INFO - full garbage collection released 86.35 MiB from 192 reference cycles (threshold: 9.54 MiB)
+slurmstepd: error: *** JOB 3102435 ON pn038 CANCELLED AT 2023-05-17T00:37:14 DUE TO TIME LIMIT ***

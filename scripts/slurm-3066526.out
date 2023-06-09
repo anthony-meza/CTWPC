@@ -1,0 +1,25 @@
+2023-04-18 15:49:53,213 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.108:44526'
+2023-04-18 15:50:10,038 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.108:34583
+2023-04-18 15:50:10,039 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.108:34583
+2023-04-18 15:50:10,039 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-04-18 15:50:10,040 - distributed.worker - INFO -          dashboard at:         172.16.3.108:44616
+2023-04-18 15:50:10,040 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.91:43697
+2023-04-18 15:50:10,040 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 15:50:10,040 - distributed.worker - INFO -               Threads:                         32
+2023-04-18 15:50:10,040 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-04-18 15:50:10,040 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-mrpr2c44
+2023-04-18 15:50:10,040 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 15:50:10,050 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.91:43697
+2023-04-18 15:50:10,050 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 15:50:10,051 - distributed.core - INFO - Starting established connection to tcp://172.16.3.91:43697
+/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/xarray/core/common.py:965: FutureWarning: 'base' in .resample() and in Grouper() is deprecated.
+The new arguments that you should use are 'offset' or 'origin'.
+
+>>> df.resample(freq="3s", base=2)
+
+becomes:
+
+>>> df.resample(freq="3s", offset="2s")
+
+  grouper = pd.Grouper(
+slurmstepd: error: *** JOB 3066526 ON pn058 CANCELLED AT 2023-04-18T15:53:54 ***

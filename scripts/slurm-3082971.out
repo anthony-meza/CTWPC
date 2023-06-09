@@ -1,0 +1,253 @@
+2023-05-04 14:58:07,016 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.104:46836'
+2023-05-04 14:58:07,390 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-7c2v_c63', purging
+2023-05-04 14:58:09,613 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.104:39749
+2023-05-04 14:58:09,613 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.104:39749
+2023-05-04 14:58:09,613 - distributed.worker - INFO -           Worker name:             SLURMCluster-2
+2023-05-04 14:58:09,613 - distributed.worker - INFO -          dashboard at:         172.16.3.104:44988
+2023-05-04 14:58:09,613 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:43862
+2023-05-04 14:58:09,613 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 14:58:09,613 - distributed.worker - INFO -               Threads:                         36
+2023-05-04 14:58:09,613 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-04 14:58:09,613 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-je3xl9tt
+2023-05-04 14:58:09,613 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 14:58:09,618 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:43862
+2023-05-04 14:58:09,618 - distributed.worker - INFO - -------------------------------------------------
+2023-05-04 14:58:09,618 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:43862
+2023-05-04 15:24:44,860 - distributed.core - INFO - Removing comms to tcp://172.16.3.185:41432
+2023-05-04 16:25:43,280 - distributed.core - INFO - Removing comms to tcp://172.16.3.65:37409
+2023-05-04 16:25:43,286 - distributed.core - INFO - Removing comms to tcp://172.16.3.67:44799
+2023-05-04 16:25:43,286 - distributed.core - INFO - Removing comms to tcp://172.16.3.63:33229
+2023-05-04 16:25:43,293 - distributed.core - INFO - Removing comms to tcp://172.16.3.68:32915
+2023-05-04 16:25:43,324 - distributed.core - INFO - Removing comms to tcp://172.16.3.64:40969
+2023-05-04 16:25:43,337 - distributed.core - INFO - Removing comms to tcp://172.16.3.70:38567
+2023-05-04 16:25:43,342 - distributed.core - INFO - Removing comms to tcp://172.16.3.69:44899
+2023-05-04 16:43:45,428 - distributed.utils_perf - INFO - full garbage collection released 2.00 GiB from 740 reference cycles (threshold: 9.54 MiB)
+2023-05-04 16:44:01,243 - distributed.utils_perf - INFO - full garbage collection released 856.80 MiB from 1619 reference cycles (threshold: 9.54 MiB)
+2023-05-04 16:44:42,753 - distributed.utils_perf - INFO - full garbage collection released 5.18 GiB from 640 reference cycles (threshold: 9.54 MiB)
+2023-05-04 16:45:04,830 - distributed.utils_perf - INFO - full garbage collection released 63.59 MiB from 471 reference cycles (threshold: 9.54 MiB)
+2023-05-04 16:46:37,235 - distributed.core - INFO - Removing comms to tcp://172.16.3.83:42714
+2023-05-04 16:46:37,328 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.83:42714
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 235, in read
+    n = await stream.read_into(chunk)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2060, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2895, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1028, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.104:56621 remote=tcp://172.16.3.83:42714>: Stream is closed
+2023-05-04 16:46:42,511 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.74s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 16:46:54,206 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.06s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 16:46:57,471 - distributed.worker - ERROR - failed during get data with tcp://172.16.3.104:39749 -> tcp://172.16.3.83:42714
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1787, in get_data
+    response = await comm.read(deserializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.104:39749 remote=tcp://172.16.3.83:38413>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-05-04 16:46:57,483 - distributed.core - INFO - Lost connection to 'tcp://172.16.3.83:38413'
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 832, in _handle_comm
+    result = await result
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 991, in wrapper
+    return await func(self, *args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1787, in get_data
+    response = await comm.read(deserializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.104:39749 remote=tcp://172.16.3.83:38413>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-05-04 16:47:05,680 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.31s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 16:47:18,623 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.53s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 16:47:28,783 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.55s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 16:47:39,972 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.95s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 16:47:51,443 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.05s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 16:48:01,199 - distributed.core - INFO - Event loop was unresponsive in Worker for 9.76s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 16:48:04,265 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.07s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-04 16:48:32,874 - distributed.utils_perf - INFO - full garbage collection released 2.78 GiB from 201 reference cycles (threshold: 9.54 MiB)
+2023-05-04 16:48:39,389 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-04 16:48:45,682 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2023-05-04 16:48:50,822 - distributed.utils_perf - WARNING - full garbage collections took 12% CPU time recently (threshold: 10%)
+2023-05-04 16:48:55,824 - distributed.utils_perf - WARNING - full garbage collections took 22% CPU time recently (threshold: 10%)
+2023-05-04 16:48:59,810 - distributed.utils_perf - WARNING - full garbage collections took 22% CPU time recently (threshold: 10%)
+2023-05-04 16:48:59,810 - distributed.utils_perf - INFO - full garbage collection released 23.16 MiB from 519 reference cycles (threshold: 9.54 MiB)
+2023-05-04 16:49:02,364 - distributed.utils_perf - WARNING - full garbage collections took 23% CPU time recently (threshold: 10%)
+2023-05-04 16:49:07,082 - distributed.utils_perf - WARNING - full garbage collections took 23% CPU time recently (threshold: 10%)
+2023-05-04 16:49:31,866 - distributed.worker - ERROR - failed during get data with tcp://172.16.3.104:39749 -> tcp://172.16.3.189:34085
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+TimeoutError: [Errno 110] Connection timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1787, in get_data
+    response = await comm.read(deserializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.104:39749 remote=tcp://172.16.3.189:59702>: TimeoutError: [Errno 110] Connection timed out
+2023-05-04 16:49:31,867 - distributed.core - INFO - Lost connection to 'tcp://172.16.3.189:59702'
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+TimeoutError: [Errno 110] Connection timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 832, in _handle_comm
+    result = await result
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 991, in wrapper
+    return await func(self, *args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1787, in get_data
+    response = await comm.read(deserializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.104:39749 remote=tcp://172.16.3.189:59702>: TimeoutError: [Errno 110] Connection timed out
+2023-05-04 16:49:46,824 - distributed.utils_perf - WARNING - full garbage collections took 23% CPU time recently (threshold: 10%)
+2023-05-04 16:49:50,113 - distributed.utils_perf - WARNING - full garbage collections took 22% CPU time recently (threshold: 10%)
+2023-05-04 16:49:54,861 - distributed.utils_perf - WARNING - full garbage collections took 22% CPU time recently (threshold: 10%)
+2023-05-04 16:50:01,007 - distributed.utils_perf - WARNING - full garbage collections took 22% CPU time recently (threshold: 10%)
+2023-05-04 16:50:05,141 - distributed.utils_perf - WARNING - full garbage collections took 22% CPU time recently (threshold: 10%)
+2023-05-04 16:50:31,879 - distributed.utils_perf - WARNING - full garbage collections took 22% CPU time recently (threshold: 10%)
+2023-05-04 16:50:43,595 - distributed.utils_perf - WARNING - full garbage collections took 22% CPU time recently (threshold: 10%)
+2023-05-04 16:51:31,655 - distributed.utils_perf - WARNING - full garbage collections took 22% CPU time recently (threshold: 10%)
+2023-05-04 16:51:39,308 - distributed.utils_perf - WARNING - full garbage collections took 21% CPU time recently (threshold: 10%)
+2023-05-04 16:53:02,479 - distributed.utils_perf - WARNING - full garbage collections took 19% CPU time recently (threshold: 10%)
+2023-05-04 16:53:52,740 - distributed.utils_perf - WARNING - full garbage collections took 18% CPU time recently (threshold: 10%)
+2023-05-04 16:54:08,492 - distributed.core - INFO - Connection to tcp://172.16.3.106:43862 has been closed.
+2023-05-04 16:54:08,495 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.104:39749. Reason: worker-handle-scheduler-connection-broken
+2023-05-04 16:54:08,497 - distributed.worker - ERROR - failed during get data with tcp://172.16.3.104:39749 -> tcp://172.16.3.82:33831
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 317, in write
+    raise StreamClosedError()
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1786, in get_data
+    compressed = await comm.write(msg, serializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 328, in write
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.104:39749 remote=tcp://172.16.3.82:55592>: Stream is closed
+2023-05-04 16:54:08,591 - distributed.batched - INFO - Batched Comm Closed <TCP (closed) Worker->Scheduler local=tcp://172.16.3.104:60200 remote=tcp://172.16.3.106:43862>
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/batched.py", line 115, in _background_send
+    nbytes = yield coro
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/gen.py", line 767, in run
+    value = future.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 269, in write
+    raise CommClosedError()
+distributed.comm.core.CommClosedError
+2023-05-04 16:54:08,631 - distributed.worker - ERROR - failed during get data with tcp://172.16.3.104:39749 -> tcp://172.16.3.102:38857
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 317, in write
+    raise StreamClosedError()
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1786, in get_data
+    compressed = await comm.write(msg, serializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 328, in write
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.104:39749 remote=tcp://172.16.3.102:37506>: Stream is closed
+2023-05-04 16:54:08,636 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.104:46836'. Reason: worker-handle-scheduler-connection-broken
+2023-05-04 16:54:08,669 - distributed.worker - ERROR - failed during get data with tcp://172.16.3.104:39749 -> tcp://172.16.3.189:34085
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 317, in write
+    raise StreamClosedError()
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1786, in get_data
+    compressed = await comm.write(msg, serializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 328, in write
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.104:39749 remote=tcp://172.16.3.189:59860>: Stream is closed
+2023-05-04 16:54:10,743 - distributed.client - ERROR - 
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 292, in connect
+    comm = await wait_for(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 1878, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 511, in connect
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <distributed.comm.tcp.TCPConnector object at 0x2aaacbe4f5e0>: ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 754, in wrapper
+    return await func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/client.py", line 1323, in _reconnect
+    await self._ensure_connected(timeout=timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/client.py", line 1353, in _ensure_connected
+    comm = await connect(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 316, in connect
+    await asyncio.sleep(backoff)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 605, in sleep
+    return await future
+asyncio.exceptions.CancelledError
+2023-05-04 16:54:10,748 - distributed.nanny - INFO - Worker closed
+2023-05-04 16:54:12,751 - distributed.nanny - ERROR - Worker process died unexpectedly
+2023-05-04 16:54:19,204 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.104:46836'. Reason: nanny-close-gracefully
+2023-05-04 16:54:19,206 - distributed.dask_worker - INFO - End worker

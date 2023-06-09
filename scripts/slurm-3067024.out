@@ -1,0 +1,18 @@
+2023-04-18 21:34:54,654 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.81:43058'
+2023-04-18 21:34:55,768 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.81:35208
+2023-04-18 21:34:55,769 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.81:35208
+2023-04-18 21:34:55,769 - distributed.worker - INFO -           Worker name:             SLURMCluster-1
+2023-04-18 21:34:55,769 - distributed.worker - INFO -          dashboard at:          172.16.3.81:34569
+2023-04-18 21:34:55,769 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.91:46863
+2023-04-18 21:34:55,769 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 21:34:55,769 - distributed.worker - INFO -               Threads:                         36
+2023-04-18 21:34:55,769 - distributed.worker - INFO -                Memory:                 166.71 GiB
+2023-04-18 21:34:55,769 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-7cb2hey7
+2023-04-18 21:34:55,769 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 21:34:55,774 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.91:46863
+2023-04-18 21:34:55,775 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 21:34:55,775 - distributed.core - INFO - Starting established connection to tcp://172.16.3.91:46863
+2023-04-18 23:07:57,813 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.78s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 23:08:08,413 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.06s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-18 23:08:16,941 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.77s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+slurmstepd: error: *** JOB 3067024 ON pn031 CANCELLED AT 2023-04-18T23:38:22 ***

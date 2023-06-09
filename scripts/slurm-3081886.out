@@ -1,0 +1,80 @@
+2023-05-02 23:11:50,188 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.64:33899'
+2023-05-02 23:11:58,030 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.64:45233
+2023-05-02 23:11:58,031 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.64:45233
+2023-05-02 23:11:58,031 - distributed.worker - INFO -           Worker name:             SLURMCluster-2
+2023-05-02 23:11:58,031 - distributed.worker - INFO -          dashboard at:          172.16.3.64:34677
+2023-05-02 23:11:58,031 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.55:35893
+2023-05-02 23:11:58,031 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 23:11:58,031 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 23:11:58,031 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 23:11:58,031 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-hgp4as21
+2023-05-02 23:11:58,031 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 23:11:58,050 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.55:35893
+2023-05-02 23:11:58,051 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 23:11:58,052 - distributed.core - INFO - Starting established connection to tcp://172.16.3.55:35893
+2023-05-02 23:16:47,086 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.99s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-02 23:35:20,600 - distributed.core - INFO - Removing comms to tcp://172.16.3.85:46114
+2023-05-02 23:35:41,212 - distributed.core - INFO - Connection to tcp://172.16.3.55:35893 has been closed.
+2023-05-02 23:35:41,212 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.64:45233. Reason: worker-handle-scheduler-connection-broken
+2023-05-02 23:35:41,213 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1234, in heartbeat
+    response = await retry_operation(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils_comm.py", line 434, in retry_operation
+    return await retry(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils_comm.py", line 413, in retry
+    return await coro()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1268, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://172.16.3.64:47484 remote=tcp://172.16.3.55:35893>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-05-02 23:35:41,255 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.64:33899'. Reason: worker-handle-scheduler-connection-broken
+2023-05-02 23:35:45,859 - distributed.client - ERROR - 
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 292, in connect
+    comm = await wait_for(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 1850, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 511, in connect
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <distributed.comm.tcp.TCPConnector object at 0x2aab5fbd6470>: ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 752, in wrapper
+    return await func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/client.py", line 1321, in _reconnect
+    await self._ensure_connected(timeout=timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/client.py", line 1351, in _ensure_connected
+    comm = await connect(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 316, in connect
+    await asyncio.sleep(backoff)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 605, in sleep
+    return await future
+asyncio.exceptions.CancelledError
+2023-05-02 23:35:45,922 - distributed.nanny - INFO - Worker closed
+2023-05-02 23:35:52,181 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.64:33899'. Reason: nanny-close-gracefully
+2023-05-02 23:35:52,182 - distributed.dask_worker - INFO - End worker

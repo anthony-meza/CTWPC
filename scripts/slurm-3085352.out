@@ -1,0 +1,18 @@
+2023-05-10 09:33:15,040 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.129:33224'
+2023-05-10 09:33:15,420 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-xw04t6ud', purging
+2023-05-10 09:33:18,114 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.129:37884
+2023-05-10 09:33:18,114 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.129:37884
+2023-05-10 09:33:18,114 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-05-10 09:33:18,114 - distributed.worker - INFO -          dashboard at:         172.16.3.129:41215
+2023-05-10 09:33:18,114 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:33291
+2023-05-10 09:33:18,114 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 09:33:18,114 - distributed.worker - INFO -               Threads:                         30
+2023-05-10 09:33:18,114 - distributed.worker - INFO -                Memory:                 139.70 GiB
+2023-05-10 09:33:18,114 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-erta8uir
+2023-05-10 09:33:18,114 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 09:33:18,119 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:33291
+2023-05-10 09:33:18,119 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 09:33:18,120 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:33291
+2023-05-10 09:38:21,668 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.10s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-10 09:40:04,630 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.71s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+slurmstepd: error: *** JOB 3085352 ON pn079 CANCELLED AT 2023-05-10T10:14:05 ***

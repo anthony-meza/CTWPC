@@ -1,0 +1,49 @@
+2023-05-03 09:36:06,579 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.62:34479'
+2023-05-03 09:36:09,085 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.62:40308
+2023-05-03 09:36:09,085 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.62:40308
+2023-05-03 09:36:09,085 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-05-03 09:36:09,085 - distributed.worker - INFO -          dashboard at:          172.16.3.62:45118
+2023-05-03 09:36:09,085 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.158:36762
+2023-05-03 09:36:09,085 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:36:09,085 - distributed.worker - INFO -               Threads:                         36
+2023-05-03 09:36:09,085 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-03 09:36:09,085 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-7cdx5263
+2023-05-03 09:36:09,085 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:36:09,090 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.158:36762
+2023-05-03 09:36:09,090 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:36:09,091 - distributed.core - INFO - Starting established connection to tcp://172.16.3.158:36762
+2023-05-03 09:37:12,293 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 125.35 GiB -- Worker memory limit: 178.81 GiB
+2023-05-03 09:37:21,435 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.13s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:37:22,528 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 142.00 GiB -- Worker memory limit: 178.81 GiB
+2023-05-03 09:37:22,582 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.99s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:37:32,249 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.16s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:37:37,205 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 141.11 GiB -- Worker memory limit: 178.81 GiB
+2023-05-03 09:37:37,205 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.96s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:37:45,636 - distributed.core - INFO - Event loop was unresponsive in Worker for 7.54s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:37:48,251 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 141.24 GiB -- Worker memory limit: 178.81 GiB
+2023-05-03 09:37:51,389 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.30s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:37:59,358 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 140.89 GiB -- Worker memory limit: 178.81 GiB
+2023-05-03 09:38:09,508 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 141.38 GiB -- Worker memory limit: 178.81 GiB
+2023-05-03 09:38:25,604 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 141.44 GiB -- Worker memory limit: 178.81 GiB
+2023-05-03 09:38:26,390 - distributed.core - INFO - Event loop was unresponsive in Worker for 14.67s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:38:35,870 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 141.34 GiB -- Worker memory limit: 178.81 GiB
+2023-05-03 09:38:45,892 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 141.37 GiB -- Worker memory limit: 178.81 GiB
+2023-05-03 09:38:54,880 - distributed.nanny - INFO - Worker process 111175 was killed by signal 9
+2023-05-03 09:38:55,022 - distributed.nanny - WARNING - Restarting worker
+2023-05-03 09:38:58,488 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.62:41635
+2023-05-03 09:38:58,489 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.62:41635
+2023-05-03 09:38:58,489 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-05-03 09:38:58,489 - distributed.worker - INFO -          dashboard at:          172.16.3.62:41480
+2023-05-03 09:38:58,489 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.158:36762
+2023-05-03 09:38:58,489 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:38:58,489 - distributed.worker - INFO -               Threads:                         36
+2023-05-03 09:38:58,489 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-03 09:38:58,489 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-cq04cqq5
+2023-05-03 09:38:58,489 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:38:58,502 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.158:36762
+2023-05-03 09:38:58,502 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:38:58,503 - distributed.core - INFO - Starting established connection to tcp://172.16.3.158:36762
+2023-05-03 09:39:03,489 - distributed.core - INFO - Removing comms to tcp://172.16.3.61:41636
+2023-05-03 09:39:03,505 - distributed.core - INFO - Removing comms to tcp://172.16.3.168:39825
+2023-05-03 09:39:03,509 - distributed.core - INFO - Removing comms to tcp://172.16.3.167:46110
+slurmstepd: error: *** JOB 3082115 ON pn012 CANCELLED AT 2023-05-03T09:39:03 ***

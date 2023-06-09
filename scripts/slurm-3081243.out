@@ -1,0 +1,20 @@
+2023-05-02 16:45:35,058 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.92:44600'
+2023-05-02 16:45:35,532 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-b95v8g90', purging
+2023-05-02 16:45:45,648 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.92:38110
+2023-05-02 16:45:45,648 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.92:38110
+2023-05-02 16:45:45,648 - distributed.worker - INFO -           Worker name:             SLURMCluster-5
+2023-05-02 16:45:45,648 - distributed.worker - INFO -          dashboard at:          172.16.3.92:38494
+2023-05-02 16:45:45,648 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:46309
+2023-05-02 16:45:45,648 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 16:45:45,648 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 16:45:45,648 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 16:45:45,648 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-npkfu9ce
+2023-05-02 16:45:45,648 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 16:45:45,661 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:46309
+2023-05-02 16:45:45,662 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 16:45:45,663 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:46309
+2023-05-02 16:50:10,530 - distributed.core - INFO - Removing comms to tcp://172.16.3.53:41836
+2023-05-02 16:50:10,537 - distributed.core - INFO - Removing comms to tcp://172.16.3.52:36493
+2023-05-02 16:50:10,546 - distributed.core - INFO - Removing comms to tcp://172.16.3.168:44848
+2023-05-02 16:50:10,551 - distributed.core - INFO - Removing comms to tcp://172.16.3.167:44663
+slurmstepd: error: *** JOB 3081243 ON pn042 CANCELLED AT 2023-05-02T16:50:10 ***

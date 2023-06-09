@@ -1,0 +1,18 @@
+2023-04-26 11:34:20,131 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.57:43230'
+2023-04-26 11:34:39,935 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.57:40705
+2023-04-26 11:34:39,936 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.57:40705
+2023-04-26 11:34:39,936 - distributed.worker - INFO -           Worker name:             SLURMCluster-2
+2023-04-26 11:34:39,936 - distributed.worker - INFO -          dashboard at:          172.16.3.57:42042
+2023-04-26 11:34:39,936 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.52:44375
+2023-04-26 11:34:39,936 - distributed.worker - INFO - -------------------------------------------------
+2023-04-26 11:34:39,936 - distributed.worker - INFO -               Threads:                         36
+2023-04-26 11:34:39,936 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-04-26 11:34:39,936 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-m7ib3852
+2023-04-26 11:34:39,936 - distributed.worker - INFO - -------------------------------------------------
+2023-04-26 11:34:39,957 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.52:44375
+2023-04-26 11:34:39,957 - distributed.worker - INFO - -------------------------------------------------
+2023-04-26 11:34:39,957 - distributed.core - INFO - Starting established connection to tcp://172.16.3.52:44375
+2023-04-26 11:41:42,925 - distributed.utils_perf - INFO - full garbage collection released 68.19 MiB from 361 reference cycles (threshold: 9.54 MiB)
+2023-04-26 12:26:02,368 - distributed.core - INFO - Removing comms to tcp://172.16.3.85:34633
+2023-04-26 12:26:02,382 - distributed.core - INFO - Removing comms to tcp://172.16.3.84:44040
+slurmstepd: error: *** JOB 3075051 ON pn007 CANCELLED AT 2023-04-26T12:26:02 ***

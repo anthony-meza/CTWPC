@@ -1,0 +1,62 @@
+2023-05-03 09:51:35,293 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.88:33062'
+2023-05-03 09:51:37,784 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.88:39818
+2023-05-03 09:51:37,785 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.88:39818
+2023-05-03 09:51:37,785 - distributed.worker - INFO -           Worker name:             SLURMCluster-4
+2023-05-03 09:51:37,785 - distributed.worker - INFO -          dashboard at:          172.16.3.88:43902
+2023-05-03 09:51:37,785 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.158:45398
+2023-05-03 09:51:37,785 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:51:37,785 - distributed.worker - INFO -               Threads:                         36
+2023-05-03 09:51:37,785 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-03 09:51:37,785 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-z10jhck8
+2023-05-03 09:51:37,785 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:51:37,850 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.158:45398
+2023-05-03 09:51:37,850 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:51:37,850 - distributed.core - INFO - Starting established connection to tcp://172.16.3.158:45398
+2023-05-03 09:54:42,804 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.189:41839
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2891, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.88:59664 remote=tcp://172.16.3.189:41839>: Stream is closed
+2023-05-03 09:54:42,827 - distributed.core - INFO - Removing comms to tcp://172.16.3.189:41839
+2023-05-03 09:55:33,177 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.168:42978
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2891, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.88:51508 remote=tcp://172.16.3.168:42978>: Stream is closed
+2023-05-03 09:55:33,194 - distributed.core - INFO - Removing comms to tcp://172.16.3.168:42978
+2023-05-03 09:56:20,763 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.86s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:56:46,427 - distributed.core - INFO - Event loop was unresponsive in Nanny for 7.72s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:57:02,337 - distributed.core - INFO - Event loop was unresponsive in Nanny for 19.25s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:57:34,886 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.02s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:57:40,482 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.60s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:57:51,658 - distributed.core - INFO - Event loop was unresponsive in Worker for 90.88s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.

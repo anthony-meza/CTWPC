@@ -1,0 +1,3 @@
+2023-04-18 12:29:38,208 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.103:39156'
+2023-04-18 12:29:38,656 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-n_3kg38k', purging
+slurmstepd: error: *** JOB 3066165 ON pn053 CANCELLED AT 2023-04-18T12:29:41 ***

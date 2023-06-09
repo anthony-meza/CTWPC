@@ -1,0 +1,829 @@
+2023-05-01 15:31:31,254 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.88:43704'
+2023-05-01 15:31:33,778 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.88:44180
+2023-05-01 15:31:33,779 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.88:44180
+2023-05-01 15:31:33,779 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-05-01 15:31:33,779 - distributed.worker - INFO -          dashboard at:          172.16.3.88:34873
+2023-05-01 15:31:33,779 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.62:43030
+2023-05-01 15:31:33,779 - distributed.worker - INFO - -------------------------------------------------
+2023-05-01 15:31:33,779 - distributed.worker - INFO -               Threads:                         36
+2023-05-01 15:31:33,779 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-01 15:31:33,779 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-glm54dlo
+2023-05-01 15:31:33,779 - distributed.worker - INFO - -------------------------------------------------
+2023-05-01 15:31:33,784 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.62:43030
+2023-05-01 15:31:33,785 - distributed.worker - INFO - -------------------------------------------------
+2023-05-01 15:31:33,785 - distributed.core - INFO - Starting established connection to tcp://172.16.3.62:43030
+2023-05-01 15:35:29,972 - distributed.utils_perf - INFO - full garbage collection released 20.57 MiB from 261 reference cycles (threshold: 9.54 MiB)
+2023-05-01 15:36:38,124 - distributed.utils_perf - INFO - full garbage collection released 17.50 MiB from 453 reference cycles (threshold: 9.54 MiB)
+2023-05-01 15:41:25,693 - distributed.utils_perf - INFO - full garbage collection released 17.22 MiB from 491 reference cycles (threshold: 9.54 MiB)
+2023-05-01 15:42:40,035 - distributed.utils_perf - INFO - full garbage collection released 19.46 MiB from 738 reference cycles (threshold: 9.54 MiB)
+2023-05-01 15:53:50,413 - distributed.utils_perf - INFO - full garbage collection released 14.39 MiB from 1054 reference cycles (threshold: 9.54 MiB)
+2023-05-01 16:01:08,759 - distributed.utils_perf - INFO - full garbage collection released 36.65 MiB from 1075 reference cycles (threshold: 9.54 MiB)
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 1:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 739 in H5D__write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #006: H5Dcontig.c line 921 in H5D__contig_write(): contiguous write failed
+    major: Dataset
+    minor: Write failed
+  #007: H5Dselect.c line 493 in H5D__select_write(): write error
+    major: Dataspace
+    minor: Write failed
+  #008: H5Dselect.c line 230 in H5D__select_io(): write error
+    major: Dataspace
+    minor: Write failed
+  #009: H5Dcontig.c line 1530 in H5D__contig_writevv(): can't perform vectorized sieve buffer write
+    major: Dataset
+    minor: Can't operate on object
+  #010: H5VM.c line 1400 in H5VM_opvv(): can't perform operation
+    major: Internal error (too specific to document in detail)
+    minor: Can't operate on object
+  #011: H5Dcontig.c line 1283 in H5D__contig_writevv_sieve_cb(): block write failed
+    major: Dataset
+    minor: Write failed
+    major: Low-level I/O
+:
+2023-05-01 16:08:23,219 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 4315, 2, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[27.659382, 27.633015, 27.60445 , ...,       nan,       nan,
+                nan],
+         [27.623493, 27.59859 , 27.572222, ...,       nan,       nan,
+                nan],
+         [27.592   , 27.566362, 27.540728, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[27.654255, 27.627888, 27.599323, ...,       nan,       nan,
+                nan],
+         [27.618366, 27.593464, 27.567095, ...,       nan,       nan,
+                nan],
+         [27.586872, 27.560503, 27.535599, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:08:23,451 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 4315, 4, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[27.58614 , 27.561968, 27.52974 , ...,       nan,       nan,
+                nan],
+         [27.542192, 27.513626, 27.4814  , ...,       nan,       nan,
+                nan],
+         [27.50264 , 27.476273, 27.449171, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]]]], dtype=float32), 21.0), <xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab74432e80>, (slice(4315, 4316, None), slice(20, 21, None), slice(0, 745, None), slice(0, 901, None)), None, False))
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:08:28,545 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 4315, 3, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[27.619831, 27.593464, 27.564898, ...,       nan,       nan,
+                nan],
+         [27.584673, 27.559038, 27.531937, ...,       nan,       nan,
+                nan],
+         [27.553911, 27.52681 , 27.500443, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[27.605183, 27.579546, 27.550982, ...,       nan,       nan,
+                nan],
+         [27.569292, 27.54439 , 27.517288, ...,       nan,       nan,
+                nan],
+         [27.538528, 27.511429, 27.485794, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:08:36,244 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 5722, 0, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[26.63982 , 26.656666, 26.676443, ...,       nan,       nan,
+                nan],
+         [26.613453, 26.637623, 26.650074, ...,       nan,       nan,
+                nan],
+         [26.590015, 26.606129, 26.629566, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[26.622242, 26.63982 , 26.658863, ...,       nan,       nan,
+                nan],
+         [26.595875, 26.620045, 26.632496, ...,       nan,       nan,
+                nan],
+         [26.571703, 26.587818, 26.611256, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:08:36,279 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 5722, 2, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[26.544603, 26.562914, 26.58269 , ...,       nan,       nan,
+                nan],
+         [26.515305, 26.540209, 26.554125, ...,       nan,       nan,
+                nan],
+         [26.490402, 26.507248, 26.530685, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[26.538742, 26.557055, 26.57683 , ...,       nan,       nan,
+                nan],
+         [26.509445, 26.534348, 26.548265, ...,       nan,       nan,
+                nan],
+         [26.48381 , 26.500656, 26.524826, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:08:45,805 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 5722, 1, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[26.5739  , 26.59148 , 26.611256, ...,       nan,       nan,
+                nan],
+         [26.546068, 26.570238, 26.583422, ...,       nan,       nan,
+                nan],
+         [26.520432, 26.537277, 26.560717, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[26.56804 , 26.585619, 26.605396, ...,       nan,       nan,
+                nan],
+         [26.539476, 26.564379, 26.57683 , ...,       nan,       nan,
+                nan],
+         [26.514572, 26.530685, 26.554125, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:08:46,200 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 5722, 3, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[26.504318, 26.527023, 26.551195, ...,       nan,       nan,
+                nan],
+         [26.474289, 26.498459, 26.518967, ...,       nan,       nan,
+                nan],
+         [26.441328, 26.469162, 26.488937, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[26.488205, 26.51384 , 26.541674, ...,       nan,       nan,
+                nan],
+         [26.456709, 26.481613, 26.50505 , ...,       nan,       nan,
+                nan],
+         [26.423018, 26.453047, 26.472824, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:08:46,596 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 1214, 0, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[28.42552 , 28.421125, 28.417463, ...,       nan,       nan,
+                nan],
+         [28.37498 , 28.370586, 28.366192, ...,       nan,       nan,
+                nan],
+         [28.317118, 28.309793, 28.303934, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[28.423323, 28.418928, 28.415266, ...,       nan,       nan,
+                nan],
+         [28.372051, 28.36839 , 28.363995, ...,       nan,       nan,
+                nan],
+         [28.314188, 28.307596, 28.301737, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:08:46,993 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 1214, 1, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[28.385235, 28.381573, 28.378643, ...,       nan,       nan,
+                nan],
+         [28.333231, 28.328836, 28.325174, ...,       nan,       nan,
+                nan],
+         [28.27317 , 28.266579, 28.261452, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[28.378643, 28.37498 , 28.372051, ...,       nan,       nan,
+                nan],
+         [28.32664 , 28.322245, 28.318583, ...,       nan,       nan,
+                nan],
+         [28.266579, 28.259987, 28.254128, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:08:57,183 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 1214, 2, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[28.358135, 28.354473, 28.351543, ...,       nan,       nan,
+                nan],
+         [28.305399, 28.301004, 28.297342, ...,       nan,       nan,
+                nan],
+         [28.244606, 28.238014, 28.232155, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[28.353008, 28.349346, 28.345684, ...,       nan,       nan,
+                nan],
+         [28.300272, 28.295877, 28.292215, ...,       nan,       nan,
+                nan],
+         [28.23948 , 28.232887, 28.227028, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:08:57,577 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 1214, 4, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[26.405437, 26.40617 , 26.39738 , ...,       nan,       nan,
+                nan],
+         [26.175451, 26.223793, 26.25895 , ...,       nan,       nan,
+                nan],
+         [25.93228 , 25.952787, 25.978424, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]]]], dtype=float32), 21.0), <xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab85358f40>, (slice(1214, 1215, None), slice(20, 21, None), slice(0, 745, None), slice(0, 901, None)), None, False))
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:08:57,998 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 1214, 3, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[28.258522, 28.23948 , 28.222633, ...,       nan,       nan,
+                nan],
+         [28.219704, 28.1948  , 28.166235, ...,       nan,       nan,
+                nan],
+         [28.188208, 28.172094, 28.150852, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[28.01828 , 27.976532, 27.938444, ...,       nan,       nan,
+                nan],
+         [28.021942, 27.964813, 27.90475 , ...,       nan,       nan,
+                nan],
+         [28.065157, 28.024872, 27.971405, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:09:08,595 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 4105, 0, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[27.912807, 27.928923, 27.945036, ...,       nan,       nan,
+                nan],
+         [27.84103 , 27.854946, 27.86813 , ...,       nan,       nan,
+                nan],
+         [27.767052, 27.780968, 27.792688, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[27.855679, 27.872524, 27.890102, ...,       nan,       nan,
+                nan],
+         [27.783165, 27.797815, 27.812464, ...,       nan,       nan,
+                nan],
+         [27.708456, 27.723106, 27.73629 , ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:09:08,981 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 4105, 1, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[27.729698, 27.748741, 27.767052, ...,       nan,       nan,
+                nan],
+         [27.654255, 27.67037 , 27.686483, ...,       nan,       nan,
+                nan],
+         [27.576616, 27.592731, 27.60738 , ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[27.719444, 27.737755, 27.756798, ...,       nan,       nan,
+                nan],
+         [27.642536, 27.659382, 27.675497, ...,       nan,       nan,
+                nan],
+         [27.564898, 27.58101 , 27.595661, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:09:09,367 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 4105, 2, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[27.69161 , 27.710653, 27.729698, ...,       nan,       nan,
+                nan],
+         [27.613972, 27.630085, 27.646198, ...,       nan,       nan,
+                nan],
+         [27.534866, 27.551714, 27.566362, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[27.682821, 27.702597, 27.722374, ...,       nan,       nan,
+                nan],
+         [27.605915, 27.62276 , 27.638874, ...,       nan,       nan,
+                nan],
+         [27.52681 , 27.543657, 27.558306, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:09:09,759 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 4105, 4, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[26.392986, 26.378338, 26.36369 , ...,       nan,       nan,
+                nan],
+         [26.361492, 26.341717, 26.33439 , ...,       nan,       nan,
+                nan],
+         [26.33146 , 26.296305, 26.276527, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]]]], dtype=float32), 21.0), <xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x2aab7a72bdc0>, (slice(4105, 4106, None), slice(20, 21, None), slice(0, 745, None), slice(0, 901, None)), None, False))
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:09:10,155 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 4105, 3, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[27.534134, 27.567827, 27.60445 , ...,       nan,       nan,
+                nan],
+         [27.486526, 27.50557 , 27.526077, ...,       nan,       nan,
+                nan],
+         [27.425734, 27.43965 , 27.452833, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[27.388378, 27.43672 , 27.490189, ...,       nan,       nan,
+                nan],
+         [27.348827, 27.36494 , 27.392773, ...,       nan,       nan,
+                nan],
+         [27.331247, 27.330515, 27.332712, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:09:10,551 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 1432, 0, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[26.793634, 26.81341 , 26.829523, ...,       nan,       nan,
+                nan],
+         [26.770195, 26.791437, 26.809748, ...,       nan,       nan,
+                nan],
+         [26.724052, 26.752617, 26.776787, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[26.772392, 26.792902, 26.809748, ...,       nan,       nan,
+                nan],
+         [26.748955, 26.770927, 26.789972, ...,       nan,       nan,
+                nan],
+         [26.702078, 26.73211 , 26.757011, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:09:10,941 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 1432, 1, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[26.69036 , 26.713066, 26.732841, ...,       nan,       nan,
+                nan],
+         [26.66619 , 26.689627, 26.710867, ...,       nan,       nan,
+                nan],
+         [26.62151 , 26.651539, 26.677176, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[26.679373, 26.702078, 26.722588, ...,       nan,       nan,
+                nan],
+         [26.655201, 26.677908, 26.69988 , ...,       nan,       nan,
+                nan],
+         [26.610523, 26.640553, 26.66619 , ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:09:11,328 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 1432, 2, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[26.647877, 26.671316, 26.691824, ...,       nan,       nan,
+                nan],
+         [26.623707, 26.646412, 26.668386, ...,       nan,       nan,
+                nan],
+         [26.57976 , 26.609058, 26.634693, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[26.63982 , 26.663258, 26.683767, ...,       nan,       nan,
+                nan],
+         [26.617115, 26.639088, 26.661793, ...,       nan,       nan,
+                nan],
+         [26.573168, 26.602467, 26.627369, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:09:11,724 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 1432, 3, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[26.593678, 26.616383, 26.635426, ...,       nan,       nan,
+                nan],
+         [26.578295, 26.599537, 26.61858 , ...,       nan,       nan,
+                nan],
+         [26.531418, 26.56145 , 26.589283, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[26.573168, 26.595875, 26.61565 , ...,       nan,       nan,
+                nan],
+         [26.560717, 26.58269 , 26.599537, ...,       nan,       nan,
+                nan],
+         [26.517502, 26.540941, 26.571703, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:09:12,166 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 5392, 0, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[25.647358, 25.624653, 25.600483, ...,       nan,       nan,
+                nan],
+         [25.62978 , 25.60561 , 25.579973, ...,       nan,       nan,
+                nan],
+         [25.601948, 25.578508, 25.553606, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[25.636372, 25.612934, 25.588764, ...,       nan,       nan,
+                nan],
+         [25.618793, 25.594624, 25.568987, ...,       nan,       nan,
+                nan],
+         [25.590961, 25.567522, 25.54262 , ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:09:42,502 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 5392, 1, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[25.567522, 25.544085, 25.519913, ...,       nan,       nan,
+                nan],
+         [25.549944, 25.525772, 25.499405, ...,       nan,       nan,
+                nan],
+         [25.52211 , 25.49794 , 25.473038, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[25.557268, 25.533829, 25.508926, ...,       nan,       nan,
+                nan],
+         [25.53969 , 25.515518, 25.489151, ...,       nan,       nan,
+                nan],
+         [25.511856, 25.487686, 25.462784, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:09:42,897 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 5392, 2, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[25.526505, 25.503067, 25.478165, ...,       nan,       nan,
+                nan],
+         [25.508194, 25.484024, 25.457655, ...,       nan,       nan,
+                nan],
+         [25.47963 , 25.455458, 25.430555, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[25.519913, 25.496475, 25.471573, ...,       nan,       nan,
+                nan],
+         [25.50087 , 25.4767  , 25.45033 , ...,       nan,       nan,
+                nan],
+         [25.472305, 25.448133, 25.423231, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:09:50,235 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 5392, 3, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[25.491348, 25.467178, 25.440077, ...,       nan,       nan,
+                nan],
+         [25.472305, 25.446669, 25.418837, ...,       nan,       nan,
+                nan],
+         [25.441542, 25.41664 , 25.39027 , ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[25.484024, 25.458387, 25.430555, ...,       nan,       nan,
+                nan],
+         [25.464249, 25.43788 , 25.40858 , ...,       nan,       nan,
+                nan],
+         [25.433485, 25.407116, 25.379284, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 16:09:50,691 - distributed.worker - WARNING - Compute Failed
+Key:       ('astype-store-map-ec06254cf0adce1d1c77fd526bc2b14b', 978, 0, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15b2b00>, (subgraph_callable-6d38a6af-542e-4ae5-87ae-7c7b9489e528, array(-32767., dtype=float32), 0.0007324442267417908, array([[[[27.007507, 26.995789, 26.981873, ...,       nan,       nan,
+                nan],
+         [26.973816, 26.964294, 26.951841, ...,       nan,       nan,
+                nan],
+         [26.943052, 26.931334, 26.916685, ...,       nan,       nan,
+                nan],
+         ...,
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan],
+         [      nan,       nan,       nan, ...,       nan,       nan,
+                nan]],
+
+        [[27.006042, 26.994324, 26.980408, ...,       nan,       nan,
+                nan],
+         [26.972351, 26.962097, 26.950377, ...,       nan,       nan,
+                nan],
+         [26.941587, 26.929869, 26.914488, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+--- Logging error ---
+2023-05-01 17:23:40,988 - distributed.utils_perf - INFO - full garbage collection released 437.59 MiB from 7039 reference cycles (threshold: 9.54 MiB)
+--- Logging error ---
+2023-05-01 17:28:20,462 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1234, in heartbeat
+    response = await retry_operation(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils_comm.py", line 434, in retry_operation
+    return await retry(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils_comm.py", line 413, in retry
+    return await coro()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1268, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://172.16.3.88:56846 remote=tcp://172.16.3.62:43030>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-05-01 17:28:20,465 - distributed.core - INFO - Connection to tcp://172.16.3.62:43030 has been closed.
+2023-05-01 17:28:20,465 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.88:44180. Reason: worker-handle-scheduler-connection-broken
+2023-05-01 17:28:20,471 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.88:43704'. Reason: worker-handle-scheduler-connection-broken
+2023-05-01 17:28:22,586 - distributed.client - ERROR - 
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 292, in connect
+    comm = await wait_for(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 1850, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 511, in connect
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <distributed.comm.tcp.TCPConnector object at 0x2aaae19c8f10>: ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 752, in wrapper
+    return await func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/client.py", line 1321, in _reconnect
+    await self._ensure_connected(timeout=timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/client.py", line 1351, in _ensure_connected
+    comm = await connect(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 316, in connect
+    await asyncio.sleep(backoff)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 605, in sleep
+    return await future
+asyncio.exceptions.CancelledError
+2023-05-01 17:28:52,591 - distributed.nanny - INFO - Worker closed
+2023-05-01 17:28:55,579 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.88:43704'. Reason: nanny-close-gracefully
+2023-05-01 17:28:55,579 - distributed.dask_worker - INFO - End worker

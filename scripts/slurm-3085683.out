@@ -1,0 +1,19 @@
+2023-05-10 10:17:20,119 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.101:45283'
+2023-05-10 10:17:20,542 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-qx8d_q3n', purging
+2023-05-10 10:17:25,659 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.101:43005
+2023-05-10 10:17:25,659 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.101:43005
+2023-05-10 10:17:25,659 - distributed.worker - INFO -           Worker name:             SLURMCluster-4
+2023-05-10 10:17:25,659 - distributed.worker - INFO -          dashboard at:         172.16.3.101:33602
+2023-05-10 10:17:25,659 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:40509
+2023-05-10 10:17:25,659 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 10:17:25,659 - distributed.worker - INFO -               Threads:                         30
+2023-05-10 10:17:25,659 - distributed.worker - INFO -                Memory:                 139.70 GiB
+2023-05-10 10:17:25,659 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-u9e3dev1
+2023-05-10 10:17:25,660 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 10:17:25,937 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:40509
+2023-05-10 10:17:25,937 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 10:17:25,938 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:40509
+2023-05-10 10:18:42,445 - distributed.utils_perf - INFO - full garbage collection released 2.26 GiB from 56 reference cycles (threshold: 9.54 MiB)
+2023-05-10 10:18:43,436 - distributed.utils_perf - INFO - full garbage collection released 2.43 GiB from 0 reference cycles (threshold: 9.54 MiB)
+2023-05-10 10:19:00,748 - distributed.core - INFO - Removing comms to tcp://172.16.3.128:41087
+slurmstepd: error: *** JOB 3085683 ON pn051 CANCELLED AT 2023-05-10T12:17:33 DUE TO TIME LIMIT ***

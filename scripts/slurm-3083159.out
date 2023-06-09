@@ -1,0 +1,19 @@
+2023-05-05 00:07:43,685 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.72:40571'
+2023-05-05 00:07:44,061 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-wt7sztt5', purging
+2023-05-05 00:07:45,065 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.72:41909
+2023-05-05 00:07:45,065 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.72:41909
+2023-05-05 00:07:45,065 - distributed.worker - INFO -           Worker name:             SLURMCluster-7
+2023-05-05 00:07:45,065 - distributed.worker - INFO -          dashboard at:          172.16.3.72:42834
+2023-05-05 00:07:45,065 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:44961
+2023-05-05 00:07:45,065 - distributed.worker - INFO - -------------------------------------------------
+2023-05-05 00:07:45,065 - distributed.worker - INFO -               Threads:                         36
+2023-05-05 00:07:45,065 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-05 00:07:45,065 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-eg2386sg
+2023-05-05 00:07:45,065 - distributed.worker - INFO - -------------------------------------------------
+2023-05-05 00:07:45,070 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:44961
+2023-05-05 00:07:45,071 - distributed.worker - INFO - -------------------------------------------------
+2023-05-05 00:07:45,071 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:44961
+2023-05-05 00:09:49,258 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.31s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-05 00:23:30,300 - distributed.core - INFO - Removing comms to tcp://172.16.3.62:43789
+2023-05-05 00:23:30,307 - distributed.core - INFO - Removing comms to tcp://172.16.3.61:40521
+slurmstepd: error: *** JOB 3083159 ON pn022 CANCELLED AT 2023-05-05T00:23:30 ***

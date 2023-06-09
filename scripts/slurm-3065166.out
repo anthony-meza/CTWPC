@@ -1,0 +1,28 @@
+2023-04-16 23:19:40,257 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.133:38458'
+2023-04-16 23:20:01,591 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.133:42645
+2023-04-16 23:20:01,591 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.133:42645
+2023-04-16 23:20:01,591 - distributed.worker - INFO -           Worker name:             SLURMCluster-2
+2023-04-16 23:20:01,591 - distributed.worker - INFO -          dashboard at:         172.16.3.133:41275
+2023-04-16 23:20:01,591 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.167:43521
+2023-04-16 23:20:01,591 - distributed.worker - INFO - -------------------------------------------------
+2023-04-16 23:20:01,591 - distributed.worker - INFO -               Threads:                         36
+2023-04-16 23:20:01,591 - distributed.worker - INFO -                Memory:                 166.71 GiB
+2023-04-16 23:20:01,591 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-_pbf3bqe
+2023-04-16 23:20:01,591 - distributed.worker - INFO - -------------------------------------------------
+2023-04-16 23:20:01,600 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.167:43521
+2023-04-16 23:20:01,601 - distributed.worker - INFO - -------------------------------------------------
+2023-04-16 23:20:01,601 - distributed.core - INFO - Starting established connection to tcp://172.16.3.167:43521
+2023-04-16 23:21:07,691 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.17s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in divide
+  return func(*(_execute_task(a, cache) for a in args))
+Exception ignored in: <function CachingFileManager.__del__ at 0x2aaac7a6dea0>
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 248, in __del__
+    self.close(needs_lock=False)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 232, in close
+    file.close()
+  File "src/netCDF4/_netCDF4.pyx", line 2624, in netCDF4._netCDF4.Dataset.close
+  File "src/netCDF4/_netCDF4.pyx", line 2587, in netCDF4._netCDF4.Dataset._close
+  File "src/netCDF4/_netCDF4.pyx", line 2028, in netCDF4._netCDF4._ensure_nc_success
+RuntimeError: NetCDF: Not a valid ID
+slurmstepd: error: *** JOB 3065166 ON pn083 CANCELLED AT 2023-04-17T01:19:40 DUE TO TIME LIMIT ***

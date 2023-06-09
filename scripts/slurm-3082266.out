@@ -1,0 +1,19 @@
+2023-05-03 10:46:36,373 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.62:40929'
+2023-05-03 10:46:37,934 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.62:37481
+2023-05-03 10:46:37,935 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.62:37481
+2023-05-03 10:46:37,935 - distributed.worker - INFO -           Worker name:            SLURMCluster-10
+2023-05-03 10:46:37,935 - distributed.worker - INFO -          dashboard at:          172.16.3.62:42818
+2023-05-03 10:46:37,935 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.158:35777
+2023-05-03 10:46:37,935 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 10:46:37,935 - distributed.worker - INFO -               Threads:                         36
+2023-05-03 10:46:37,935 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-03 10:46:37,935 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-7lzs8jl9
+2023-05-03 10:46:37,935 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 10:46:37,941 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.158:35777
+2023-05-03 10:46:37,941 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 10:46:37,941 - distributed.core - INFO - Starting established connection to tcp://172.16.3.158:35777
+2023-05-03 10:48:17,730 - distributed.utils_perf - INFO - full garbage collection released 712.73 MiB from 540 reference cycles (threshold: 9.54 MiB)
+2023-05-03 10:48:36,866 - distributed.utils_perf - INFO - full garbage collection released 831.00 MiB from 340 reference cycles (threshold: 9.54 MiB)
+2023-05-03 10:48:43,416 - distributed.utils_perf - INFO - full garbage collection released 273.36 MiB from 420 reference cycles (threshold: 9.54 MiB)
+2023-05-03 11:05:40,692 - distributed.core - INFO - Removing comms to tcp://172.16.3.105:45801
+slurmstepd: error: *** JOB 3082266 ON pn012 CANCELLED AT 2023-05-03T11:05:40 ***

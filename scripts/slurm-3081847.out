@@ -1,0 +1,234 @@
+2023-05-02 22:50:19,163 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.85:42671'
+2023-05-02 22:50:22,267 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.85:40002
+2023-05-02 22:50:22,268 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.85:40002
+2023-05-02 22:50:22,268 - distributed.worker - INFO -           Worker name:             SLURMCluster-6
+2023-05-02 22:50:22,268 - distributed.worker - INFO -          dashboard at:          172.16.3.85:38721
+2023-05-02 22:50:22,268 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.55:40487
+2023-05-02 22:50:22,268 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:50:22,268 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 22:50:22,268 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 22:50:22,268 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-cqvfehbe
+2023-05-02 22:50:22,268 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:50:22,274 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.55:40487
+2023-05-02 22:50:22,274 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:50:22,274 - distributed.core - INFO - Starting established connection to tcp://172.16.3.55:40487
+2023-05-02 22:50:50,956 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.12s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-02 22:51:11,091 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 65.48 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:12,619 - distributed.utils_perf - INFO - full garbage collection released 158.02 MiB from 0 reference cycles (threshold: 9.54 MiB)
+2023-05-02 22:51:12,619 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 75.38 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:12,676 - distributed.worker.memory - WARNING - Worker is at 76% memory usage. Resuming worker. Process memory: 71.46 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:12,976 - distributed.worker.memory - WARNING - Worker is at 81% memory usage. Pausing worker.  Process memory: 75.60 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:13,675 - distributed.worker.memory - WARNING - Worker is at 79% memory usage. Resuming worker. Process memory: 73.67 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:13,900 - distributed.worker.memory - WARNING - Worker is at 81% memory usage. Pausing worker.  Process memory: 75.94 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:14,385 - distributed.worker.memory - WARNING - Worker is at 77% memory usage. Resuming worker. Process memory: 72.55 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:14,815 - distributed.worker.memory - WARNING - Worker is at 81% memory usage. Pausing worker.  Process memory: 75.99 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:17,486 - distributed.nanny.memory - WARNING - Worker tcp://172.16.3.85:40002 (pid=271030) exceeded 95% memory budget. Restarting...
+2023-05-02 22:51:18,428 - distributed.nanny - INFO - Worker process 271030 was killed by signal 15
+2023-05-02 22:51:18,435 - distributed.nanny - WARNING - Restarting worker
+2023-05-02 22:51:24,553 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.85:35884
+2023-05-02 22:51:24,554 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.85:35884
+2023-05-02 22:51:24,554 - distributed.worker - INFO -           Worker name:             SLURMCluster-6
+2023-05-02 22:51:24,556 - distributed.worker - INFO -          dashboard at:          172.16.3.85:34143
+2023-05-02 22:51:24,556 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.55:40487
+2023-05-02 22:51:24,556 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:51:24,556 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 22:51:24,556 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 22:51:24,556 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-nw4k3e3l
+2023-05-02 22:51:24,556 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:51:24,578 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.55:40487
+2023-05-02 22:51:24,578 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:51:24,578 - distributed.core - INFO - Starting established connection to tcp://172.16.3.55:40487
+2023-05-02 22:51:29,172 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.93s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-02 22:51:29,362 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.63:44924
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 329, in connect
+    handshake = await wait_for(comm.read(), time_left())
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 1850, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.85:56459 remote=tcp://172.16.3.63:44924>: ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2888, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1509, in connect
+    return await connect_attempt
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1430, in _connect
+    comm = await connect(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 334, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://172.16.3.63:44924 after 30 s
+2023-05-02 22:51:29,401 - distributed.core - INFO - Removing comms to tcp://172.16.3.63:44924
+2023-05-02 22:51:40,336 - distributed.core - INFO - Removing comms to tcp://172.16.3.52:32814
+2023-05-02 22:51:42,873 - distributed.core - INFO - Removing comms to tcp://172.16.3.53:42755
+2023-05-02 22:51:48,172 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 66.43 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:51,660 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 74.52 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:51,788 - distributed.worker.memory - WARNING - Worker is at 75% memory usage. Resuming worker. Process memory: 69.87 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:52,330 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 75.20 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:52,480 - distributed.worker.memory - WARNING - Worker is at 79% memory usage. Resuming worker. Process memory: 74.45 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:52,582 - distributed.worker.memory - WARNING - Worker is at 81% memory usage. Pausing worker.  Process memory: 76.18 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:51:54,086 - distributed.nanny.memory - WARNING - Worker tcp://172.16.3.85:35884 (pid=271175) exceeded 95% memory budget. Restarting...
+2023-05-02 22:51:55,135 - distributed.nanny - INFO - Worker process 271175 was killed by signal 15
+2023-05-02 22:51:55,273 - distributed.nanny - WARNING - Restarting worker
+2023-05-02 22:52:02,018 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.85:44210
+2023-05-02 22:52:02,019 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.85:44210
+2023-05-02 22:52:02,019 - distributed.worker - INFO -           Worker name:             SLURMCluster-6
+2023-05-02 22:52:02,019 - distributed.worker - INFO -          dashboard at:          172.16.3.85:34710
+2023-05-02 22:52:02,019 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.55:40487
+2023-05-02 22:52:02,019 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:52:02,019 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 22:52:02,019 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 22:52:02,019 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-62bbs2zj
+2023-05-02 22:52:02,019 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:52:02,032 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.55:40487
+2023-05-02 22:52:02,033 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:52:02,034 - distributed.core - INFO - Starting established connection to tcp://172.16.3.55:40487
+2023-05-02 22:52:35,685 - distributed.core - INFO - Removing comms to tcp://172.16.3.53:39920
+2023-05-02 22:52:41,322 - distributed.core - INFO - Removing comms to tcp://172.16.3.52:40984
+2023-05-02 22:52:41,954 - distributed.core - INFO - Removing comms to tcp://172.16.3.63:41815
+2023-05-02 22:57:05,562 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 67.00 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:57:08,340 - distributed.worker.memory - WARNING - Worker is at 81% memory usage. Pausing worker.  Process memory: 76.01 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 22:57:09,986 - distributed.nanny.memory - WARNING - Worker tcp://172.16.3.85:44210 (pid=271310) exceeded 95% memory budget. Restarting...
+2023-05-02 22:57:10,853 - distributed.nanny - INFO - Worker process 271310 was killed by signal 15
+2023-05-02 22:57:10,877 - distributed.nanny - WARNING - Restarting worker
+2023-05-02 22:57:20,387 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.85:38332
+2023-05-02 22:57:20,388 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.85:38332
+2023-05-02 22:57:20,388 - distributed.worker - INFO -           Worker name:             SLURMCluster-6
+2023-05-02 22:57:20,388 - distributed.worker - INFO -          dashboard at:          172.16.3.85:42137
+2023-05-02 22:57:20,388 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.55:40487
+2023-05-02 22:57:20,388 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:57:20,388 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 22:57:20,388 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 22:57:20,389 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-9poz46zk
+2023-05-02 22:57:20,389 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:57:20,398 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.55:40487
+2023-05-02 22:57:20,398 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:57:20,399 - distributed.core - INFO - Starting established connection to tcp://172.16.3.55:40487
+2023-05-02 22:57:24,308 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.83s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-02 22:57:27,024 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.105:38846
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 329, in connect
+    handshake = await wait_for(comm.read(), time_left())
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 1850, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.85:36867 remote=tcp://172.16.3.105:38846>: ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2888, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1509, in connect
+    return await connect_attempt
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1430, in _connect
+    comm = await connect(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 334, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://172.16.3.105:38846 after 30 s
+2023-05-02 22:57:27,111 - distributed.core - INFO - Removing comms to tcp://172.16.3.105:38846
+2023-05-02 22:57:27,921 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.93:44738
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2891, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.85:54291 remote=tcp://172.16.3.93:44738>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-05-02 22:57:27,928 - distributed.core - INFO - Removing comms to tcp://172.16.3.93:44738
+2023-05-02 22:57:31,618 - distributed.core - INFO - Removing comms to tcp://172.16.3.53:35183
+2023-05-02 22:57:32,835 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.92:39919
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2891, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.85:38381 remote=tcp://172.16.3.92:39919>: Stream is closed
+2023-05-02 22:57:32,847 - distributed.core - INFO - Removing comms to tcp://172.16.3.92:39919
+2023-05-02 22:57:34,995 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.63:41773
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2891, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.85:58543 remote=tcp://172.16.3.63:41773>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-05-02 22:57:35,006 - distributed.core - INFO - Removing comms to tcp://172.16.3.63:41773
+2023-05-02 22:57:41,484 - distributed.core - INFO - Removing comms to tcp://172.16.3.63:35868
+2023-05-02 22:57:41,485 - distributed.core - INFO - Removing comms to tcp://172.16.3.92:41198
+slurmstepd: error: *** JOB 3081847 ON pn035 CANCELLED AT 2023-05-02T22:57:41 ***

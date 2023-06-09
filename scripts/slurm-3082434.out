@@ -1,0 +1,59 @@
+2023-05-03 13:33:34,412 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.133:38828'
+2023-05-03 13:33:41,169 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.133:45666
+2023-05-03 13:33:41,169 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.133:45666
+2023-05-03 13:33:41,169 - distributed.worker - INFO -           Worker name:             SLURMCluster-9
+2023-05-03 13:33:41,169 - distributed.worker - INFO -          dashboard at:         172.16.3.133:44676
+2023-05-03 13:33:41,169 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.87:37981
+2023-05-03 13:33:41,169 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 13:33:41,169 - distributed.worker - INFO -               Threads:                         36
+2023-05-03 13:33:41,169 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-03 13:33:41,169 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-prucjh69
+2023-05-03 13:33:41,169 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 13:33:42,105 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.87:37981
+2023-05-03 13:33:42,105 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 13:33:42,105 - distributed.core - INFO - Starting established connection to tcp://172.16.3.87:37981
+/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/scipy/io/_netcdf.py:305: RuntimeWarning: Cannot close a netcdf_file opened with mmap=True, when netcdf_variables or arrays referring to its data still exist. All data arrays obtained from such files refer directly to data on disk, and must be copied before the file can be cleanly closed. (See netcdf_file docstring for more information on mmap.)
+  warnings.warn((
+2023-05-03 13:40:57,009 - distributed.worker - WARNING - Compute Failed
+Key:       ('broadcast_to-concatenate-store-map-62b890564bc6ed183b5824295b9c1b9e', 82, 4, 0, 0)
+Function:  execute_task
+args:      ((<function store_chunk at 0x2aaeb15eedd0>, (<function broadcast_to at 0x2aaab6a2a3b0>, (functools.partial(<function mean_agg at 0x2aaeb1ba48b0>, dtype=dtype('float32'), axis=(0,), keepdims=False), [{'n': array([[[[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]],
+
+        [[16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         ...,
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.],
+         [16., 16., 16., ..., 16., 16., 16.]]]], dtype=float32), 'total': array([[[[321.73346, 321.73346, 321.69464, ...,       nan,       nan,
+                nan],
+         [320.89114, 320.76883, 320.70288, ...,       nan,       nan,
+                nan],
+ 
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: HDF error')"
+
+HDF5-DIAG: Error detected in HDF5 (1.14.0) thread 1:
+  #000: H5D.c line 1390 in H5Dwrite(): can't synchronously write data
+    major: Dataset
+    minor: Write failed
+  #001: H5D.c line 1333 in H5D__write_api_common(): can't write data
+    major: Dataset
+    minor: Write failed
+  #002: H5VLcallback.c line 2282 in H5VL_dataset_write_direct(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #003: H5VLcallback.c line 2237 in H5VL__dataset_write(): dataset write failed
+    major: Virtual Object Layer
+    minor: Write failed
+  #004: H5VLnative_dataset.c line 408 in H5VL__native_dataset_write(): can't write data
+    major: Dataset
+    minor: Write failed
+  #005: H5Dio.c line 648 in H5D__write(): unable to initialize storage
+    major: Dataset

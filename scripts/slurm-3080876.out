@@ -1,0 +1,21 @@
+2023-05-02 13:19:12,635 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.89:45563'
+2023-05-02 13:19:13,008 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-uk2vpmhd', purging
+2023-05-02 13:19:13,760 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.89:32917
+2023-05-02 13:19:13,760 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.89:32917
+2023-05-02 13:19:13,760 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2023-05-02 13:19:13,760 - distributed.worker - INFO -          dashboard at:          172.16.3.89:39389
+2023-05-02 13:19:13,760 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:37636
+2023-05-02 13:19:13,761 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 13:19:13,761 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 13:19:13,761 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-02 13:19:13,761 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-d9na8s7g
+2023-05-02 13:19:13,761 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 13:19:13,766 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:37636
+2023-05-02 13:19:13,766 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 13:19:13,766 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:37636
+/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in divide
+  return func(*(_execute_task(a, cache) for a in args))
+2023-05-02 13:36:54,158 - distributed.core - INFO - Removing comms to tcp://172.16.3.55:36839
+2023-05-02 13:36:54,167 - distributed.core - INFO - Removing comms to tcp://172.16.3.54:46626
+2023-05-02 13:36:54,180 - distributed.core - INFO - Removing comms to tcp://172.16.3.53:39172
+slurmstepd: error: *** JOB 3080876 ON pn039 CANCELLED AT 2023-05-02T13:36:54 ***

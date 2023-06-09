@@ -1,0 +1,18 @@
+2023-05-10 13:32:45,416 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.101:44858'
+2023-05-10 13:32:45,879 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-u9e3dev1', purging
+2023-05-10 13:32:55,767 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.101:40719
+2023-05-10 13:32:55,767 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.101:40719
+2023-05-10 13:32:55,767 - distributed.worker - INFO -           Worker name:            SLURMCluster-11
+2023-05-10 13:32:55,767 - distributed.worker - INFO -          dashboard at:         172.16.3.101:32814
+2023-05-10 13:32:55,767 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:37106
+2023-05-10 13:32:55,767 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 13:32:55,767 - distributed.worker - INFO -               Threads:                         30
+2023-05-10 13:32:55,768 - distributed.worker - INFO -                Memory:                 139.70 GiB
+2023-05-10 13:32:55,768 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-2szqpl1d
+2023-05-10 13:32:55,768 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 13:32:55,781 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:37106
+2023-05-10 13:32:55,782 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 13:32:55,784 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:37106
+2023-05-10 13:40:41,297 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.83s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-10 14:23:23,925 - distributed.core - INFO - Removing comms to tcp://172.16.3.105:35851
+slurmstepd: error: *** JOB 3086992 ON pn051 CANCELLED AT 2023-05-10T14:23:23 ***

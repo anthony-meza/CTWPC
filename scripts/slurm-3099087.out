@@ -1,0 +1,15 @@
+2023-05-15 23:11:34,888 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.65:37931'
+2023-05-15 23:11:44,107 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.65:45240
+2023-05-15 23:11:44,107 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.65:45240
+2023-05-15 23:11:44,107 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2023-05-15 23:11:44,107 - distributed.worker - INFO -          dashboard at:          172.16.3.65:35568
+2023-05-15 23:11:44,107 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.53:40242
+2023-05-15 23:11:44,107 - distributed.worker - INFO - -------------------------------------------------
+2023-05-15 23:11:44,107 - distributed.worker - INFO -               Threads:                         36
+2023-05-15 23:11:44,107 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-15 23:11:44,107 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-2c8kx2bw
+2023-05-15 23:11:44,107 - distributed.worker - INFO - -------------------------------------------------
+2023-05-15 23:11:44,114 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.53:40242
+2023-05-15 23:11:44,114 - distributed.worker - INFO - -------------------------------------------------
+2023-05-15 23:11:44,114 - distributed.core - INFO - Starting established connection to tcp://172.16.3.53:40242
+slurmstepd: error: *** JOB 3099087 ON pn015 CANCELLED AT 2023-05-15T23:24:01 ***

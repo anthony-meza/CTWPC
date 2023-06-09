@@ -1,0 +1,20 @@
+2023-05-26 00:54:30,920 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.87:36403'
+2023-05-26 00:54:31,296 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-s6g1ufby', purging
+2023-05-26 00:54:32,751 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.87:45116
+2023-05-26 00:54:32,751 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.87:45116
+2023-05-26 00:54:32,751 - distributed.worker - INFO -           Worker name:             SLURMCluster-4
+2023-05-26 00:54:32,751 - distributed.worker - INFO -          dashboard at:          172.16.3.87:39229
+2023-05-26 00:54:32,751 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.103:43976
+2023-05-26 00:54:32,751 - distributed.worker - INFO - -------------------------------------------------
+2023-05-26 00:54:32,751 - distributed.worker - INFO -               Threads:                         36
+2023-05-26 00:54:32,751 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-26 00:54:32,752 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-onk02sz7
+2023-05-26 00:54:32,752 - distributed.worker - INFO - -------------------------------------------------
+2023-05-26 00:54:32,759 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.103:43976
+2023-05-26 00:54:32,759 - distributed.worker - INFO - -------------------------------------------------
+2023-05-26 00:54:32,759 - distributed.core - INFO - Starting established connection to tcp://172.16.3.103:43976
+2023-05-26 02:27:57,752 - distributed.core - INFO - Removing comms to tcp://172.16.3.92:40386
+2023-05-26 02:27:57,758 - distributed.core - INFO - Removing comms to tcp://172.16.3.91:38423
+2023-05-26 02:27:57,763 - distributed.core - INFO - Removing comms to tcp://172.16.3.93:38355
+2023-05-26 02:27:57,769 - distributed.core - INFO - Removing comms to tcp://172.16.3.94:35128
+slurmstepd: error: *** JOB 3108029 ON pn037 CANCELLED AT 2023-05-26T02:54:57 DUE TO TIME LIMIT ***

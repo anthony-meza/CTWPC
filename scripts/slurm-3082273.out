@@ -1,0 +1,23 @@
+2023-05-03 10:46:53,924 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.93:42802'
+2023-05-03 10:46:55,426 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.93:41979
+2023-05-03 10:46:55,426 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.93:41979
+2023-05-03 10:46:55,426 - distributed.worker - INFO -           Worker name:            SLURMCluster-14
+2023-05-03 10:46:55,426 - distributed.worker - INFO -          dashboard at:          172.16.3.93:44321
+2023-05-03 10:46:55,426 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.158:35777
+2023-05-03 10:46:55,426 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 10:46:55,426 - distributed.worker - INFO -               Threads:                         36
+2023-05-03 10:46:55,426 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-03 10:46:55,426 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-smb428rg
+2023-05-03 10:46:55,427 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 10:46:55,431 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.158:35777
+2023-05-03 10:46:55,432 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 10:46:55,432 - distributed.core - INFO - Starting established connection to tcp://172.16.3.158:35777
+2023-05-03 10:47:51,672 - distributed.utils_perf - INFO - full garbage collection released 345.79 MiB from 80 reference cycles (threshold: 9.54 MiB)
+2023-05-03 10:48:02,542 - distributed.utils_perf - INFO - full garbage collection released 1.13 GiB from 860 reference cycles (threshold: 9.54 MiB)
+2023-05-03 10:48:06,170 - distributed.utils_perf - INFO - full garbage collection released 616.02 MiB from 539 reference cycles (threshold: 9.54 MiB)
+2023-05-03 10:48:10,669 - distributed.utils_perf - INFO - full garbage collection released 1.26 GiB from 699 reference cycles (threshold: 9.54 MiB)
+2023-05-03 10:48:22,177 - distributed.utils_perf - INFO - full garbage collection released 4.11 GiB from 580 reference cycles (threshold: 9.54 MiB)
+2023-05-03 10:48:24,349 - distributed.utils_perf - INFO - full garbage collection released 247.62 MiB from 479 reference cycles (threshold: 9.54 MiB)
+2023-05-03 10:48:26,885 - distributed.utils_perf - INFO - full garbage collection released 3.08 GiB from 599 reference cycles (threshold: 9.54 MiB)
+2023-05-03 10:49:01,394 - distributed.utils_perf - INFO - full garbage collection released 22.53 MiB from 440 reference cycles (threshold: 9.54 MiB)
+slurmstepd: error: *** JOB 3082273 ON pn043 CANCELLED AT 2023-05-03T11:05:40 ***

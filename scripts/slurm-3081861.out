@@ -1,0 +1,17 @@
+2023-05-02 22:58:28,622 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.53:43942'
+2023-05-02 22:58:29,022 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-y2ie9cwj', purging
+2023-05-02 22:58:31,273 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.53:45005
+2023-05-02 22:58:31,273 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.53:45005
+2023-05-02 22:58:31,273 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-05-02 22:58:31,273 - distributed.worker - INFO -          dashboard at:          172.16.3.53:33042
+2023-05-02 22:58:31,273 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.55:46537
+2023-05-02 22:58:31,273 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:58:31,273 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 22:58:31,273 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 22:58:31,273 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-t5bk25sd
+2023-05-02 22:58:31,273 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:58:31,279 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.55:46537
+2023-05-02 22:58:31,280 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 22:58:31,280 - distributed.core - INFO - Starting established connection to tcp://172.16.3.55:46537
+2023-05-02 22:59:53,440 - distributed.core - INFO - Event loop was unresponsive in Worker for 17.24s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+slurmstepd: error: *** JOB 3081861 ON pn003 CANCELLED AT 2023-05-02T23:03:37 ***

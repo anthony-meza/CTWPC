@@ -1,0 +1,21 @@
+2023-04-18 21:12:39,037 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.81:44808'
+2023-04-18 21:12:39,431 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-k1dgqd8a', purging
+2023-04-18 21:12:42,271 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.81:36717
+2023-04-18 21:12:42,271 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.81:36717
+2023-04-18 21:12:42,271 - distributed.worker - INFO -           Worker name:             SLURMCluster-7
+2023-04-18 21:12:42,271 - distributed.worker - INFO -          dashboard at:          172.16.3.81:44537
+2023-04-18 21:12:42,271 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.91:33339
+2023-04-18 21:12:42,271 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 21:12:42,271 - distributed.worker - INFO -               Threads:                         36
+2023-04-18 21:12:42,271 - distributed.worker - INFO -                Memory:                  55.88 GiB
+2023-04-18 21:12:42,271 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-z1_ogi_d
+2023-04-18 21:12:42,271 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 21:12:42,277 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.91:33339
+2023-04-18 21:12:42,277 - distributed.worker - INFO - -------------------------------------------------
+2023-04-18 21:12:42,277 - distributed.core - INFO - Starting established connection to tcp://172.16.3.91:33339
+2023-04-18 21:21:50,172 - distributed.core - INFO - Connection to tcp://172.16.3.91:33339 has been closed.
+2023-04-18 21:21:50,172 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.81:36717. Reason: worker-handle-scheduler-connection-broken
+2023-04-18 21:21:50,175 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.81:44808'. Reason: worker-handle-scheduler-connection-broken
+2023-04-18 21:21:52,700 - distributed.nanny - INFO - Worker closed
+2023-04-18 21:21:54,961 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.81:44808'. Reason: nanny-close-gracefully
+2023-04-18 21:21:54,962 - distributed.dask_worker - INFO - End worker

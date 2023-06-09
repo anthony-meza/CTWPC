@@ -1,0 +1,16 @@
+2023-05-03 10:46:53,917 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.105:41034'
+2023-05-03 10:46:55,237 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.105:45801
+2023-05-03 10:46:55,237 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.105:45801
+2023-05-03 10:46:55,238 - distributed.worker - INFO -           Worker name:            SLURMCluster-13
+2023-05-03 10:46:55,238 - distributed.worker - INFO -          dashboard at:         172.16.3.105:38170
+2023-05-03 10:46:55,238 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.158:35777
+2023-05-03 10:46:55,238 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 10:46:55,238 - distributed.worker - INFO -               Threads:                         36
+2023-05-03 10:46:55,238 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-03 10:46:55,238 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-jx7msh98
+2023-05-03 10:46:55,238 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 10:46:55,243 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.158:35777
+2023-05-03 10:46:55,243 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 10:46:55,244 - distributed.core - INFO - Starting established connection to tcp://172.16.3.158:35777
+2023-05-03 10:49:13,387 - distributed.utils_perf - INFO - full garbage collection released 41.77 MiB from 140 reference cycles (threshold: 9.54 MiB)
+slurmstepd: error: *** JOB 3082274 ON pn055 CANCELLED AT 2023-05-03T11:05:40 ***

@@ -1,0 +1,35 @@
+2023-04-16 23:19:40,257 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.103:43769'
+2023-04-16 23:20:01,590 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.103:34612
+2023-04-16 23:20:01,590 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.103:34612
+2023-04-16 23:20:01,590 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2023-04-16 23:20:01,590 - distributed.worker - INFO -          dashboard at:         172.16.3.103:38297
+2023-04-16 23:20:01,590 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.167:43521
+2023-04-16 23:20:01,590 - distributed.worker - INFO - -------------------------------------------------
+2023-04-16 23:20:01,591 - distributed.worker - INFO -               Threads:                         36
+2023-04-16 23:20:01,591 - distributed.worker - INFO -                Memory:                 166.71 GiB
+2023-04-16 23:20:01,591 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-n_3kg38k
+2023-04-16 23:20:01,591 - distributed.worker - INFO - -------------------------------------------------
+2023-04-16 23:20:01,600 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.167:43521
+2023-04-16 23:20:01,600 - distributed.worker - INFO - -------------------------------------------------
+2023-04-16 23:20:01,600 - distributed.core - INFO - Starting established connection to tcp://172.16.3.167:43521
+2023-04-16 23:20:33,348 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.37s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in divide
+  return func(*(_execute_task(a, cache) for a in args))
+2023-04-16 23:26:08,141 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.48s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-04-16 23:35:55,870 - distributed.worker - ERROR - Exception during execution of task ('sum-sum-aggregate-ad7c36c3073a4afdd970856927d88809', 0).
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 2337, in _prepare_args_for_execution
+    data[k] = self.data[k]
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/zict/buffer.py", line 108, in __getitem__
+    raise KeyError(key)
+KeyError: "('open_dataset-477b43f9530f6d4ac629b276718bf891EQ-02aafabcac0cf0a2a03a0c49189d00ca', 0, 0)"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 2235, in execute
+    args2, kwargs2 = self._prepare_args_for_execution(ts, args, kwargs)
+  File "/vortexfs1/home/anthony.meza/.conda/envs/notebook_env/lib/python3.10/site-packages/distributed/worker.py", line 2341, in _prepare_args_for_execution
+    data[k] = Actor(type(self.state.actors[k]), self.address, k, self)
+KeyError: "('open_dataset-477b43f9530f6d4ac629b276718bf891EQ-02aafabcac0cf0a2a03a0c49189d00ca', 0, 0)"
+slurmstepd: error: *** JOB 3065165 ON pn053 CANCELLED AT 2023-04-17T01:19:40 DUE TO TIME LIMIT ***

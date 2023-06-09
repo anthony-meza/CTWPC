@@ -1,0 +1,78 @@
+2023-05-10 20:49:35,186 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.55:40486'
+2023-05-10 20:49:36,709 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.55:35203
+2023-05-10 20:49:36,709 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.55:35203
+2023-05-10 20:49:36,709 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-05-10 20:49:36,709 - distributed.worker - INFO -          dashboard at:          172.16.3.55:44349
+2023-05-10 20:49:36,709 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:38839
+2023-05-10 20:49:36,709 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 20:49:36,709 - distributed.worker - INFO -               Threads:                         36
+2023-05-10 20:49:36,709 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-10 20:49:36,709 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-oh6alopq
+2023-05-10 20:49:36,709 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 20:49:36,714 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:38839
+2023-05-10 20:49:36,714 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 20:49:36,714 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:38839
+/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in divide
+  return func(*(_execute_task(a, cache) for a in args))
+2023-05-10 20:52:25,803 - distributed.worker.memory - WARNING - Worker is at 81% memory usage. Pausing worker.  Process memory: 38.10 GiB -- Worker memory limit: 46.57 GiB
+2023-05-10 20:52:25,808 - distributed.core - INFO - Event loop was unresponsive in Worker for 8.99s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-10 20:52:32,152 - distributed.nanny.memory - WARNING - Worker tcp://172.16.3.55:35203 (pid=162212) exceeded 95% memory budget. Restarting...
+2023-05-10 20:52:34,753 - distributed.nanny - INFO - Worker process 162212 was killed by signal 15
+2023-05-10 20:52:35,021 - distributed.nanny - WARNING - Restarting worker
+2023-05-10 20:52:37,372 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.55:45988
+2023-05-10 20:52:37,372 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.55:45988
+2023-05-10 20:52:37,372 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-05-10 20:52:37,372 - distributed.worker - INFO -          dashboard at:          172.16.3.55:39325
+2023-05-10 20:52:37,372 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:38839
+2023-05-10 20:52:37,372 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 20:52:37,372 - distributed.worker - INFO -               Threads:                         36
+2023-05-10 20:52:37,372 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-10 20:52:37,372 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-7h8lvbko
+2023-05-10 20:52:37,372 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 20:52:37,378 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:38839
+2023-05-10 20:52:37,378 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 20:52:37,379 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:38839
+/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in divide
+  return func(*(_execute_task(a, cache) for a in args))
+2023-05-10 20:55:05,106 - distributed.core - INFO - Event loop was unresponsive in Worker for 10.03s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-10 20:55:08,047 - distributed.worker.memory - WARNING - Worker is at 81% memory usage. Pausing worker.  Process memory: 38.05 GiB -- Worker memory limit: 46.57 GiB
+2023-05-10 20:55:13,151 - distributed.nanny.memory - WARNING - Worker tcp://172.16.3.55:45988 (pid=162701) exceeded 95% memory budget. Restarting...
+2023-05-10 20:55:15,680 - distributed.nanny - INFO - Worker process 162701 was killed by signal 15
+2023-05-10 20:55:16,040 - distributed.nanny - WARNING - Restarting worker
+2023-05-10 20:55:21,424 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.55:38899
+2023-05-10 20:55:21,424 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.55:38899
+2023-05-10 20:55:21,424 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-05-10 20:55:21,424 - distributed.worker - INFO -          dashboard at:          172.16.3.55:39285
+2023-05-10 20:55:21,425 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:38839
+2023-05-10 20:55:21,425 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 20:55:21,425 - distributed.worker - INFO -               Threads:                         36
+2023-05-10 20:55:21,425 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-10 20:55:21,425 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-d_5t_nb9
+2023-05-10 20:55:21,425 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 20:55:21,430 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:38839
+2023-05-10 20:55:21,431 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 20:55:21,431 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:38839
+/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in divide
+  return func(*(_execute_task(a, cache) for a in args))
+2023-05-10 20:56:21,570 - distributed.core - INFO - Removing comms to tcp://172.16.3.126:37364
+2023-05-10 20:58:31,708 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.25s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-10 20:58:42,561 - distributed.worker.memory - WARNING - Worker is at 86% memory usage. Pausing worker.  Process memory: 40.15 GiB -- Worker memory limit: 46.57 GiB
+2023-05-10 20:58:44,151 - distributed.nanny.memory - WARNING - Worker tcp://172.16.3.55:38899 (pid=163231) exceeded 95% memory budget. Restarting...
+2023-05-10 20:58:47,182 - distributed.nanny - INFO - Worker process 163231 was killed by signal 15
+2023-05-10 20:58:47,509 - distributed.nanny - WARNING - Restarting worker
+2023-05-10 20:58:51,937 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.55:42296
+2023-05-10 20:58:51,937 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.55:42296
+2023-05-10 20:58:51,937 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2023-05-10 20:58:51,937 - distributed.worker - INFO -          dashboard at:          172.16.3.55:44982
+2023-05-10 20:58:51,937 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:38839
+2023-05-10 20:58:51,937 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 20:58:51,937 - distributed.worker - INFO -               Threads:                         36
+2023-05-10 20:58:51,938 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-10 20:58:51,938 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-grk64kkh
+2023-05-10 20:58:51,938 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 20:58:51,943 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:38839
+2023-05-10 20:58:51,943 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 20:58:51,944 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:38839
+/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in divide
+  return func(*(_execute_task(a, cache) for a in args))
+slurmstepd: error: *** JOB 3089851 ON pn005 CANCELLED AT 2023-05-10T20:59:55 ***

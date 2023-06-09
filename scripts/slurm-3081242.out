@@ -1,0 +1,20 @@
+2023-05-02 16:45:35,060 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.105:43377'
+2023-05-02 16:45:45,648 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.105:43268
+2023-05-02 16:45:45,649 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.105:43268
+2023-05-02 16:45:45,649 - distributed.worker - INFO -           Worker name:             SLURMCluster-7
+2023-05-02 16:45:45,649 - distributed.worker - INFO -          dashboard at:         172.16.3.105:42661
+2023-05-02 16:45:45,649 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:46309
+2023-05-02 16:45:45,649 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 16:45:45,649 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 16:45:45,649 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 16:45:45,649 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-c13dehkz
+2023-05-02 16:45:45,649 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 16:45:45,656 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:46309
+2023-05-02 16:45:45,656 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 16:45:45,656 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:46309
+2023-05-02 16:50:10,531 - distributed.core - INFO - Removing comms to tcp://172.16.3.53:41836
+2023-05-02 16:50:10,538 - distributed.core - INFO - Removing comms to tcp://172.16.3.52:36493
+2023-05-02 16:50:10,547 - distributed.core - INFO - Removing comms to tcp://172.16.3.168:44848
+2023-05-02 16:50:10,552 - distributed.core - INFO - Removing comms to tcp://172.16.3.167:44663
+2023-05-02 16:50:10,560 - distributed.core - INFO - Removing comms to tcp://172.16.3.166:33030
+slurmstepd: error: *** JOB 3081242 ON pn055 CANCELLED AT 2023-05-02T16:50:10 ***

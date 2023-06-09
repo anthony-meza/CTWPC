@@ -1,0 +1,52 @@
+2023-05-01 17:29:47,379 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.93:37853'
+2023-05-01 17:29:50,048 - distributed.worker - INFO -       Start worker at:    tcp://172.16.3.93:36689
+2023-05-01 17:29:50,048 - distributed.worker - INFO -          Listening to:    tcp://172.16.3.93:36689
+2023-05-01 17:29:50,048 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2023-05-01 17:29:50,048 - distributed.worker - INFO -          dashboard at:          172.16.3.93:42018
+2023-05-01 17:29:50,048 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.62:37325
+2023-05-01 17:29:50,048 - distributed.worker - INFO - -------------------------------------------------
+2023-05-01 17:29:50,048 - distributed.worker - INFO -               Threads:                         36
+2023-05-01 17:29:50,048 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-01 17:29:50,048 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-8xjy1n85
+2023-05-01 17:29:50,048 - distributed.worker - INFO - -------------------------------------------------
+2023-05-01 17:29:50,053 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.62:37325
+2023-05-01 17:29:50,053 - distributed.worker - INFO - -------------------------------------------------
+2023-05-01 17:29:50,054 - distributed.core - INFO - Starting established connection to tcp://172.16.3.62:37325
+2023-05-01 17:37:26,959 - distributed.core - INFO - Connection to tcp://172.16.3.62:37325 has been closed.
+2023-05-01 17:37:26,960 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.93:36689. Reason: worker-handle-scheduler-connection-broken
+2023-05-01 17:37:26,968 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.93:37853'. Reason: worker-handle-scheduler-connection-broken
+2023-05-01 17:37:29,075 - distributed.client - ERROR - 
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 292, in connect
+    comm = await wait_for(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 1850, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 511, in connect
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <distributed.comm.tcp.TCPConnector object at 0x2aab99e73160>: ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils.py", line 752, in wrapper
+    return await func(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/client.py", line 1321, in _reconnect
+    await self._ensure_connected(timeout=timeout)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/client.py", line 1351, in _ensure_connected
+    comm = await connect(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/core.py", line 316, in connect
+    await asyncio.sleep(backoff)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/tasks.py", line 605, in sleep
+    return await future
+asyncio.exceptions.CancelledError
+2023-05-01 17:37:59,080 - distributed.nanny - INFO - Worker closed
+2023-05-01 17:38:01,910 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.93:37853'. Reason: nanny-close-gracefully
+2023-05-01 17:38:01,911 - distributed.dask_worker - INFO - End worker

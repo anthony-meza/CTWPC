@@ -1,0 +1,185 @@
+2023-05-10 21:01:05,988 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.127:40141'
+2023-05-10 21:01:06,408 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-f95h1r_7', purging
+2023-05-10 21:01:07,638 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.127:33230
+2023-05-10 21:01:07,640 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.127:33230
+2023-05-10 21:01:07,640 - distributed.worker - INFO -           Worker name:             SLURMCluster-7
+2023-05-10 21:01:07,640 - distributed.worker - INFO -          dashboard at:         172.16.3.127:39355
+2023-05-10 21:01:07,640 - distributed.worker - INFO - Waiting to connect to:    tcp://172.16.3.56:38430
+2023-05-10 21:01:07,640 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 21:01:07,640 - distributed.worker - INFO -               Threads:                         36
+2023-05-10 21:01:07,641 - distributed.worker - INFO -                Memory:                  46.57 GiB
+2023-05-10 21:01:07,641 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-0s5ajfz6
+2023-05-10 21:01:07,641 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 21:01:07,648 - distributed.worker - INFO -         Registered to:    tcp://172.16.3.56:38430
+2023-05-10 21:01:07,649 - distributed.worker - INFO - -------------------------------------------------
+2023-05-10 21:01:07,650 - distributed.core - INFO - Starting established connection to tcp://172.16.3.56:38430
+/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in divide
+  return func(*(_execute_task(a, cache) for a in args))
+2023-05-10 21:02:48,814 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.55:40344
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 235, in read
+    n = await stream.read_into(chunk)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2060, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2895, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1028, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.127:57621 remote=tcp://172.16.3.55:40344>: Stream is closed
+2023-05-10 21:02:48,825 - distributed.core - INFO - Removing comms to tcp://172.16.3.55:40344
+2023-05-10 21:02:53,320 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.125:42443
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 235, in read
+    n = await stream.read_into(chunk)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2060, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2895, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1028, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.127:47697 remote=tcp://172.16.3.125:42443>: Stream is closed
+2023-05-10 21:02:53,346 - distributed.core - INFO - Removing comms to tcp://172.16.3.125:42443
+2023-05-10 21:02:53,830 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.128:40874
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 235, in read
+    n = await stream.read_into(chunk)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2060, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2895, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1028, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.127:43969 remote=tcp://172.16.3.128:40874>: Stream is closed
+2023-05-10 21:02:53,839 - distributed.core - INFO - Removing comms to tcp://172.16.3.128:40874
+2023-05-10 21:02:58,156 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.126:37733
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 235, in read
+    n = await stream.read_into(chunk)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2060, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2895, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1028, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.127:34780 remote=tcp://172.16.3.126:37733>: Stream is closed
+2023-05-10 21:02:58,174 - distributed.core - INFO - Removing comms to tcp://172.16.3.126:37733
+2023-05-10 21:04:01,411 - distributed.worker - ERROR - Encountered invalid state
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 219, in wrapper
+    return method(self, *args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1941, in handle_stimulus
+    super().handle_stimulus(*stims)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 3706, in handle_stimulus
+    instructions = self.state.handle_stimulus(*stims)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1355, in handle_stimulus
+    recs, instr = self._handle_event(stim)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/functools.py", line 926, in _method
+    return method.__get__(obj, cls)(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 2794, in _handle_remove_replicas
+    raise RuntimeError("Encountered invalid state")  # pragma: no cover
+RuntimeError: Encountered invalid state
+2023-05-10 21:04:01,412 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.127:33230. Reason: worker-handle-scheduler-connection-broken
+2023-05-10 21:04:01,412 - distributed.batched - INFO - Batched Comm Closed <TCP (closed) Worker->Scheduler local=tcp://172.16.3.127:45206 remote=tcp://172.16.3.56:38430>
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/batched.py", line 115, in _background_send
+    nbytes = yield coro
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/gen.py", line 767, in run
+    value = future.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 269, in write
+    raise CommClosedError()
+distributed.comm.core.CommClosedError
+2023-05-10 21:04:01,445 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.127:40141'. Reason: worker-handle-scheduler-connection-broken
+2023-05-10 21:04:02,726 - distributed.nanny - INFO - Worker closed
+2023-05-10 21:04:02,727 - tornado.application - ERROR - Exception in callback functools.partial(<bound method IOLoop._discard_future_result of <tornado.platform.asyncio.AsyncIOMainLoop object at 0x2aaab752c5e0>>, <Task finished name='Task-7' coro=<Worker.handle_scheduler() done, defined at /vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py:203> exception=RuntimeError('Encountered invalid state')>)
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/ioloop.py", line 738, in _run_callback
+    ret = callback()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/ioloop.py", line 762, in _discard_future_result
+    future.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 206, in wrapper
+    return await method(self, *args, **kwargs)  # type: ignore
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1283, in handle_scheduler
+    await self.handle_stream(comm)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 916, in handle_stream
+    handler(**merge(extra, msg))
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1926, in _
+    self.handle_stimulus(event)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 219, in wrapper
+    return method(self, *args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1941, in handle_stimulus
+    super().handle_stimulus(*stims)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 3706, in handle_stimulus
+    instructions = self.state.handle_stimulus(*stims)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1355, in handle_stimulus
+    recs, instr = self._handle_event(stim)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/functools.py", line 926, in _method
+    return method.__get__(obj, cls)(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 2794, in _handle_remove_replicas
+    raise RuntimeError("Encountered invalid state")  # pragma: no cover
+RuntimeError: Encountered invalid state
+unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-7' coro=<Worker.handle_scheduler() done, defined at /vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py:203> exception=RuntimeError('Encountered invalid state')>
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/ioloop.py", line 738, in _run_callback
+    ret = callback()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/ioloop.py", line 762, in _discard_future_result
+    future.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 206, in wrapper
+    return await method(self, *args, **kwargs)  # type: ignore
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1283, in handle_scheduler
+    await self.handle_stream(comm)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 916, in handle_stream
+    handler(**merge(extra, msg))
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1926, in _
+    self.handle_stimulus(event)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 219, in wrapper
+    return method(self, *args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1941, in handle_stimulus
+    super().handle_stimulus(*stims)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 3706, in handle_stimulus
+    instructions = self.state.handle_stimulus(*stims)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 1355, in handle_stimulus
+    recs, instr = self._handle_event(stim)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/functools.py", line 926, in _method
+    return method.__get__(obj, cls)(*args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker_state_machine.py", line 2794, in _handle_remove_replicas
+    raise RuntimeError("Encountered invalid state")  # pragma: no cover
+RuntimeError: Encountered invalid state
+2023-05-10 21:04:07,053 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.127:40141'. Reason: nanny-close-gracefully
+2023-05-10 21:04:07,055 - distributed.dask_worker - INFO - End worker

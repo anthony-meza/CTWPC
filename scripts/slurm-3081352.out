@@ -1,0 +1,66 @@
+2023-05-02 17:07:54,591 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.189:38205'
+2023-05-02 17:07:55,375 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.189:35651
+2023-05-02 17:07:55,376 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.189:35651
+2023-05-02 17:07:55,376 - distributed.worker - INFO -           Worker name:             SLURMCluster-5
+2023-05-02 17:07:55,376 - distributed.worker - INFO -          dashboard at:         172.16.3.189:46325
+2023-05-02 17:07:55,376 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:42366
+2023-05-02 17:07:55,376 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:07:55,376 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 17:07:55,376 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 17:07:55,376 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-czaw4dt5
+2023-05-02 17:07:55,376 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:07:55,399 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:42366
+2023-05-02 17:07:55,399 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:07:55,400 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:42366
+2023-05-02 17:10:06,150 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.43s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-02 17:10:35,907 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 65.51 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 17:10:37,848 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 75.14 GiB -- Worker memory limit: 93.13 GiB
+2023-05-02 17:10:39,751 - distributed.nanny.memory - WARNING - Worker tcp://172.16.3.189:35651 (pid=295072) exceeded 95% memory budget. Restarting...
+2023-05-02 17:10:45,844 - distributed.nanny - INFO - Worker process 295072 was killed by signal 15
+2023-05-02 17:10:45,848 - distributed.nanny - WARNING - Restarting worker
+2023-05-02 17:10:50,592 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.189:34895
+2023-05-02 17:10:50,592 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.189:34895
+2023-05-02 17:10:50,592 - distributed.worker - INFO -           Worker name:             SLURMCluster-5
+2023-05-02 17:10:50,592 - distributed.worker - INFO -          dashboard at:         172.16.3.189:44954
+2023-05-02 17:10:50,592 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.106:42366
+2023-05-02 17:10:50,592 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:10:50,593 - distributed.worker - INFO -               Threads:                         36
+2023-05-02 17:10:50,593 - distributed.worker - INFO -                Memory:                  93.13 GiB
+2023-05-02 17:10:50,593 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-ha91lnx9
+2023-05-02 17:10:50,593 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:10:50,607 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.106:42366
+2023-05-02 17:10:50,607 - distributed.worker - INFO - -------------------------------------------------
+2023-05-02 17:10:50,607 - distributed.core - INFO - Starting established connection to tcp://172.16.3.106:42366
+2023-05-02 17:10:54,849 - distributed.core - INFO - Removing comms to tcp://172.16.3.167:38166
+2023-05-02 17:11:02,778 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1234, in heartbeat
+    response = await retry_operation(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils_comm.py", line 434, in retry_operation
+    return await retry(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils_comm.py", line 413, in retry
+    return await coro()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1268, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://172.16.3.189:34039 remote=tcp://172.16.3.106:42366>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-05-02 17:11:02,779 - distributed.core - INFO - Connection to tcp://172.16.3.106:42366 has been closed.
+2023-05-02 17:11:02,779 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.189:34895. Reason: worker-handle-scheduler-connection-broken
+2023-05-02 17:11:02,782 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.189:38205'. Reason: worker-handle-scheduler-connection-broken
+2023-05-02 17:11:32,841 - distributed.nanny - INFO - Worker closed
+2023-05-02 17:11:38,842 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.189:38205'. Reason: nanny-close-gracefully
+2023-05-02 17:11:38,843 - distributed.dask_worker - INFO - End worker

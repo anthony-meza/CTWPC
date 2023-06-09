@@ -1,0 +1,3297 @@
+2023-05-03 09:39:52,286 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.168:35792'
+2023-05-03 09:39:52,671 - distributed.diskutils - INFO - Found stale lock file and directory '/tmp/dask-worker-space/worker-p9edk0nz', purging
+2023-05-03 09:39:53,111 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.168:40360
+2023-05-03 09:39:53,112 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.168:40360
+2023-05-03 09:39:53,112 - distributed.worker - INFO -           Worker name:             SLURMCluster-4
+2023-05-03 09:39:53,112 - distributed.worker - INFO -          dashboard at:         172.16.3.168:41829
+2023-05-03 09:39:53,112 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.158:44343
+2023-05-03 09:39:53,112 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:39:53,112 - distributed.worker - INFO -               Threads:                         36
+2023-05-03 09:39:53,112 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-03 09:39:53,112 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-ad6i70i4
+2023-05-03 09:39:53,112 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:39:53,117 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.158:44343
+2023-05-03 09:39:53,117 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:39:53,117 - distributed.core - INFO - Starting established connection to tcp://172.16.3.158:44343
+2023-05-03 09:43:44,376 - distributed.utils_perf - INFO - full garbage collection released 83.02 MiB from 1800 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:43:50,167 - distributed.utils_perf - INFO - full garbage collection released 9.67 MiB from 1360 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:45:22,391 - distributed.utils_perf - INFO - full garbage collection released 55.07 MiB from 439 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:46:00,915 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.14s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:46:47,174 - distributed.utils_perf - INFO - full garbage collection released 171.72 MiB from 300 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:49:36,787 - distributed.core - INFO - Connection to tcp://172.16.3.158:44343 has been closed.
+2023-05-03 09:49:36,788 - distributed.worker - INFO - Stopping worker at tcp://172.16.3.168:40360. Reason: worker-handle-scheduler-connection-broken
+2023-05-03 09:49:36,789 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1234, in heartbeat
+    response = await retry_operation(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils_comm.py", line 434, in retry_operation
+    return await retry(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/utils_comm.py", line 413, in retry
+    return await coro()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1268, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://172.16.3.168:43145 remote=tcp://172.16.3.158:44343>: Stream is closed
+2023-05-03 09:49:36,791 - distributed.worker - ERROR - failed during get data with tcp://172.16.3.168:40360 -> tcp://172.16.3.61:37998
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1783, in get_data
+    response = await comm.read(deserializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.168:40360 remote=tcp://172.16.3.61:39550>: Stream is closed
+2023-05-03 09:49:36,797 - distributed.worker - ERROR - failed during get data with tcp://172.16.3.168:40360 -> tcp://172.16.3.167:34932
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 317, in write
+    raise StreamClosedError()
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1782, in get_data
+    compressed = await comm.write(msg, serializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 328, in write
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.168:40360 remote=tcp://172.16.3.167:52124>: Stream is closed
+2023-05-03 09:49:36,797 - distributed.worker - ERROR - failed during get data with tcp://172.16.3.168:40360 -> tcp://172.16.3.63:38486
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 317, in write
+    raise StreamClosedError()
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1782, in get_data
+    compressed = await comm.write(msg, serializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 328, in write
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.168:40360 remote=tcp://172.16.3.63:39211>: Stream is closed
+2023-05-03 09:49:36,799 - distributed.batched - INFO - Batched Comm Closed <TCP (closed) Worker->Scheduler local=tcp://172.16.3.168:43143 remote=tcp://172.16.3.158:44343>
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/batched.py", line 115, in _background_send
+    nbytes = yield coro
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/gen.py", line 767, in run
+    value = future.result()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 269, in write
+    raise CommClosedError()
+distributed.comm.core.CommClosedError
+2023-05-03 09:49:36,810 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://172.16.3.168:35792'. Reason: worker-handle-scheduler-connection-broken
+2023-05-03 09:49:39,818 - distributed.nanny - INFO - Worker closed
+2023-05-03 09:49:39,820 - distributed.protocol.core - CRITICAL - Failed to Serialize
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 109, in dumps
+    frames[0] = msgpack.dumps(msg, default=_encode_default, use_bin_type=True)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/msgpack/__init__.py", line 38, in packb
+    return Packer(**kwargs).pack(o)
+  File "msgpack/_packer.pyx", line 294, in msgpack._cmsgpack.Packer.pack
+  File "msgpack/_packer.pyx", line 300, in msgpack._cmsgpack.Packer.pack
+  File "msgpack/_packer.pyx", line 297, in msgpack._cmsgpack.Packer.pack
+  File "msgpack/_packer.pyx", line 231, in msgpack._cmsgpack.Packer._pack
+  File "msgpack/_packer.pyx", line 231, in msgpack._cmsgpack.Packer._pack
+  File "msgpack/_packer.pyx", line 285, in msgpack._cmsgpack.Packer._pack
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 100, in _encode_default
+    frames.extend(create_serialized_sub_frames(obj))
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 67, in create_serialized_sub_frames
+    _inplace_compress_frames(sub_header, sub_frames)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 50, in _inplace_compress_frames
+    compression[i], frames[i] = maybe_compress(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/contextlib.py", line 78, in inner
+    with self._recreate_cm():
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/metrics.py", line 275, in meter
+    self.digest_metric(label, delta, unit)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/metrics.py", line 225, in digest_metric
+    cb(label, value, unit)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 987, in metrics_callback
+    loop.call_soon_threadsafe(self.digest_metric, name, value)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/base_events.py", line 798, in call_soon_threadsafe
+    self._check_closed()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2023-05-03 09:49:39,821 - distributed.comm.utils - INFO - Unserializable Message: {'status': 'OK', 'data': {"('mean_chunk-5551b6adc3f1ef514ae186054fb55867', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.05645924,  0.06286813,  0.06683554, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.05188147,  0.05890072,  0.06378368, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.04608295,  0.05340739,  0.05859554, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.13214515, -0.13672292, -0.14038515, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.11627552, -0.11993774, -0.12451552, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.09643849, -0.10010071, -0.10498367, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-77fcbf5f91e921853285edc2d82a063f', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.02990814, -0.0286874 , -0.02777184, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.04150517, -0.03997925, -0.03784295, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.05157628, -0.04943999, -0.04669332, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.24933623, -0.24658956, -0.24262215, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.24689475, -0.24414808, -0.2414014 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.24475844, -0.24201179, -0.23987548, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-2db26c3aa8f6c9c17efc68a4984de7d5', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.00488296,  0.01281777,  0.01953185, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.00030519,  0.00824   ,  0.01525925, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.00488296,  0.00244148,  0.00946074, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.18311106, -0.18677327, -0.19135106, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.17273477, -0.1760918 , -0.18097477, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.16541032, -0.16876736, -0.17365032, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-9442a5021b15f1c8c162d956e019c6ab', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.04119999,  0.04943999,  0.0552385 , ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.03723258,  0.04577776,  0.05279702, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.03173925,  0.04028443,  0.04791406, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.13245033, -0.13611256, -0.13855404, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.11627552, -0.12024292, -0.12390515, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.09765923, -0.10284737, -0.10773034, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-7f18227c41f66badbb484ad5ede3c2d7', 18, 2, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        ...,
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.]]], dtype=float32), 'total': array([[[0.491348  , 0.49012727, 0.48829615, ..., 0.15900144,
+         0.15106662, 0.14252144],
+        [0.49653614, 0.4953154 , 0.4937895 , ..., 0.15594958,
+         0.1474044 , 0.13824885],
+        [0.50019836, 0.49897763, 0.4974517 , ..., 0.15228736,
+         0.1431318 , 0.13367108],
+        ...,
+        [0.6424146 , 0.6418043 , 0.6424146 , ..., 0.23255104,
+         0.24201179, 0.25208288],
+        [0.6344798 , 0.6326487 , 0.6317331 , ..., 0.23773919,
+         0.24658956, 0.25482956],
+        [0.6237983 , 0.621662  , 0.6198309 , ..., 0.24506363,
+         0.25208288, 0.25849178]]], dtype=float32)}>, "('mean_chunk-ce2e23611f097a9ff5a9896a3385fe17', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.09277627, -0.0900296 , -0.08819849, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.10345775, -0.10101627, -0.09887997, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.11352886, -0.11139256, -0.10956145, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.25910214, -0.26520586, -0.26856288, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.2395703 , -0.24445327, -0.24933623, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.22492142, -0.22827846, -0.23194067, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-751d31d43b4fd50d6f6e6afb896a6fef', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.02838221, -0.0265511 , -0.02594073, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.03631703, -0.03570665, -0.03631703, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.04455702, -0.04486221, -0.04638813, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.30365917, -0.30610064, -0.30762658, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.29969177, -0.30182806, -0.30426955, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.3009125 , -0.30152288, -0.30243844, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-0836d938358d4a73067088233e164318', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.02197333, -0.0204474 , -0.01922666, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.03204443, -0.03051851, -0.02838221, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.04150517, -0.03906369, -0.03631703, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.23560289, -0.22888882, -0.22064883, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.23285623, -0.22675252, -0.21973327, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.23041475, -0.22553179, -0.21973327, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-1638cf71f439f1f758b49945491aa2f0', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.05676443,  0.05767998,  0.05767998, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.05157628,  0.05157628,  0.05066073, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.04638813,  0.04577776,  0.04394665, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.11200293, -0.12024292, -0.12939848, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.10162663, -0.10559404, -0.11200293, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.09338664, -0.09369183, -0.09643849, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-d6a4d7f5a6333a81992b5cce2eced3e6', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.01312296, -0.0122074 , -0.01312296, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.02319407, -0.02197333, -0.02197333, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.03418073, -0.03265481, -0.03204443, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.17639698, -0.16968292, -0.16418958, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.15717033, -0.15442365, -0.15442365, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.14496292, -0.14526811, -0.14770958, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-89ba7ad1a1b4dd153ec93b73f4c3b8b1', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.02594073, -0.03082369, -0.03570665, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.03265481, -0.03875851, -0.04425184, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.03967406, -0.04577776, -0.05066073, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.20935698, -0.21332438, -0.21851254, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.22644734, -0.22949919, -0.23194067, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.24048585, -0.24231696, -0.24353771, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-72f9813dbc36313d8b782a267a67f3d0', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.00122074,  0.00244148,  0.00183111, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.00824   , -0.00701926, -0.00701926, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.01922666, -0.01739555, -0.01709037, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.15808588, -0.1556444 , -0.15533921, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.14557329, -0.14679404, -0.15015107, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.13855404, -0.14252144, -0.14770958, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-ad711f4de77e2b91d7d5fd7225b4d280', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.03784295,  0.04181036,  0.04364147, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.0347911 ,  0.03753777,  0.03814813, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.03173925,  0.03357036,  0.03295999, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.12146367, -0.12512589, -0.12848292, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.11749626, -0.11963256, -0.1226844 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.11719108, -0.11902219, -0.12115848, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-a4ce2888c70be66c51a5f17e7fd03e86', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.03082369, -0.02777184, -0.02624592, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.0347911 , -0.03234962, -0.03112888, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.03936888, -0.03753777, -0.03723258, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.32807398, -0.3253273 , -0.32166508, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.32563248, -0.3238014 , -0.32166508, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.32258064, -0.32197028, -0.32074952, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-04fbf686ad49411ebab62ece54aa3a76', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.03143407,  0.03051851,  0.03143407, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.02502518,  0.02410962,  0.02502518, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.01922666,  0.01861629,  0.01983703, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.118717  , -0.12970367, -0.14252144, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.11017182, -0.1208533 , -0.13367108, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.10101627, -0.10986663, -0.12115848, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-ad19f3f1b16723b8acc9fd1b8cd19cbd', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.01312296, -0.00671407, -0.00274667, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.01861629, -0.01190222, -0.00732444, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.02410962, -0.01709037, -0.01251259, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.31220436, -0.31006807, -0.30671102, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.3109836 , -0.30976287, -0.30793175, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.30854213, -0.30854213, -0.30762658, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-9c51b7f5f06910d005789c827ded45aa', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.02777184, -0.02105777, -0.0143437 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.03540147, -0.02899258, -0.02197333, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.04242073, -0.03601184, -0.02960295, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.2789392 , -0.27710807, -0.27527696, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.2822962 , -0.2807703 , -0.2789392 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.28321177, -0.2822962 , -0.28107548, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-fa741174bc1afd64190b66d470017d8e', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.08026368, -0.07660146, -0.07385479, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.08697775, -0.0839259 , -0.08117923, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.09125035, -0.08850367, -0.08606219, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.26276436, -0.26703694, -0.2722251 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.26093325, -0.2661214 , -0.27161473, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.25696585, -0.2624592 , -0.2679525 , ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-bbfb50416dfc2b544b446c65dcc048ce', 18, 2, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        ...,
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.]]], dtype=float32), 'total': array([[[0.40437025, 0.40498063, 0.4058962 , ..., 0.17303994,
+         0.19531846, 0.21637623],
+        [0.40650654, 0.40681174, 0.4077273 , ..., 0.17517625,
+         0.19806513, 0.21973327],
+        [0.4095584 , 0.4095584 , 0.41047394, ..., 0.17578661,
+         0.19959106, 0.22186956],
+        ...,
+        [0.53926206, 0.540788  , 0.5426191 , ..., 0.30610064,
+         0.31861323, 0.33051544],
+        [0.5279702 , 0.52949613, 0.5316324 , ..., 0.3152562 ,
+         0.32715842, 0.3378399 ],
+        [0.5114902 , 0.5127109 , 0.5148473 , ..., 0.32624286,
+         0.33631396, 0.34455398]]], dtype=float32)}>, "('mean_chunk-04938b37b6fc898e5a14f7eb0061000e', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.08514664, -0.07690664, -0.07019258, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.09887997, -0.09338664, -0.08789331, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.10803552, -0.10437331, -0.10071108, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.2826014 , -0.28321177, -0.28351694, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.2764977 , -0.2758873 , -0.27558213, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.28199103, -0.28199103, -0.2807703 , ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-1282a158d2bcc667be081a48c6c3b785', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.00762963, -0.00427259, -0.00183111, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.01312296, -0.01037629, -0.00824   , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.01709037, -0.01495407, -0.01342814, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.22034363, -0.22278512, -0.22705771, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.22370067, -0.22553179, -0.22858363, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.22461623, -0.22705771, -0.22949919, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-97d3a9807bbcfb778f9cddc1aa57aa47', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.04181036,  0.04760887,  0.05157628, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.03662221,  0.04242073,  0.04638813, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.02990814,  0.03570665,  0.03967406, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.20599994, -0.20874661, -0.21118808, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.19959106, -0.20233771, -0.2047792 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.18158513, -0.18402661, -0.18738365, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-532d0ca6db8efc43c6b9cc91ee2b6826', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.00030519,  0.00396741,  0.00640889, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.00518815, -0.00244148, -0.00030519, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.00976592, -0.00762963, -0.00640889, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.21301919, -0.21759698, -0.22370067, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.21790215, -0.220954  , -0.22492142, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.22186956, -0.22431104, -0.2273629 , ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-98df3b19fc8bf80a2a2beaa7f6d59c8a', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.03753777,  0.03601184,  0.0347911 , ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.03082369,  0.02899258,  0.02746666, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.02471999,  0.0225837 ,  0.02105777, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.12451552, -0.13672292, -0.14984588, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.11505478, -0.1248207 , -0.13641773, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.10162663, -0.10773034, -0.11597034, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('rechunk-merge-8ea5b9551330e6b863b9d7c3e36610b2', 26, 0, 0, 0)": <Serialize: [[[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]]>, "('mean_chunk-c71352a8e32a747a096700b0e982ded1', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.03784295, -0.03357036, -0.03112888, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.05432295, -0.0512711 , -0.0491348 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.0634785 , -0.0613422 , -0.05920591, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.22705771, -0.22980438, -0.23163548, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.2191229 , -0.22034363, -0.22217475, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.21607104, -0.21729179, -0.21820734, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-8daa1cf4ee7d595f58ce41fcf4bd08d2', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.00671407,  0.01190222,  0.01922666, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.0021363 ,  0.00701926,  0.0143437 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.00244148,  0.00244148,  0.00885037, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.10742515, -0.11505478, -0.12390515, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.10284737, -0.11230811, -0.12298959, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.09979553, -0.11139256, -0.12390515, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-4d1b896ad5541da5549d8d6666bff1ec', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.04364147, -0.04882962, -0.05432295, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.05035554, -0.05706961, -0.06256294, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.05767998, -0.06378368, -0.06897183, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.2066103 , -0.21057771, -0.21607104, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.2233955 , -0.22675252, -0.22949919, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.23651844, -0.23926511, -0.24109623, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-5e31039d7e28385662774f09476624e4', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.02716147,  0.02929777,  0.02990814, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.01739555,  0.01983703,  0.02105777, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.00701926,  0.00946074,  0.01098666, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.13550219, -0.13641773, -0.1391644 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.13031404, -0.13397625, -0.13855404, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.12909329, -0.13397625, -0.1394696 , ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('rechunk-merge-8ea5b9551330e6b863b9d7c3e36610b2', 4, 0, 0, 0)": <Serialize: [[[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]
+
+
+ [[[ True]]]]>, "('mean_chunk-c99109943e96f814e58e479f4f2eee6a', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.00061037,  0.00427259,  0.00579852, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.00762963, -0.00427259, -0.00244148, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.01770074, -0.0143437 , -0.01281777, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.19837031, -0.19959106, -0.20142215, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.19623402, -0.19837031, -0.20050661, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.19104587, -0.19257179, -0.1947081 , ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-81dafeca0de81fc071552f15fac343f8', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.03967406,  0.0469985 ,  0.05188147, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.03448591,  0.04242073,  0.04821924, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.02777184,  0.03601184,  0.04272591, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.13428144, -0.14099552, -0.14587848, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.11291848, -0.11902219, -0.12543108, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.08575701, -0.09186071, -0.09918515, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-a54ad41a38749b9bd1e5804ec1111f10', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.01739555, -0.01403851, -0.01129185, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.0225837 , -0.01922666, -0.01709037, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.02685629, -0.02349925, -0.02197333, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.15228736, -0.15778069, -0.16327402, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.14465773, -0.14984588, -0.1556444 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.14007996, -0.14618365, -0.15259254, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-d1c1d4a8b46c8e9151f4be1699ee3c6b', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.0347911 , -0.03875851, -0.04364147, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.05218665, -0.05676443, -0.06164739, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.06653035, -0.07019258, -0.07415998, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.27985474, -0.27802363, -0.27466658, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.26215398, -0.26306954, -0.26337475, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.2414014 , -0.24201179, -0.24323252, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-49377c5e662a0428922f8d4793941804', 18, 2, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        ...,
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.]]], dtype=float32), 'total': array([[[0.44740134, 0.44557023, 0.44373912, ..., 0.22827846,
+         0.2230903 , 0.21820734],
+        [0.44892728, 0.44740134, 0.44557023, ..., 0.23682363,
+         0.22980438, 0.2230903 ],
+        [0.44984284, 0.4483169 , 0.446791  , ..., 0.24597919,
+         0.23712882, 0.22888882],
+        ...,
+        [0.51240575, 0.51118505, 0.5096591 , ..., 0.31311992,
+         0.31830806, 0.32441175],
+        [0.51728874, 0.516068  , 0.5148473 , ..., 0.3192236 ,
+         0.32471693, 0.33051544],
+        [0.52125615, 0.5200354 , 0.5188147 , ..., 0.32715842,
+         0.33204138, 0.33722952]]], dtype=float32)}>, "('mean_chunk-ad19f3f1b16723b8acc9fd1b8cd19cbd', 18, 2, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        ...,
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.]]], dtype=float32), 'total': array([[[0.4812769 , 0.4794458 , 0.47761467, ..., 0.18097477,
+         0.1739555 , 0.16663106],
+        [0.48615986, 0.48432875, 0.4828028 , ..., 0.18005921,
+         0.17303994, 0.16602069],
+        [0.49104282, 0.48890653, 0.4873806 , ..., 0.17883846,
+         0.17212439, 0.16479996],
+        ...,
+        [0.6756798 , 0.6836146 , 0.6866665 , ..., 0.2169866 ,
+         0.22766808, 0.2395703 ],
+        [0.6717124 , 0.67903686, 0.6817835 , ..., 0.22125919,
+         0.23071992, 0.24048585],
+        [0.66621906, 0.67232275, 0.6747642 , ..., 0.22797327,
+         0.23529771, 0.24201179]]], dtype=float32)}>, "('mean_chunk-a02ed225a06ab13467a1ca6fda4ed787', 18, 2, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        ...,
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.]]], dtype=float32), 'total': array([[[0.46449172, 0.46662802, 0.4693747 , ..., 0.34363842,
+         0.32563248, 0.3073214 ],
+        [0.46723837, 0.46906948, 0.47181615, ..., 0.33356732,
+         0.31464583, 0.29541916],
+        [0.46906948, 0.4709006 , 0.4733421 , ..., 0.3213599 ,
+         0.30152288, 0.28168583],
+        ...,
+        [0.6326487 , 0.6350902 , 0.6366161 , ..., 0.29053622,
+         0.2963347 , 0.30152288],
+        [0.6295968 , 0.6326487 , 0.6344798 , ..., 0.29267251,
+         0.29725027, 0.30060732],
+        [0.6286813 , 0.63203835, 0.6344798 , ..., 0.29511398,
+         0.29786065, 0.29969177]]], dtype=float32)}>, "('mean_chunk-4a48db2f91e6c52ab16509e5e77f9597', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.03051851, -0.02929777, -0.0286874 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.04150517, -0.03997925, -0.03814813, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.05096591, -0.04882962, -0.04669332, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.23895992, -0.23316142, -0.22614215, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.23590808, -0.2313303 , -0.22553179, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.23316142, -0.22949919, -0.2252266 , ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-167de3ef0007eaa344cf9a8b151905ef', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.09247109, -0.08819849, -0.08362071, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.10284737, -0.10132145, -0.09857479, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.10956145, -0.10925627, -0.10834071, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.26459548, -0.27100438, -0.27771842, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.27283546, -0.27771842, -0.28168583, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.28199103, -0.28595844, -0.2883999 , ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-c9d6cca4cc852604f51d5ad606d336a9', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.03906369, -0.03692739, -0.03601184, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.04394665, -0.04272591, -0.04242073, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.04974517, -0.04882962, -0.04882962, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.33356732, -0.33051544, -0.32624286, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.3299051 , -0.3277688 , -0.32471693, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.32502213, -0.32410657, -0.32227546, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-1eade346b5bbc64115995abdb1fff340', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.02594073, -0.02441481, -0.02288888, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.03723258, -0.03540147, -0.03295999, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.04730369, -0.04455702, -0.04150517, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.24323252, -0.24109623, -0.23834956, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.24079104, -0.23865475, -0.23682363, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.23926511, -0.23682363, -0.23499252, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-b7f4107b68ddf03d7533653bf30ef990', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.03631703,  0.04242073,  0.04669332, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.03051851,  0.03631703,  0.04058962, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.02319407,  0.0286874 ,  0.03265481, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.20203254, -0.20569475, -0.20874661, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.19623402, -0.19959106, -0.2026429 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.1779229 , -0.18066958, -0.18463698, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-c6a6df0ad5e989912903eb211a9c6d09', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.07080294, -0.06469924, -0.05890072, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.08117923, -0.07751702, -0.07324442, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.08850367, -0.08575701, -0.08270516, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.28534806, -0.29419842, -0.3030488 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.28107548, -0.2883999 , -0.29602954, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.28199103, -0.2883999 , -0.2948088 , ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-f48e238766f355ee8758249dc994cf27', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.00030519,  0.00305185,  0.00518815, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.00640889, -0.00366222, -0.0021363 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.01190222, -0.00976592, -0.00885037, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.19806513, -0.20538957, -0.21332438, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.20203254, -0.20722067, -0.21301919, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.2069155 , -0.21118808, -0.2151555 , ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-e2ce627cb2815f7c57c65ed715c34104', 18, 2, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        ...,
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.]]], dtype=float32), 'total': array([[[0.4364147 , 0.43366802, 0.43061617, ..., 0.16449477,
+         0.16846217, 0.17212439],
+        [0.4397717 , 0.43733025, 0.4342784 , ..., 0.16937773,
+         0.17365032, 0.17700735],
+        [0.44312876, 0.44068727, 0.4379406 , ..., 0.17426069,
+         0.17853329, 0.18189031],
+        ...,
+        [0.5417035 , 0.5310221 , 0.5197302 , ..., 0.29206213,
+         0.29541916, 0.2969451 ],
+        [0.5310221 , 0.5182043 , 0.5056917 , ..., 0.29114658,
+         0.2923673 , 0.29053622],
+        [0.5188147 , 0.5047761 , 0.49226356, ..., 0.2887051 ,
+         0.2862636 , 0.2804651 ]]], dtype=float32)}>, "('mean_chunk-51826b084f5533b034e70a1be7bfd2c5', 18, 2, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        ...,
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.]]], dtype=float32), 'total': array([[[0.4278695 , 0.42359692, 0.42023987, ..., 0.4998932 ,
+         0.5117954 , 0.5236976 ],
+        [0.42847988, 0.42420727, 0.42115542, ..., 0.50538653,
+         0.5175939 , 0.5298013 ],
+        [0.42878506, 0.42481765, 0.4217658 , ..., 0.50935394,
+         0.5218665 , 0.5343791 ],
+        ...,
+        [0.6286813 , 0.6308176 , 0.63234353, ..., 0.3253273 ,
+         0.32959992, 0.33326212],
+        [0.63325906, 0.63539535, 0.6366161 , ..., 0.3238014 ,
+         0.3277688 , 0.33082065],
+        [0.6350902 , 0.63753164, 0.6384472 , ..., 0.3234962 ,
+         0.32654804, 0.32837915]]], dtype=float32)}>, "('mean_chunk-662db2d5c6c5ef7c31dd7c3987e30e67', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.06653035, -0.06256294, -0.05676443, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.07690664, -0.07293924, -0.06683554, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.08514664, -0.08056886, -0.07446516, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.2578814 , -0.25666067, -0.25513473, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.25635546, -0.25482956, -0.25360882, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.25635546, -0.25421917, -0.25238806, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-90c47d753f06f5859f41a195f475a4d4', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.02471999, -0.02166814, -0.02014222, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.03143407, -0.02929777, -0.02838221, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.03753777, -0.03601184, -0.03570665, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.19409773, -0.20355846, -0.21332438, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.1947081 , -0.20233771, -0.21027254, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.19837031, -0.2047792 , -0.2108829 , ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-7b8f503ec2aedbb949d44161e965d7e4', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.01525925, -0.01098666, -0.00885037, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.01892148, -0.01556444, -0.0143437 , ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.02197333, -0.01953185, -0.01953185, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.13245033, -0.13641773, -0.14038515, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.12726219, -0.13061923, -0.13428144, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.12543108, -0.12848292, -0.13183996, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-b9f2b0f6f59f15e27478311fb31b5069', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.05279702, -0.04638813, -0.03967406, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.06317332, -0.05890072, -0.05401776, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.07049776, -0.06775109, -0.06439406, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.25147253, -0.25940734, -0.26764733, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.25452438, -0.26093325, -0.26734215, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.26215398, -0.26764733, -0.2722251 , ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-12216aa42c983a07e43fe43c7eb7eb22', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.02685629, -0.02777184, -0.02929777, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.03631703, -0.03692739, -0.03753777, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.04547258, -0.04577776, -0.04577776, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.21179846, -0.20599994, -0.19928586, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.20783105, -0.20203254, -0.19592883, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.20508438, -0.19898069, -0.19287698, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-9b05176dfd9f7fa0ebed79e2e4d2171e', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[ 0.04211554,  0.04394665,  0.04425184, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.03357036,  0.03540147,  0.03601184, ...,  0.        ,
+          0.        ,  0.        ],
+        [ 0.02380444,  0.02563555,  0.02624592, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.17273477, -0.17456588, -0.17731254, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.1782281 , -0.18127994, -0.18341625, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.18005921, -0.18280587, -0.18494217, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-c435e2f8afb6f3ad35c12e344a2f3a3d', 8, 6, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        ...,
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.],
+        [1., 1., 1., ..., 0., 0., 0.]]], dtype=float32), 'total': array([[[-0.02990814, -0.02746666, -0.02624592, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.03448591, -0.03295999, -0.03234962, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.03997925, -0.03906369, -0.03906369, ...,  0.        ,
+          0.        ,  0.        ],
+        ...,
+        [-0.33082065, -0.3277688 , -0.32410657, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.3277688 , -0.3259377 , -0.32319102, ...,  0.        ,
+          0.        ,  0.        ],
+        [-0.3238014 , -0.32288584, -0.32105473, ...,  0.        ,
+          0.        ,  0.        ]]], dtype=float32)}>, "('mean_chunk-1dbcd3820d0acb0a5bd97bcd39f05baf', 18, 2, 0)": <Serialize: {'n': array([[[1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        ...,
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.],
+        [1., 1., 1., ..., 1., 1., 1.]]], dtype=float32), 'total': array([[[0.4422132 , 0.44099247, 0.4397717 , ..., 0.27466658,
+         0.2658162 , 0.2557451 ],
+        [0.4422132 , 0.44068727, 0.43946654, ..., 0.2865688 ,
+         0.27771842, 0.26734215],
+        [0.44251838, 0.44068727, 0.43916136, ..., 0.2990814 ,
+         0.29023102, 0.27985474],
+        ...,
+        [0.54994357, 0.55116427, 0.5505539 , ..., 0.2883999 ,
+         0.2923673 , 0.29816583],
+        [0.5548265 , 0.5566576 , 0.55604726, ..., 0.2929777 ,
+         0.29663992, 0.30152288],
+        [0.55940425, 0.5615406 , 0.56123537, ..., 0.29816583,
+         0.30152288, 0.3054903 ]]], dtype=float32)}>}}
+2023-05-03 09:49:39,850 - distributed.comm.utils - ERROR - Event loop is closed
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/utils.py", line 55, in _to_frames
+    return list(protocol.dumps(msg, **kwargs))
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 109, in dumps
+    frames[0] = msgpack.dumps(msg, default=_encode_default, use_bin_type=True)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/msgpack/__init__.py", line 38, in packb
+    return Packer(**kwargs).pack(o)
+  File "msgpack/_packer.pyx", line 294, in msgpack._cmsgpack.Packer.pack
+  File "msgpack/_packer.pyx", line 300, in msgpack._cmsgpack.Packer.pack
+  File "msgpack/_packer.pyx", line 297, in msgpack._cmsgpack.Packer.pack
+  File "msgpack/_packer.pyx", line 231, in msgpack._cmsgpack.Packer._pack
+  File "msgpack/_packer.pyx", line 231, in msgpack._cmsgpack.Packer._pack
+  File "msgpack/_packer.pyx", line 285, in msgpack._cmsgpack.Packer._pack
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 100, in _encode_default
+    frames.extend(create_serialized_sub_frames(obj))
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 67, in create_serialized_sub_frames
+    _inplace_compress_frames(sub_header, sub_frames)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/protocol/core.py", line 50, in _inplace_compress_frames
+    compression[i], frames[i] = maybe_compress(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/contextlib.py", line 78, in inner
+    with self._recreate_cm():
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/metrics.py", line 275, in meter
+    self.digest_metric(label, delta, unit)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/metrics.py", line 225, in digest_metric
+    cb(label, value, unit)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 987, in metrics_callback
+    loop.call_soon_threadsafe(self.digest_metric, name, value)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/base_events.py", line 798, in call_soon_threadsafe
+    self._check_closed()
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2023-05-03 09:49:41,820 - distributed.nanny - ERROR - Worker process died unexpectedly
+2023-05-03 09:49:51,925 - distributed.nanny - INFO - Closing Nanny at 'tcp://172.16.3.168:35792'. Reason: nanny-close-gracefully
+2023-05-03 09:49:51,926 - distributed.dask_worker - INFO - End worker

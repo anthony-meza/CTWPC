@@ -1,0 +1,171 @@
+2023-05-03 09:14:41,611 - distributed.nanny - INFO -         Start Nanny at: 'tcp://172.16.3.105:46058'
+2023-05-03 09:14:42,965 - distributed.worker - INFO -       Start worker at:   tcp://172.16.3.105:44979
+2023-05-03 09:14:42,965 - distributed.worker - INFO -          Listening to:   tcp://172.16.3.105:44979
+2023-05-03 09:14:42,965 - distributed.worker - INFO -           Worker name:             SLURMCluster-7
+2023-05-03 09:14:42,965 - distributed.worker - INFO -          dashboard at:         172.16.3.105:45063
+2023-05-03 09:14:42,965 - distributed.worker - INFO - Waiting to connect to:   tcp://172.16.3.158:44759
+2023-05-03 09:14:42,965 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:14:42,965 - distributed.worker - INFO -               Threads:                         36
+2023-05-03 09:14:42,966 - distributed.worker - INFO -                Memory:                 178.81 GiB
+2023-05-03 09:14:42,966 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-i5o8u_p0
+2023-05-03 09:14:42,966 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:14:42,972 - distributed.worker - INFO -         Registered to:   tcp://172.16.3.158:44759
+2023-05-03 09:14:42,972 - distributed.worker - INFO - -------------------------------------------------
+2023-05-03 09:14:42,972 - distributed.core - INFO - Starting established connection to tcp://172.16.3.158:44759
+2023-05-03 09:18:01,910 - distributed.utils_perf - INFO - full garbage collection released 1.29 GiB from 860 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:18:10,934 - distributed.utils_perf - INFO - full garbage collection released 760.98 MiB from 1180 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:18:14,075 - distributed.utils_perf - INFO - full garbage collection released 672.75 MiB from 1100 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:18:29,009 - distributed.utils_perf - INFO - full garbage collection released 407.78 MiB from 879 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:18:34,235 - distributed.utils_perf - INFO - full garbage collection released 454.36 MiB from 679 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:18:49,251 - distributed.utils_perf - INFO - full garbage collection released 849.50 MiB from 780 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:18:56,268 - distributed.utils_perf - INFO - full garbage collection released 227.81 MiB from 620 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:19:15,244 - distributed.utils_perf - INFO - full garbage collection released 16.25 MiB from 719 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:19:36,696 - distributed.utils_perf - INFO - full garbage collection released 12.02 MiB from 760 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:20:02,305 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.29s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:20:07,294 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.60s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:20:20,270 - distributed.core - INFO - Event loop was unresponsive in Worker for 7.70s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:20:25,877 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.42s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:20:42,579 - distributed.utils_perf - INFO - full garbage collection released 16.84 MiB from 439 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:20:42,629 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.45s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:20:59,857 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.92s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:21:05,599 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.64s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:21:16,774 - distributed.utils_perf - INFO - full garbage collection released 25.64 MiB from 559 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:21:16,828 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.56s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:21:31,246 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.16s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:21:42,278 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.65s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:21:54,844 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.45s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:22:07,673 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.55s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:22:21,583 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.31s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:22:34,848 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.18s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:22:48,774 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.00s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:23:03,032 - distributed.utils_perf - INFO - full garbage collection released 13.88 MiB from 579 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:23:03,113 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.24s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:23:18,386 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.56s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:23:32,812 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.89s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:23:45,584 - distributed.core - INFO - Event loop was unresponsive in Worker for 7.28s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:24:02,875 - distributed.core - INFO - Event loop was unresponsive in Worker for 8.75s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:24:20,141 - distributed.utils_perf - WARNING - full garbage collections took 32% CPU time recently (threshold: 10%)
+2023-05-03 09:24:20,161 - distributed.core - INFO - Event loop was unresponsive in Worker for 8.41s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:24:27,206 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.51s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:24:41,516 - distributed.core - INFO - Event loop was unresponsive in Worker for 14.31s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:24:46,152 - distributed.utils_perf - WARNING - full garbage collections took 30% CPU time recently (threshold: 10%)
+2023-05-03 09:24:48,614 - distributed.utils_perf - WARNING - full garbage collections took 30% CPU time recently (threshold: 10%)
+2023-05-03 09:25:06,986 - distributed.utils_perf - WARNING - full garbage collections took 30% CPU time recently (threshold: 10%)
+2023-05-03 09:25:40,228 - distributed.utils_perf - WARNING - full garbage collections took 30% CPU time recently (threshold: 10%)
+2023-05-03 09:26:01,045 - distributed.utils_perf - WARNING - full garbage collections took 29% CPU time recently (threshold: 10%)
+2023-05-03 09:26:36,890 - distributed.utils_perf - WARNING - full garbage collections took 29% CPU time recently (threshold: 10%)
+2023-05-03 09:26:55,509 - distributed.utils_perf - WARNING - full garbage collections took 29% CPU time recently (threshold: 10%)
+2023-05-03 09:27:34,799 - distributed.utils_perf - WARNING - full garbage collections took 29% CPU time recently (threshold: 10%)
+2023-05-03 09:28:31,509 - distributed.utils_perf - WARNING - full garbage collections took 29% CPU time recently (threshold: 10%)
+2023-05-03 09:29:20,764 - distributed.utils_perf - WARNING - full garbage collections took 26% CPU time recently (threshold: 10%)
+2023-05-03 09:30:05,707 - distributed.utils_perf - WARNING - full garbage collections took 25% CPU time recently (threshold: 10%)
+2023-05-03 09:30:43,176 - distributed.worker - ERROR - failed during get data with tcp://172.16.3.105:44979 -> tcp://172.16.3.62:35035
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1783, in get_data
+    response = await comm.read(deserializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.105:44979 remote=tcp://172.16.3.62:54996>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-05-03 09:30:43,178 - distributed.core - INFO - Lost connection to 'tcp://172.16.3.62:54996'
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 831, in _handle_comm
+    result = await result
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 990, in wrapper
+    return await func(self, *args, **kwargs)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 1783, in get_data
+    response = await comm.read(deserializers=serializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://172.16.3.105:44979 remote=tcp://172.16.3.62:54996>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-05-03 09:30:44,842 - distributed.core - INFO - Removing comms to tcp://172.16.3.62:35035
+2023-05-03 09:30:44,884 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.62:35035
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 235, in read
+    n = await stream.read_into(chunk)
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2891, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 144, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.105:44267 remote=tcp://172.16.3.62:35035>: Stream is closed
+2023-05-03 09:31:22,856 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.87s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2023-05-03 09:31:26,578 - distributed.utils_perf - WARNING - full garbage collections took 24% CPU time recently (threshold: 10%)
+2023-05-03 09:31:26,579 - distributed.utils_perf - INFO - full garbage collection released 1.20 GiB from 80 reference cycles (threshold: 9.54 MiB)
+2023-05-03 09:33:03,809 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.88:33948
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2891, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.105:41903 remote=tcp://172.16.3.88:33948>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-05-03 09:33:03,834 - distributed.worker - ERROR - Worker stream died during communication: tcp://172.16.3.61:35519
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2056, in gather_dep
+    response = await get_data_from_worker(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/worker.py", line 2891, in get_data_from_worker
+    response = await send_recv(
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/core.py", line 1027, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/vortexfs1/home/anthony.meza/mambaforge/envs/atm_rivers/lib/python3.10/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://172.16.3.105:43057 remote=tcp://172.16.3.61:35519>: ConnectionResetError: [Errno 104] Connection reset by peer
+2023-05-03 09:33:03,839 - distributed.core - INFO - Event loop was unresponsive in Worker for 100.98s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+slurmstepd: error: *** JOB 3082096 ON pn055 CANCELLED AT 2023-05-03T09:33:34 ***
