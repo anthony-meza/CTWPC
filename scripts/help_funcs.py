@@ -5,6 +5,7 @@ import netCDF4
 import xarray as xr
 from scipy import linalg
 from scipy.signal import butter,filtfilt
+from math import radians, cos, sin, asin, sqrt
 
 # def getVarUrl(var, time_idx):
 #     #maximum time is index 328
@@ -215,7 +216,6 @@ def stitch_zonal_average(d):
 
         var_list = np.concatenate((var_list, var))
     return var_list 
-from math import radians, cos, sin, asin, sqrt
 def haversine(lon1, lat1, lon2, lat2):
     """
     Calculate the great circle distance in kilometers between two points 
@@ -255,3 +255,49 @@ def stich_zonal_average_xr(ds_dict, longitudes, latitudes, cum_distance):
         n_dist1 = n_dist2 + n_dist1
         var_list = var_list + [var]
     return var_list
+
+# window = tukey(len(zos.distance), 0.05)
+def filter_negative_wavenumbers(data, dt=1, dx=1):
+    
+    #legnth of dimensions
+    nt, nx = data.shape
+
+    fft_vals = fft2(data)
+    
+    #wave definition is exp(i(k*x-omega*t)) but FFT definition exp(-ikx)
+    #so change sign
+    omega = fftfreq(nt, 1)
+    k = fftfreq(nx, 100); k =-1*k
+
+    fft_shift = fftshift(fft_vals)
+    k_grid, omega_grid = np.meshgrid(fftshift(k), fftshift(omega))
+
+    #filter regularly gridded wavenumber and frequency
+    fft_shift[omega_grid < 0.0] = 0*fft_shift[omega_grid < 0.0]
+    fft_shift[omega_grid > 0.0] = 2*fft_shift[omega_grid > 0.0]
+    
+    fft_shift[k_grid < 0.0] = 0*fft_shift[k_grid < 0.0]
+    fft_shift[k_grid > 0.0] = 2*fft_shift[k_grid > 0.0]
+
+
+    return np.real(ifft2(ifftshift(fft_shift))), (omega_grid, k_grid, fft_shift)
+
+def get_dispersion_data(data, dt=1, dx=1):
+    
+    #legnth of dimensions
+    nt, nx = data.shape
+
+    fft_vals = fft2(data)
+    
+    #wave definition is exp(i(k*x-omega*t)) but FFT definition exp(-ikx)
+    #so change sign
+    omega = fftfreq(nt, 1)
+    k = fftfreq(nx, 100); k =-1*k #in hundereds of kilomoters
+
+    fft_shift = fftshift(fft_vals)
+    k_grid, omega_grid = np.meshgrid(fftshift(k), fftshift(omega))
+
+    #filter regularly gridded wavenumber and frequency
+    fft_shift[omega_grid < 0.0] = 0*fft_shift[omega_grid < 0.0]
+    fft_shift[omega_grid > 0.0] = 2*fft_shift[omega_grid > 0.0]
+    return omega_grid, k_grid, fft_shift
