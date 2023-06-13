@@ -171,3 +171,87 @@ def smooth_daily_climatology_fast(daily_climatology, axis = "dayofyear"):
             smooth_climatology[key].values[..., ilon] = ysmooth.T
 
     return smooth_climatology
+
+def zonal_average_coastline(var, weights): 
+    var_dict = dict()
+    var_dict["GC_E"]  = (weights.GC_E * var).sum(dim = "longitude") / (weights.GC_E).sum(dim = "longitude")
+    var_dict["GC_W"] = (weights.GC_W * var).sum(dim = "longitude") / (weights.GC_W).sum(dim = "longitude")
+    var_dict["GC_C"] = (weights.GC_C * var).sum(dim = "longitude") / (weights.GC_C).sum(dim = "longitude")
+    var_dict["EQ"] = (weights.EQ * var).sum(dim = "latitude") / (weights.EQ).sum(dim = "latitude")
+    var_dict["SW"] = (weights.SW * var).sum(dim = "latitude") / (weights.SW).sum(dim = "latitude")
+    var_dict["NW"] = (weights.NW * var).sum(dim = "longitude") / (weights.NW).sum(dim = "longitude")
+    var_dict["COL"] = (weights.COL * var).sum(dim = "longitude") / (weights.COL).sum(dim = "longitude")
+    return var_dict
+
+#only pick dry points when the variables varies with depth
+#if we do not use this then the above function will overcount the number of actual point available
+
+def zonal_average_coastline_depth(var, weights, wet_points): 
+    var_dict = dict()
+    var_dict["GC_E"]  = (weights.GC_E * var).sum(dim = "longitude") / (weights.GC_E *wet_points).sum(dim = "longitude")
+    var_dict["GC_W"] = (weights.GC_W * var).sum(dim = "longitude") / (weights.GC_W *wet_points).sum(dim = "longitude")
+    var_dict["GC_C"] = (weights.GC_C * var).sum(dim = "longitude") / (weights.GC_C *wet_points).sum(dim = "longitude")
+    var_dict["EQ"] = (weights.EQ * var).sum(dim = "latitude") / (weights.EQ *wet_points).sum(dim = "latitude")
+    var_dict["SW"] = (weights.SW * var).sum(dim = "latitude") / (weights.SW *wet_points).sum(dim = "latitude")
+    var_dict["NW"] = (weights.NW * var).sum(dim = "longitude") / (weights.NW *wet_points).sum(dim = "longitude")
+    var_dict["COL"] = (weights.COL * var).sum(dim = "longitude") / (weights.COL *wet_points).sum(dim = "longitude")
+    return var_dict
+
+def stitch_zonal_average(d):
+    var_list = []
+    for key in ["EQ", "COL", "SW", "GC_E", "GC_C", "GC_W", "NW"]:
+        d[key] = d[key].compute()
+        if key == "EQ":
+            var = d[key][~np.isnan(d[key])].compute().values
+        else:
+            if key == "GC_C":
+                print(key)
+                var = d[key][~np.isnan(d[key])].compute().values[::-1]
+            elif key == "SW":
+                print(key)
+                var = d[key][~np.isnan(d[key])].compute().values[::-1]
+            else:
+                var = d[key][~np.isnan(d[key])].compute().values
+
+        var_list = np.concatenate((var_list, var))
+    return var_list 
+from math import radians, cos, sin, asin, sqrt
+def haversine(lon1, lat1, lon2, lat2):
+    """
+    Calculate the great circle distance in kilometers between two points 
+    on the earth (specified in decimal degrees)
+    """
+    # convert decimal degrees to radians 
+    lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+
+    # haversine formula 
+    dlon = lon2 - lon1 
+    dlat = lat2 - lat1 
+    a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
+    c = 2 * asin(sqrt(a)) 
+    r = 6371 # Radius of earth in kilometers. Use 3956 for miles. Determines return value units.
+    return c * r
+
+def stich_zonal_average_xr(ds_dict, longitudes, latitudes, cum_distance):
+    var_list = []
+    n_dist1 = 0
+    for key in ["EQ", "COL", "SW", "GC_E", "GC_C", "GC_W", "NW"]:
+        if key == "EQ":
+            var = ds_dict[key].isel(longitude = np.where(~np.isnan(longitudes[key]))[0])
+            var = var.rename({'longitude': 'distance'})
+        else:
+            if key == "GC_C":
+                var = ds_dict[key].isel(latitude = np.where(~np.isnan(latitudes[key]))[0]).isel(latitude=slice(None, None, -1))
+                var = var.rename({'latitude': 'distance'})
+            elif key == "SW":
+                var = ds_dict[key].isel(longitude = np.where(~np.isnan(longitudes[key]))[0]).isel(longitude=slice(None, None, -1))
+                var = var.rename({'longitude': 'distance'})
+            else:
+                var = ds_dict[key].isel(latitude = np.where(~np.isnan(latitudes[key]))[0])
+                var = var.rename({'latitude': 'distance'})
+
+        n_dist2 = len(var.distance)
+        var = var.assign_coords({"distance": cum_distance[n_dist1:n_dist1+n_dist2]})
+        n_dist1 = n_dist2 + n_dist1
+        var_list = var_list + [var]
+    return var_list
