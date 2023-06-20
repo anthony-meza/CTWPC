@@ -1,4 +1,4 @@
-Scripts used to analyze the statistical relationship between coastal waves and precipiation in California. 
+## Scripts used to analyze the statistical relationship between coastal waves and precipiation in California. 
 
 0: file concatenation and combination and obtaining daily climatologies
 
